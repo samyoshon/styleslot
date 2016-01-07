@@ -64,5 +64,4 @@ gem 'stripe', '~> 1.31'
 gem 'puma'
 
 ruby "2.2.0"
-end
 
