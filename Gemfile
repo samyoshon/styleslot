@@ -49,8 +49,6 @@ end
 
 gem 'will_paginate', github: 'jonatack/will_paginate'
 
-gem 'ransack'
-
 gem 'devise', '~> 3.5', '>= 3.5.3'
 
 gem "paperclip", "~> 4.3"

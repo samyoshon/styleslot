@@ -1,0 +1,17 @@
+<h1>NEW POST</h1>
+
+	<%= form_for @post do |f| %>
+		<%= f.label :title, "Job Title" %>
+		<%= f.text_field :title %>
+
+		<%= f.label :description, "Job Description" %>
+		<%= f.text_field :description %>
+
+		<%= f.label :city, "Job City" %>
+		<%= f.text_field :city %>
+
+		<%= f.label :state, "Job State" %>
+		<%= f.text_field :state %>
+
+		<%= f.submit "Submit" %>
+	<% end %>
