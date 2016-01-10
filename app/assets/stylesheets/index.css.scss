@@ -12,17 +12,34 @@
 }
 
 .post-container {
+	padding: 0px !important;
+}
 	
+.post-container--each {
+	padding: 10px 0px ;
+
 		h1 {
 			margin: 0px;
+			font-size: 20px;
+			overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+
+		    a {
 			color: $second-color;
+		    }
 		}
 
 		h2 {
 			margin: 0px;
+			font-size: 16px;
 		}
 
-		h3 {
+		p {
 			margin: 0px;
+			font-size: 13px;
+			overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
 		}
 }
