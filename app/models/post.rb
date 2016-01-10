@@ -10,4 +10,8 @@ class Post < ActiveRecord::Base
 		end
 	end
 
+	 def to_param
+    	"#{id}-#{name}"
+  	end
+
 end

@@ -1,3 +1,36 @@
+.show-main {
+	padding-bottom: 10px;
+}
+
+.show-main--logo {
+	text-align: center;
+}
+
+.show-main--social {
+	i {
+		font-size: 25px;
+		color: $first-color;
+		margin-right: 10px;
+
+		&:hover {
+			color: $second-color;
+			cursor: pointer;
+		};
+	}
+}
+
+.show-main--apply {
+	text-align: center;
+}
+
+.show-main--post {
+	border-top: 1px solid black;
+}
+
 .show-newsletter--fixed {
 	position: fixed !important;
+	background-color: lighten($second-color, 28%);
+	box-sizing: border-box;
+	padding: 0px 20px 20px 20px;
+	margin-right: 10px;
 }

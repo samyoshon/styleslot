@@ -1,14 +1,14 @@
 <div class="home-container">
 	<div class="gif-container">
-		<div class="model-gif model-gif--riri"></div>
-		<div class="model-gif model-gif--cara"></div>
-		<div class="model-gif model-gif--heels"></div>
-		<div class="model-gif model-gif--jourdan"></div>
-		<div class="model-gif model-gif--kendall"></div>
+		<div class="hidden-xs hidden-sm col-md-2 col-lg-2 model-gif model-gif--riri"></div>
+		<div class="hidden-xs hidden-smcol-xs-12 col-sm-12 col-md-4 col-lg-4 model-gif model-gif--cara"></div>
+		<!-- <div class="col-md-1 hidden-xs hidden-sm model-gif model-gif--heels"></div> -->
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 model-gif model-gif--women"></div>
+		<div class="hidden-xs hidden-sm col-md-3 col-mg-3 model-gif model-gif--kendall"></div>
 	</div>
 	<div class="home-search-form">
 		<div class="home-search-form--container">
-			<h1 class="home-search-form--header">Love your work.</h1>
+			<h1 class="home-search-form--header">Love fashion.<br>Work fashion.</h1>
 			<%= form_tag(posts_path, :method => "get", id: "search-form") do %>
 				<%= text_field_tag :q, params[:search], class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 home-search-form--input", placeholder: "What (job title, keywords, company)" %>
 				<%= text_field_tag :l, params[:search], class: :"home-search-form--input", placeholder: "Where (city, state, or zip code)" %>
