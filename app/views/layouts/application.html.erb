@@ -17,15 +17,15 @@
         </div>
    </nav>
 
-<!--     <div class="home-flash">
-        <% if notice %>
-            <div class="bg-success"><%= notice %></div>
-        <% end %>
-        <% if alert %>
-            <div class="bg-danger"><%= alert %></div>
-        <% end %>
-    </div> -->
     <div class="main-body">
+        <div class="home-flash">
+            <% if notice %>
+                <div class="bg-success"><%= notice %></div>
+            <% end %>
+            <% if alert %>
+                <div class="bg-danger"><%= alert %></div>
+            <% end %>
+        </div>
         <%= yield %>
     </div>
 </body>

@@ -1,1 +1,31 @@
-<%= @post.title %>
+<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+	<h1><%= @post.company.email %></h1>
+	<p><%= @post.title %></p>
+	<p><%= @post.description %></p>
+	<p><%= @post.description %></p>
+	<p><%= @post.description %></p>
+	<p><%= @post.description %></p>
+	<p><%= @post.description %></p>
+
+</div>
+<aside class="show-newsletter col-xs-12 col-sm-12 col-md-4 col-md-4">
+	<div class="show-newsletter--fixed">
+		<h1>Newsletter</h1>
+		<p>Stay updated with the hottest fashion jobs.</p>
+		<%= form_for @post do |f| %>
+			<%= f.label :title, "Job Title" %>
+			<%= f.text_field :title %>
+
+			<%= f.label :description, "Job Description" %>
+			<%= f.text_field :description %>
+
+			<%= f.label :city, "Job City" %>
+			<%= f.text_field :city %>
+
+			<%= f.label :state, "Job State" %>
+			<%= f.text_field :state %>
+
+			<%= f.submit "Submit" %>
+		<% end %>
+	</div>
+</aside>
