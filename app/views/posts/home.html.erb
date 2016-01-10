@@ -1,7 +1,20 @@
-<h1>HOME</h1>
+<div class="home-container">
+	<div class="gif-container">
+		<div class="model-gif model-gif--riri"></div>
+		<div class="model-gif model-gif--cara"></div>
+		<div class="model-gif model-gif--heels"></div>
+		<div class="model-gif model-gif--jourdan"></div>
+		<div class="model-gif model-gif--kendall"></div>
+	</div>
+	<div class="home-search-form">
+		<div class="home-search-form--container">
+			<h1 class="home-search-form--header">Love your work.</h1>
+			<%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+				<%= text_field_tag :q, params[:search], class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 home-search-form--input", placeholder: "What (job title, keywords, company)" %>
+				<%= text_field_tag :l, params[:search], class: :"home-search-form--input", placeholder: "Where (city, state, or zip code)" %>
+				<%= submit_tag "Find Jobs", class: :"home-search-form--search", name: nil %>
+			<% end %>
+		</div>
+	</div>
+</div>
 
-<%= form_tag(posts_path, :method => "get", id: "search-form") do %>
-	<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-	<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-	<%= submit_tag "Search", name: nil %>
-<% end %>

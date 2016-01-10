@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Styleslot</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <title>Styleslot</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
+
 <body>
+    <nav class="nav-bar">
+        <div>
+   		   <li><%= link_to "Sign In", new_user_session_path %></li>
+           <li><%= link_to "Employers", new_company_session_path %></li>
+        </div>
+   </nav>
 
-	<div class="home-flash">
-    	<% if notice %>
-    		<div class="bg-success"><%= notice %></div>
-    	<% end %>
-    	<% if alert %>
-    	    <div class="bg-danger"><%= alert %></div>
-    	<% end %>
-   	</div>
-
-   	<nav>
-   		<li><%= link_to "Companies Sign In", new_company_session_path %></li>
-   		<li><%= link_to "Companies Sign Up", new_company_registration_path %></li>
-   	</nav>
-   	<br>
-   	<nav>
-   		<li><%= link_to "Users Sign In", new_user_session_path %></li>
-   		<li><%= link_to "Users Sign Up", new_company_registration_path %></li>
-   	</nav>
-
-<%= yield %>
-
+<!--     <div class="home-flash">
+        <% if notice %>
+            <div class="bg-success"><%= notice %></div>
+        <% end %>
+        <% if alert %>
+            <div class="bg-danger"><%= alert %></div>
+        <% end %>
+    </div> -->
+    <div class="main-body">
+        <%= yield %>
+    </div>
 </body>
 </html>
