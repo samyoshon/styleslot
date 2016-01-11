@@ -1,5 +1,5 @@
 $first-color: #000000;
-$second-color: #d1a162;
+$second-color: #D1A162;
 $third-color: #FFFFFF;
 
 /* CSS RESET */
@@ -51,13 +51,16 @@ table {
 /* NAV BAR */ 
 
 .nav-bar {
-	background-image: image-url('navbar.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	z-index: 100;
-	width: 100%;
-	height: 100px;
-	position: absolute;
+	background-image: image-url('navbar.png') !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	z-index: 100 !important;
+	width: 100% !important;
+	height: 100px !important;
+	position: absolute !important;
+	background-color: transparent !important;
+	border: none !important;
+	border-radius: 0px !important;
 
 	div {
 		float: right;
@@ -81,6 +84,14 @@ table {
 	}
 }
 
+#navbar-collapse-1 {
+	padding-top: 15px;
+}
+
+.navbar-header{
+	padding-top: 15px !important;
+}
+
 .home-flash {
 	text-align: center;
 	position: fixed;
@@ -90,7 +101,7 @@ table {
 }
 
 .home-container {
-	margin-top: -120px;
+	margin-top: -80px;
 	position: relative;
 }
 

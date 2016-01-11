@@ -7,16 +7,25 @@
 }
 
 .show-main--social {
-	i {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+	a {
+		width: 25%;
+
+		i {
 		font-size: 25px;
 		color: $first-color;
-		margin-right: 10px;
+		};
 
 		&:hover {
 			color: $second-color;
 			cursor: pointer;
 		};
-	}
+	};
+
+	
 }
 
 .show-main--apply {
