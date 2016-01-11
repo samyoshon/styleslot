@@ -17,12 +17,15 @@
 		i {
 		font-size: 25px;
 		color: $first-color;
+
+			&:hover {
+				color: $second-color;
+				cursor: pointer;
+			};
+		
 		};
 
-		&:hover {
-			color: $second-color;
-			cursor: pointer;
-		};
+		
 	};
 
 	

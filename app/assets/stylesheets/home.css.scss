@@ -84,8 +84,35 @@ table {
 	}
 }
 
+.navbar-right {
+	margin: 0px !important;
+}
+
+.btn-navbar {
+	font-weight: bold;
+	position: relative;
+	margin-right: 10px !important;
+}
+
+#btn-words {
+	margin-right: 0px !important;
+}
+
+.nav-bar div {
+	float: inherit;
+	background-color: black;
+}
+
 #navbar-collapse-1 {
-	padding-top: 15px;
+	margin-top: -60px;
+
+	li {
+		margin-left: 20px;
+	}
+}
+
+#navbar-hamburger {
+	margin-right: 15px;
 }
 
 .navbar-header{
@@ -101,7 +128,7 @@ table {
 }
 
 .home-container {
-	margin-top: -80px;
+	margin-top: -120px;
 	position: relative;
 }
 

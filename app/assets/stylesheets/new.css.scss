@@ -1,0 +1,20 @@
+.new-post--input {
+	background-color: $third-color;
+	padding: 10px;
+	border: 1px solid $first-color;
+	margin-top: 10px;
+	outline: none;
+
+	&:focus {
+		border: 3px solid $second-color;
+	};
+}
+
+.new-post--textarea {
+	height: 100px;
+
+}
+
+.new-post--submit {
+	margin-top: 10px;
+}
