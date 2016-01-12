@@ -11,7 +11,7 @@
 			<h1 class="home-search-form--header">Love fashion.<br>Work fashion.</h1>
 			<%= search_form_for @search do |f| %>
 				<%= f.text_field :title_or_description_cont, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 home-search-form--input", placeholder: "What (job title, description)" %>
-				<%= f.text_field :city_or_state_cont, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 home-search-form--input", placeholder: "Where (city, state, zip code)" %>
+				<%= f.text_field :city_or_state_or_zip_cont, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 home-search-form--input", placeholder: "Where (city, state, zip code)" %>
 				<%= f.submit "Find Jobs", class: :"home-search-form--search", name: nil %>
 			<% end %>
 		</div>
