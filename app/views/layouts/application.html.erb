@@ -29,7 +29,7 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <% if user_signed_in? %>
+                <% if company_signed_in? %>
                     <li>
                         <%= link_to "Search Jobs", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
                     </li>
@@ -37,24 +37,55 @@
                         <%= link_to "Post Job", new_post_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
                     </li>
                     <li class="dropdown-toggle btn-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-
+                        <!-- <span class="btn-navbar" id="btn-words"> -->
+                            <% if current_company.email == nil || current_company.email == "" %>
+                                <%= "Edit Profile" %>
+                            <% else %>
+                                <%= "#{current_company.email}" %>
+                            <% end %>
+                            <i class="fa fa-caret-down"  id="navbar-edit"></i>
+                        <!-- </span> -->
                     </li>
                     <ul class="dropdown-menu">
                         <li>
-                            <%= link_to "Edit Profile", edit_user_registration_path, class: :"btn-navbar", id: :"btn-words" %>
+                            <%= link_to "Edit Profile", edit_company_registration_path, class: :"btn-navbar", id: :"btn-words" %>
                         </li>
                         <li role="separator" class="divider"></li>
                         <li>
-                            <%= link_to "Logout", destroy_user_session_path, :method => :delete, class: :"btn-navbar", id: :"btn-words" %>
+                            <%= link_to "Logout", destroy_company_session_path, :method => :delete, class: :"btn-navbar", id: :"btn-words" %>
+                        </li>
+                    </ul>
+                <% elsif user_signed_in? %>
+                    <li>
+                        <!-- posts_path -->
+                        <%= link_to "Search Jobs", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
+                    </li>
+                    <li class="dropdown-toggle btn-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <!-- <span class="btn-navbar" id="btn-words"> -->
+                            <% if current_user.email == nil || current_user.email == "" %>
+                                <%= "Edit Profile" %>
+                            <% else %>
+                                <%= "#{current_user.email}" %>
+                            <% end %>
+                            <i class="fa fa-caret-down"  id="navbar-edit"></i>
+                        <!-- </span> -->
+                    </li>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <%= link_to "Edit Profile", edit_company_registration_path, class: :"btn-navbar", id: :"btn-words" %>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <%= link_to "Logout", destroy_company_session_path, :method => :delete, class: :"btn-navbar", id: :"btn-words" %>
                         </li>
                     </ul>
                 <% else %>
                     <li>
                         <!-- posts_path -->
-                        <%= link_to "Search posts", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
+                        <%= link_to "Search Jobs", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
                     </li>
                     <li>
-                        <%= link_to "Employers", new_post_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
+                        <%= link_to "Post Job", new_post_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
                     </li>
                 <% end %> 
             </ul>
