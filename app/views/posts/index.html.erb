@@ -12,7 +12,7 @@
 			<% @posts.each do |post| %>
 				<div class="post-container--each">
 					<h1><%= link_to post.title, post_path(post), target: "_blank" %></h1>
-					<h2><%= post.company.email %> - <i class="fa fa-map-marker"></i> <%= post.city %>, <%= post.state %></h2>
+					<h2><%= post.company.email %> - <i class="fa fa-map-marker"></i> <%= post.city %>, <%= post.state %> - <%= post.zip %></h2>
 					<p><%= post.description %></p>
 				</div>
 			<% end %>

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-	# before_action :authenticate_user!, except: [:index, :show, :home]
+	before_action :authenticate_company!, except: [:index, :show, :home]
 
     def home
         @search = Post.search(params[:q])
@@ -40,7 +40,7 @@ class PostsController < ApplicationController
 
     def new
         # @post = Post.new
-      	@post = current_user.posts.build 
+      	@post = current_company.posts.build 
     end
 
     def show
@@ -48,7 +48,7 @@ class PostsController < ApplicationController
     end
 
     def create
-        @post = current_user.posts.build(post_params)
+        @post = current_company.posts.build(post_params)
         # @post = Post.new(post_params)
         @post.save
         redirect_to posts_path
@@ -108,7 +108,15 @@ class PostsController < ApplicationController
   private 
 
   	def post_params
-  		params.require(:post).permit(:company_id, :title, :description, :city, :state)
+  		params.require(:post).permit(:company_id, :title, :description, :city, :state, :zip)
   	end
+
+    def authenticate!
+        if @current_user == current_company
+            :authenticate_company!
+        elsif @current_user == current_user
+            :authenticate_user!
+        end
+    end
 
 end
