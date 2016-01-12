@@ -8,25 +8,7 @@ class PostsController < ApplicationController
 
     def index
         @search = Post.search(params[:q])
-        @posts = @search.result
-            # if params[:search]
-            #     @posts = Post.search(params[:search]).order("created_at DESC")
-            # else
-            #     @posts = Post.all.order('created_at DESC')
-            # end
-        # @posts = Post.all
-            # if params[:q] && params[:l]
-            #     @posts = Post.search(params[:q][:l]).paginate(page: params[:page], per_page: 30).order("created_at DESC")
-            # # # elsif params[:q]
-
-            # # elsif params[:l]
-            # #     @posts = Post.where()
-            # else
-            #     @posts = Post.all.paginate(page: params[:page], per_page: 30).order("created_at DESC")
-            # end
-
-        # @search = Post.search(params[:q])
-        # @posts = @search.result.paginate(page: params[:page], per_page: 30).order("created_at DESC")
+        @posts = @search.result.paginate(page: params[:page], per_page: 30).order("created_at DESC")
 
         ###Find Countries That Have Job Posts - Used for filter option
   	    # @posts_all = Post.where(["created_at > ?", 30.days.ago]).order("created_at DESC")

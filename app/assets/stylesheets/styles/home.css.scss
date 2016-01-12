@@ -166,6 +166,11 @@ table {
 	padding: 10px 20px;
 	margin-bottom: 20px;
 	width: 100%;
+	outline: none;
+
+	&:focus {
+		border: 3px solid $second-color;
+	};
 }
 
 .home-search-form--search {

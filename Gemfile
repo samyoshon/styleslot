@@ -63,5 +63,7 @@ gem 'stripe', '~> 1.31'
 
 gem 'puma'
 
+gem 'friendly_id', '~> 5.1.0'
+
 ruby "2.2.0"
 

@@ -2,7 +2,7 @@
 
 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 	<%= search_form_for @search do |f| %>
-		<%= f.text_field :title_or_description_cont, class: :"col-xs-12 col-sm-12 col-md-5 col-lg-5 home-search-form--input index-search-form--input", placeholder: "What (job title, keywords, company)" %>
+		<%= f.text_field :title_or_description_cont, class: :"col-xs-12 col-sm-12 col-md-5 col-lg-5 home-search-form--input index-search-form--input", placeholder: "What (job title, description)" %>
 		<%= f.text_field :city_or_state_or_zip_cont, class: :"col-xs-12 col-sm-12 col-md-5 col-lg-5 home-search-form--input index-search-form--input", placeholder: "Where (city, state, or zip code)" %>
 		<%= f.submit "Find Jobs", class: :"col-xs-12 col-sm-12 col-md-2 col-lg-2 home-search-form--search index-search-form--search", name: nil %>
 	<% end %>
