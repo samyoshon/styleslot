@@ -51,6 +51,8 @@ gem 'will_paginate', github: 'jonatack/will_paginate'
 
 gem 'devise', '~> 3.5', '>= 3.5.3'
 
+gem 'ransack'
+
 gem "paperclip", "~> 4.3"
 
 gem 'pry-rails'

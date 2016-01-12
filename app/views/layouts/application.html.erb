@@ -37,14 +37,7 @@
                         <%= link_to "Post A post", new_post_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
                     </li>
                     <li class="dropdown-toggle btn-navbar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <span>
-                            <% if current_user.name == nil || current_user.name == "" %>
-                                <%= "Edit Profile" %>
-                            <% else %>
-                                <%= "#{current_user.name}" %>
-                            <% end %>
-                            <i class="fa fa-caret-down"  id="navbar-edit"></i>
-                        </span>
+
                     </li>
                     <ul class="dropdown-menu">
                         <li>

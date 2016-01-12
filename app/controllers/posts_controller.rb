@@ -2,8 +2,13 @@ class PostsController < ApplicationController
 
 	# before_action :authenticate_user!, except: [:index, :show, :home]
 
+    def home
+        @search = Post.search(params[:q])
+    end
+
     def index
-        @posts = Post.all
+        @search = Post.search(params[:q])
+        @posts = @search.result
             # if params[:search]
             #     @posts = Post.search(params[:search]).order("created_at DESC")
             # else
@@ -34,8 +39,8 @@ class PostsController < ApplicationController
     end
 
     def new
-        @post = Post.new
-      	# @post = current_user.posts.build 
+        # @post = Post.new
+      	@post = current_user.posts.build 
     end
 
     def show
@@ -43,8 +48,8 @@ class PostsController < ApplicationController
     end
 
     def create
-        # @post = current_user.posts.build(post_params)
-        @post = Post.new(post_params)
+        @post = current_user.posts.build(post_params)
+        # @post = Post.new(post_params)
         @post.save
         redirect_to posts_path
         # charge_error = nil

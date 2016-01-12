@@ -9,10 +9,10 @@
 	<div class="home-search-form">
 		<div class="home-search-form--container">
 			<h1 class="home-search-form--header">Love fashion.<br>Work fashion.</h1>
-			<%= form_tag(posts_path, :method => "get", id: "search-form") do %>
-				<%= text_field_tag :q, params[:search], class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 home-search-form--input", placeholder: "What (job title, keywords, company)" %>
-				<%= text_field_tag :l, params[:search], class: :"home-search-form--input", placeholder: "Where (city, state, or zip code)" %>
-				<%= submit_tag "Find Jobs", class: :"home-search-form--search", name: nil %>
+			<%= search_form_for @search do |f| %>
+				<%= f.text_field :title_or_description_cont, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 home-search-form--input", placeholder: "What (job title, description)" %>
+				<%= f.text_field :city_or_state_cont, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 home-search-form--input", placeholder: "Where (city, state, zip code)" %>
+				<%= f.submit "Find Jobs", class: :"home-search-form--search", name: nil %>
 			<% end %>
 		</div>
 	</div>

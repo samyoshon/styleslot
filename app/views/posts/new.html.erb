@@ -1,7 +1,8 @@
-<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+<div class="new-post--container col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<%= form_for @post do |f| %>
-		<h1>NEW POST</h1>
+		<h1>New job post</h1>
+		<p>Find the best candidates who are passionate about fashion</p>
 
 		<%= f.text_field :title, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Job Title" %>
 
@@ -14,6 +15,11 @@
 		<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Qualifications" %>
 
 		<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Benefits" %>
+
+
+		<%= f.text_area :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "How To Apply" %>
+
+		<%= f.text_field :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Do you have a separate application link?" %>
 
 		<%= f.submit "Submit", class: :"col-xs-12 col-sm-12 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 home-search-form--search new-post--submit", placeholder: "State" %>
 	<% end %>
