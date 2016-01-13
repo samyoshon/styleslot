@@ -21,7 +21,28 @@
 
 		<%= f.text_area :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "How To Apply" %>
 
-		<%= f.text_field :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "If relevant, add separate application link here" %>
+		<%= f.url_field :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "If relevant, add application link here (http://www.example.com)" %>
+
+		<%= f.radio_button :description, "Design" %>
+		<%= f.label :description, "Design" %>
+
+		<%= f.radio_button :description, "Digital" %>
+		<%= f.label :description, "Digital" %>
+
+		<%= f.radio_button :description, "Marketing" %>
+		<%= f.label :description, "Marketing" %>
+
+		<%= f.radio_button :description, "Production" %>
+		<%= f.label :description, "Production" %>
+
+		<%= f.radio_button :description, "Sales" %>
+		<%= f.label :description, "Sales" %>
+
+		<%= f.radio_button :description, "Social Media" %>
+		<%= f.label :description, "Social Media" %>
+
+		<%= f.radio_button :description, "Warehouse" %>
+		<%= f.label :description, "Warehouse" %>
 
 		<%= f.submit "Submit", class: :"col-xs-12 col-sm-12 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 home-search-form--search new-post--submit", placeholder: "State" %>
 	<% end %>

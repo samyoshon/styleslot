@@ -121,11 +121,14 @@ table {
 
 .home-flash {
 	text-align: center;
-	position: fixed;
 	z-index: 100;
-	margin-top: -120px;
 	width: 100%;
 }
+
+.bg-banner {
+	margin-top: -20px;
+}
+
 
 .home-container {
 	margin-top: -120px;

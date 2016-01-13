@@ -95,10 +95,10 @@
     <div class="main-body">
         <div class="home-flash">
             <% if notice %>
-                <div class="bg-success"><%= notice %></div>
+                <div class="bg-banner bg-success"><%= notice %></div>
             <% end %>
             <% if alert %>
-                <div class="bg-danger"><%= alert %></div>
+                <div class="bg-banner bg-danger"><%= alert %></div>
             <% end %>
         </div>
         <%= yield %>
