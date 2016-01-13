@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
     def index
         @search = Post.search(params[:q])
-        @posts = @search.result.paginate(page: params[:page], per_page: 30).order("created_at DESC")
+        @posts = @search.result.paginate(page: params[:page], per_page: 3).where(["created_at > ?", 30.days.ago]).order("created_at DESC")
 
         @posts_uniq = ["Lorem", "Hello", "hello"]
         ###Find Countries That Have Job Posts - Used for filter option

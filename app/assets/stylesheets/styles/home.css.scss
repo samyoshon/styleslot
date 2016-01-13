@@ -147,12 +147,11 @@ table {
 	position: absolute;
 	top: 35%;
 	left: 50%;
-
-		h1{
-			color: $third-color;
-			font-size: 60px;
-			padding: 20px 0px;
-		}
+	h1{
+		color: $third-color;
+		font-size: 60px;
+		padding: 20px 0px;
+	}
 }
 
 .home-search-form--container {
@@ -171,7 +170,6 @@ table {
 	margin-bottom: 20px;
 	width: 100%;
 	outline: none;
-
 	&:focus {
 		border: 3px solid $second-color;
 	};
@@ -184,11 +182,10 @@ table {
 	padding: 10px 20px;
 	cursor: pointer;
 	outline: none;
-
-		&:hover {
-			background-color: $second-color;
-			color: $first-color;
-		}
+	&:hover {
+		background-color: $second-color;
+		color: $first-color;
+	}
 }
 
 .model-gif {
@@ -202,7 +199,6 @@ table {
 
 .model-gif--riri {
 	background-image: image-url('riri.png');
-
 	&:hover {
 		background-image: image-url('riri.gif');
 	};
@@ -210,17 +206,13 @@ table {
 
 .model-gif--cara {
 	background-image: image-url('cara.gif');
-
 	&:hover {
 		background-image: image-url('cara.gif');
 	};
-
-
 }
 
 .model-gif--heels {
 	background-image: image-url('heels.png');
-
 	&:hover {
 		background-image: image-url('heels.gif');
 	};
@@ -228,7 +220,6 @@ table {
 
 .model-gif--women {
 	background-image: image-url('women.gif');
-
 	&:hover {
 		background-image: image-url('women.gif');
 	};
@@ -236,7 +227,6 @@ table {
 
 .model-gif--kendall {
 	background-image: image-url('kendall.png');
-
 	&:hover {
 		background-image: image-url('kendall.gif');
 	};

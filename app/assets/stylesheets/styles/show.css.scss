@@ -22,17 +22,13 @@
 				color: $second-color;
 				cursor: pointer;
 			};
-		
 		};
-
-		
 	};
-
-	
 }
 
 .show-main--apply {
 	text-align: center;
+	margin-top: 10px;
 }
 
 .show-main--post {
@@ -46,3 +42,20 @@
 	padding: 0px 20px 20px 20px;
 	margin-right: 10px;
 }
+
+.apply-now-hidden {
+	display: none;
+}
+
+.apply-now-active {
+	display: initial;
+	background-color: $third-color;
+	color: $first-color;
+	border: 5px solid $second-color;
+
+		&:hover {
+			background-color: $third-color;
+			cursor: default;
+		};
+}
+
