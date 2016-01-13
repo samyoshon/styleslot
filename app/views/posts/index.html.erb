@@ -1,10 +1,9 @@
-<aside class="col-xs-12 col-sm-12 col-md-3 col-lg-3">I AM AN ASIDE</aside>
-
-<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
 	<%= search_form_for @search do |f| %>
-		<%= f.text_field :title_or_description_cont, class: :"col-xs-12 col-sm-12 col-md-5 col-lg-5 home-search-form--input index-search-form--input", placeholder: "What (job title, description)" %>
-		<%= f.text_field :city_or_state_or_zip_cont, class: :"col-xs-12 col-sm-12 col-md-5 col-lg-5 home-search-form--input index-search-form--input", placeholder: "Where (city, state, or zip code)" %>
-		<%= f.submit "Find Jobs", class: :"col-xs-12 col-sm-12 col-md-2 col-lg-2 home-search-form--search index-search-form--search", name: nil %>
+		<%= f.text_field :title_or_description_cont, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input", placeholder: "What (job title, description)" %>
+		<%= f.text_field :city_or_state_or_zip_cont, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input", placeholder: "Where (city, state, or zip code)" %>
+		<%= f.select(:description_cont, options_for_select(@posts_uniq), {include_blank: "All"}, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input index-search-form--select")%>
+		<%= f.submit "Find Jobs", class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--search index-search-form--search", name: nil %>
 	<% end %>
 
 	<div class="post-container col-xs-12 col-sm-12 col-md-12 col-lg-12">

@@ -133,6 +133,7 @@ table {
 .home-container {
 	margin-top: -120px;
 	position: relative;
+	overflow: hidden;
 }
 
 .gif-container {
@@ -182,6 +183,7 @@ table {
 	border: 2px solid $second-color; 
 	padding: 10px 20px;
 	cursor: pointer;
+	outline: none;
 
 		&:hover {
 			background-color: $second-color;
