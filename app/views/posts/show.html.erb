@@ -39,7 +39,7 @@
 		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12 apply-now-hidden" id="show-apply-now-div">
 			<h4>How to Apply:</h4>
 			<%= simple_format @post.description %>
-			<a href="http://www.google.com" target="blank"><%= simple_format @post.description %></a>
+			<%= link_to @post.city, @post.city, target: "blank" %>
 		</div>
 
 	</div>

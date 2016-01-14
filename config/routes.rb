@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  devise_for :companies
-  devise_for :users
+  devise_for :companies, :controllers => {:registrations => "companies/registrations", :sessions => "companies/sessions", :passwords => "companies/passwords"}
+  devise_for :users, :controllers => {:registrations => "users/registrations", :sessions => "users/sessions", :passwords => "users/passwords"}
 
   resources :posts
   
   root to: "posts#home"
-  
+
 end

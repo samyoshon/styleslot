@@ -84,6 +84,10 @@ table {
 	}
 }
 
+.navbar-header {
+	padding: 0px !important;
+}
+
 .navbar-right {
 	margin: 0px !important;
 }
@@ -96,11 +100,18 @@ table {
 
 #btn-words {
 	margin-right: 0px !important;
+	padding-top: 45px;
 }
 
 .nav-bar div {
 	float: inherit;
 	background-color: black;
+	padding: 0px;
+}
+
+.navbar-dropdown-menu {
+	background-color: $second-color !important;
+	border-radius: 0px !important;
 }
 
 #navbar-collapse-1 {
@@ -127,6 +138,7 @@ table {
 
 .bg-banner {
 	margin-top: -20px;
+	padding: 20px;
 }
 
 

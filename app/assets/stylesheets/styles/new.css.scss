@@ -1,14 +1,40 @@
+.bg-container {
+	background-size: cover;
+	background-position: center center;
+}
+
+.new-post-bg--container {
+	background-image: image-url('newpost-bg.jpg') !important;
+}
+
+.company-login-bg--container {
+	background-image: image-url('company-bg.jpg') !important;
+	height: 80vh;
+}
+
+.user-login-bg--container {
+	background-image: image-url('user-bg.jpg') !important;
+	background-position: top center;
+	height: 80vh;
+}
+
 .new-post--container {
 	padding: 20px;
 	padding-top: 0px;
 
 	h1 {
-		margin-top: 0px;
+		color: $second-color;
+	}
+
+	p {
+		color: $first-color;
 	}
 }
 
+
 .new-post--input {
 	background-color: $third-color;
+	opacity: 0.90;
 	padding: 10px;
 	border: 1px solid $first-color;
 	margin-top: 10px;
@@ -21,7 +47,7 @@
 
 .new-post--textarea {
 	height: 100px;
-
+	resize: none;
 }
 
 .new-post--submit {
