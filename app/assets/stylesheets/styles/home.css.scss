@@ -85,7 +85,7 @@ table {
 }
 
 .navbar-header {
-	padding: 0px !important;
+	padding: 15px 0px 0px 0px !important;
 }
 
 .navbar-right {
@@ -124,10 +124,6 @@ table {
 
 #navbar-hamburger {
 	margin-right: 15px;
-}
-
-.navbar-header{
-	padding-top: 15px !important;
 }
 
 .home-flash {
@@ -184,7 +180,7 @@ table {
 	outline: none;
 	&:focus {
 		border: 3px solid $second-color;
-	};
+	}
 }
 
 .home-search-form--search {
@@ -210,31 +206,24 @@ table {
 }
 
 .model-gif--riri {
-	background-image: image-url('riri.png');
-	&:hover {
+	background-image: image-url('riri.gif');
+/*	&:hover {
 		background-image: image-url('riri.gif');
-	};
+	};*/
 }
 
 .model-gif--cara {
-	background-image: image-url('cara.gif');
+	background-image: image-url('cara.png');
 	&:hover {
 		background-image: image-url('cara.gif');
 	};
 }
 
-.model-gif--heels {
-	background-image: image-url('heels.png');
-	&:hover {
-		background-image: image-url('heels.gif');
-	};
-}
-
 .model-gif--women {
 	background-image: image-url('women.gif');
-	&:hover {
+/*	&:hover {
 		background-image: image-url('women.gif');
-	};
+	};*/
 }
 
 .model-gif--kendall {
@@ -242,4 +231,39 @@ table {
 	&:hover {
 		background-image: image-url('kendall.gif');
 	};
+}
+
+/* #### FOOTER #### */
+
+footer {
+	background-color: $first-color;
+}
+
+.footer-container {
+  	text-align: center !important;
+  	padding: 15vh 0px;
+  	height: 50vh;
+}
+
+.footer-title {
+
+}
+
+.footer-social {
+	display: flex !important;
+  	justify-content: center !important;
+  	align-items: center !important;
+  	align-content: center !important;
+  	text-align: center !important;
+
+  	i {
+  		color: $third-color;
+  		font-size: 25px;
+  		padding: 0px 10px;
+  		margin-top: 20px;
+
+  		&:hover {
+  			color: $second-color;
+  		};
+  	}
 }
