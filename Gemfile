@@ -67,5 +67,7 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'instagram'
 
+gem 'httparty'
+
 ruby "2.2.0"
 

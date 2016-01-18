@@ -15,8 +15,10 @@
 		<% @photos.each do |instagram| %>
     		<%= image_tag instagram.images.standard_resolution.url, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3" %>
     	<% end %>
+
+    	<%= @instagram %>
 	</div>
-	
+
 	<div class="show-main--post col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h2><%= simple_format @post.title %></h2>
 		<p><i class="fa fa-map-marker"></i> <%= @post.city %>, <%= @post.state %></p>

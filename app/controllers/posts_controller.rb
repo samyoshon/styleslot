@@ -28,7 +28,10 @@ class PostsController < ApplicationController
 
     def show
       	@post = Post.find(params[:id])
-        @company = Post.find(params[:id]).company
+
+        @instagram_user = Post.find(params[:id]).company
+
+        @instagram = HTTParty.get("https://api.instagram.com/v1/users/search?q=samyoshon&access_token=12670140.d5cff46.6ce5a5be8f934e93937a29e8a62caf16")
 
         @photos = Instagram.user_recent_media("12670140", {:count => 4})
     end
