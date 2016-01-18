@@ -28,6 +28,9 @@ class PostsController < ApplicationController
 
     def show
       	@post = Post.find(params[:id])
+        @company = Post.find(params[:id]).company
+
+        @photos = Instagram.user_recent_media("12670140", {:count => 4})
     end
 
     def create
