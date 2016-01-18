@@ -10,19 +10,10 @@ class PostsController < ApplicationController
         @search = Post.search(params[:q])
         @posts = @search.result.paginate(page: params[:page], per_page: 5).where(["created_at > ?", 30.days.ago]).order("created_at DESC")
 
-        @posts_uniq = ["Lorem", "Hello", "hello"]
-        ###Find Countries That Have Job Posts - Used for filter option
-  	    # @posts_all = Post.where(["created_at > ?", 30.days.ago]).order("created_at DESC")
-
-       #  @countries = []
-       #  @posts_all.each do |post|
-       #      @countries << post.country_id
-       #  end
-       #  @countries_uniq = @countries.uniq.sort_by!{|e| e.downcase}
+        @posts_uniq = ["Hum", "Hello", "hello"]
     end
 
     def new
-        # @post = Post.new
       	@post = current_company.posts.build 
     end
 
@@ -38,7 +29,6 @@ class PostsController < ApplicationController
 
     def create
         @post = current_company.posts.build(post_params)
-        # @post = Post.new(post_params)
         @post.save
         redirect_to posts_path
         # charge_error = nil
@@ -91,8 +81,6 @@ class PostsController < ApplicationController
         # end
 
     end
-
-  ####### PRIVATE ######
 
   private 
 

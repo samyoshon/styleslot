@@ -1,13 +1,13 @@
 <div class="show-main col-xs-12 col-sm-12 col-md-8 col-lg-8">
 	<div class="show-main--company col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<div class="show-main--logo">LOGO</div>
+		<div class="show-main--logo"><%= image_tag @post.company.logo(:thumb) %></div>
 		<h1><%= simple_format @post.company.email %></h1>
-		<p><%= simple_format @post.description %></p>
+		<p><%= simple_format @post.company.description %></p>
 		<p class="show-main--social col-xs-12 col-sm-12 col-md-3 col-lg-3">
-			<a href="http://www.google.com" target="blank"><i class="fa fa-globe"></i></a> 
-			<a href="http://www.google.com" target="blank"><i class="fa fa-facebook-square"></i></a>  
-			<a href="http://www.google.com" target="blank"><i class="fa fa-instagram"></i></a>  
-			<a href="http://www.google.com" target="blank"><i class="fa fa-twitter-square"></i></a>  
+			<a href="#{@post.company.website}" target="blank"><i class="fa fa-globe"></i></a> 
+			<a href="#{@post.company.facebook}" target="blank"><i class="fa fa-facebook-square"></i></a>  
+			<a href="#{@post.company.instagram}" target="blank"><i class="fa fa-instagram"></i></a>  
+			<a href="#{@post.company.twitter}" target="blank"><i class="fa fa-twitter-square"></i></a>
 		</p>
 	</div>
 
@@ -28,27 +28,25 @@
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 			<p><%= simple_format @post.description %></p>
-			<p><%= simple_format @post.description %></p>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 			<h4>Qualifications</h4>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-			<p><%= simple_format @post.description %></p>
-			<p><%= simple_format @post.description %></p>
+			<p><%= simple_format @post.qualifications %></p>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 			<h4>Benefits</h4>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-			<p><%= simple_format @post.description %></p>
+			<p><%= simple_format @post.benefits %></p>
 		</div>
 		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12" id="show-apply-now-btn"><i class="fa fa-check-square-o"></i> Apply Now</div>
 
 		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12 apply-now-hidden" id="show-apply-now-div">
 			<h4>How to Apply:</h4>
-			<%= simple_format @post.description %>
-			<%= link_to @post.city, @post.city, target: "blank" %>
+			<%= simple_format @post.how_to %>
+			<%= link_to @post.how_to_link, target: "blank" %>
 		</div>
 	</div>
 </div>
@@ -60,15 +58,6 @@
 		<%= form_for @post do |f| %>
 			<%= f.label :title, "Job Title" %>
 			<%= f.text_field :title %>
-
-			<%= f.label :description, "Job Description" %>
-			<%= f.text_field :description %>
-
-			<%= f.label :city, "Job City" %>
-			<%= f.text_field :city %>
-
-			<%= f.label :state, "Job State" %>
-			<%= f.text_field :state %>
 
 			<%= f.submit "Submit" %>
 		<% end %>

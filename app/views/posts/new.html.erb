@@ -15,45 +15,16 @@
 
 			<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Description" %>
 
-			<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Qualifications" %>
+			<%= f.select :type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Human Resources", "Fit Model", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"], type: :option), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down" %>
 
-			<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Benefits" %>
+			<%= f.text_area :qualifications, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Qualifications" %>
 
-
-			<%= f.text_area :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "How To Apply" %>
-
-			<%= f.url_field :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "If relevant, add application link here (http://www.example.com)" %>
-
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<%= f.radio_button :description, "Design" %>
-			<%= f.label :description, "Design" %>
-
-			<%= f.radio_button :description, "Digital" %>
-			<%= f.label :description, "Digital" %>
-
-			<%= f.radio_button :description, "Logistics" %>
-			<%= f.label :description, "Logistics" %>	
-
-			<%= f.radio_button :description, "Marketing" %>
-			<%= f.label :description, "Marketing" %>		
-
-			<%= f.radio_button :description, "Merchandising" %>
-			<%= f.label :description, "Merchandising" %>
-
-			<%= f.radio_button :description, "Operations" %>
-			<%= f.label :description, "Operations" %>		
-
-			<%= f.radio_button :description, "Production" %>
-			<%= f.label :description, "Production" %>
-
-			<%= f.radio_button :description, "Sales" %>
-			<%= f.label :description, "Sales" %>
-
-			<%= f.radio_button :description, "Social Media" %>
-			<%= f.label :description, "Social Media" %>
+			<%= f.text_area :benefits, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Benefits" %>
 
 
-			</div>
+			<%= f.text_area :how_to, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "How To Apply" %>
+
+			<%= f.url_field :how_to_link, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "If relevant, add application link here (http://www.example.com)" %>
 
 			<%= f.submit "Submit", class: :"col-xs-12 col-sm-12 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 home-search-form--search new-post--submit", placeholder: "State" %>
 		<% end %>
