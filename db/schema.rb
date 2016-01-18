@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160118201817) do
+ActiveRecord::Schema.define(version: 20160118204141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 20160118201817) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string   "name"
+    t.text     "description"
+    t.string   "website"
+    t.string   "facebook"
+    t.string   "instagram"
+    t.string   "twitter"
   end
 
   add_index "companies", ["email"], name: "index_companies_on_email", unique: true, using: :btree
@@ -43,11 +49,16 @@ ActiveRecord::Schema.define(version: 20160118201817) do
     t.text     "description"
     t.string   "city"
     t.string   "state"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "company_id"
     t.string   "zip"
     t.string   "slug"
+    t.string   "type"
+    t.text     "qualifications"
+    t.text     "benefits"
+    t.text     "how_to"
+    t.text     "how_to_link"
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree

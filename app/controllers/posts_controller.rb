@@ -97,7 +97,7 @@ class PostsController < ApplicationController
   private 
 
   	def post_params
-  		params.require(:post).permit(:company_id, :title, :description, :city, :state, :zip)
+  		params.require(:post).permit(:company_id, :title, :description, :city, :state, :zip, :type, :qualifications, :benefits, :how_to, :how_to_link)
   	end
 
     def authenticate!
