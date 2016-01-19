@@ -15,7 +15,7 @@
 
 			<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Description" %>
 
-			<%= f.select :type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Human Resources", "Fit Model", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"], type: :option), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down" %>
+			<%= f.select :job_type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Human Resources", "Fit Model", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down" %>
 
 			<%= f.text_area :qualifications, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Qualifications" %>
 

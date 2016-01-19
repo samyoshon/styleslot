@@ -11,7 +11,7 @@
 		</p>
 	</div>
 
-	<div class="show-main--instagram col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="show-main--instagram">
 		<% @photos.each do |instagram| %>
     		<%= image_tag instagram.images.standard_resolution.url, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3" %>
     	<% end %>
@@ -21,7 +21,7 @@
 
 	<div class="show-main--post col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h2><%= simple_format @post.title %></h2>
-		<p><i class="fa fa-map-marker"></i> <%= @post.city %>, <%= @post.state %></p>
+		<p><i class="fa fa-map-marker"></i> <%= @post.city %>, <%= @post.state %> - <%= @post.zip %></p>
 		
 		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 			<h4>Job Description</h4>
@@ -46,7 +46,7 @@
 		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12 apply-now-hidden" id="show-apply-now-div">
 			<h4>How to Apply:</h4>
 			<%= simple_format @post.how_to %>
-			<%= link_to @post.how_to_link, target: "blank" %>
+			<%= link_to @post.how_to_link, @post.how_to_link, target: "blank" %>
 		</div>
 	</div>
 </div>

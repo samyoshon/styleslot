@@ -10,7 +10,7 @@ class PostsController < ApplicationController
         @search = Post.search(params[:q])
         @posts = @search.result.paginate(page: params[:page], per_page: 5).where(["created_at > ?", 30.days.ago]).order("created_at DESC")
 
-        @posts_uniq = ["Hum", "Hello", "hello"]
+        @posts_uniq = ["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Human Resources", "Fit Model", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]   
     end
 
     def new
@@ -85,7 +85,7 @@ class PostsController < ApplicationController
   private 
 
   	def post_params
-  		params.require(:post).permit(:company_id, :title, :description, :city, :state, :zip, :type, :qualifications, :benefits, :how_to, :how_to_link)
+  		params.require(:post).permit(:company_id, :title, :description, :city, :state, :zip, :job_type, :qualifications, :benefits, :how_to, :how_to_link)
   	end
 
     def authenticate!

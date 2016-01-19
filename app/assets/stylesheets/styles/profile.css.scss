@@ -1,0 +1,12 @@
+.company-edit--options {
+	cursor: pointer;
+}
+
+.company-edit--options-active {
+	background: $first-color;
+	color: $second-color;
+}
+
+.company-edit--hidden {
+	display: none;
+}
