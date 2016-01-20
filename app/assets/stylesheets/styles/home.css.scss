@@ -171,6 +171,10 @@ table {
 	margin: 0px !important;
 	padding: 0px !important;
 	margin-bottom: 20px !important;
+
+	@media (max-width: 991px) {
+		font-size: 40px !important;
+	}
 }
 
 .home-search-form--input {
