@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120172211) do
+ActiveRecord::Schema.define(version: 20160120210701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,8 +56,8 @@ ActiveRecord::Schema.define(version: 20160120172211) do
     t.text     "description"
     t.string   "city"
     t.string   "state"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "company_id"
     t.string   "zip"
     t.string   "slug"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20160120172211) do
     t.text     "how_to"
     t.text     "how_to_link"
     t.string   "job_type"
+    t.integer  "post_view_count"
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree

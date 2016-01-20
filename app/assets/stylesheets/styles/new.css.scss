@@ -42,6 +42,7 @@
 
 	&:focus {
 		border: 3px solid $second-color;
+		transition: border-color 0.4s ease;
 	};
 }
 
