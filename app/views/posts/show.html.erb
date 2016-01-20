@@ -68,9 +68,9 @@
 			<%= f.email_field :email, class: "new-post--input newsletter-form", placeholder: "Email" %>
 			<%= f.submit "Submit", class: "home-search-form--search new-post--submit" %>
 		<% end %>
-		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12" id="show-apply-now-btn-2"><i class="fa fa-check-square-o"></i> Apply Now</div>
+		<div class="home-search-form--search show-main--apply hidden-xs hidden-sm col-md-12 col-lg-12" id="show-apply-now-btn-2"><i class="fa fa-check-square-o"></i> Apply Now</div>
 
-		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12 apply-now-hidden" id="show-apply-now-div-2">
+		<div class="home-search-form--search show-main--apply hidden-xs hidden-sm col-md-12 col-lg-12 apply-now-hidden" id="show-apply-now-div-2">
 			<h4>How to Apply:</h4>
 			<%= simple_format @post.how_to %>
 			<%= link_to @post.how_to_link, @post.how_to_link, target: "blank" %>

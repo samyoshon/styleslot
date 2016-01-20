@@ -2,6 +2,7 @@
 	cursor: pointer;
 	text-align: center;
 	background-color: lighten($first-color, 93%);
+	font-weight: 900;
 }
 
 .company-edit--options-active {
@@ -32,4 +33,14 @@
 
 #sign-up-email-field {
 	margin-bottom: 15px;
+}
+
+.company-edit--logout {
+	background-color: #e50000;
+	color: $third-color;
+
+	 &:hover {
+		color: $third-color;
+		text-decoration: none;
+	 }
 }
