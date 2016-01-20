@@ -18,4 +18,12 @@ $(document).on('page:load',function(){
 		$('#show-apply-now-div').toggleClass("apply-now-active");
 		$('#show-apply-now-btn').hide();
 	});
+
+	$('.company-edit--options').click(function(){
+		$('.company-edit--options').removeClass("company-edit--options-active");
+		$(this).addClass("company-edit--options-active");
+		var editID = this.id;
+		$('.company-edit--section').hide();
+		$('#company-edit-' + editID).show();
+	});
 });

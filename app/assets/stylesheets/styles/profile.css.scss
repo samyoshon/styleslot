@@ -1,5 +1,11 @@
+.company-edit--container {
+	background: rgba(255, 255, 255, 0.8);
+	padding-bottom: 20px;
+}
+
 .company-edit--options {
 	cursor: pointer;
+	text-align: center;
 }
 
 .company-edit--options-active {
@@ -9,4 +15,8 @@
 
 .company-edit--hidden {
 	display: none;
+}
+
+#company-edit-bg--container {
+	height: 100%;
 }
