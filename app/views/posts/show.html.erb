@@ -60,16 +60,23 @@
 </div>
 
 <aside class="show-newsletter col-xs-12 col-sm-12 col-md-4 col-md-4">
-	<div class="show-newsletter--fixed">
+	<div class="show-newsletter--fixed col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h1>Stay updated.</h1>
 		<p>Stay updated with the best jobs in fashion.</p>
-		<%= form_for @post do |f| %>
-			<%= f.label :title, "Job Title" %>
-			<%= f.text_field :title %>
-
-			<%= f.submit "Submit" %>
+		<%= form_for Newsletter.new do |f| %>
+			<%= f.text_field :first_name, class: "new-post--input newsletter-form", placeholder: "First Name" %>
+			<%= f.email_field :email, class: "new-post--input newsletter-form", placeholder: "Email" %>
+			<%= f.submit "Submit", class: "home-search-form--search new-post--submit" %>
 		<% end %>
+		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12" id="show-apply-now-btn-2"><i class="fa fa-check-square-o"></i> Apply Now</div>
+
+		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12 apply-now-hidden" id="show-apply-now-div-2">
+			<h4>How to Apply:</h4>
+			<%= simple_format @post.how_to %>
+			<%= link_to @post.how_to_link, @post.how_to_link, target: "blank" %>
+		</div>
 	</div>
+
 </aside>
 
 <%= render "partials/footer" %>

@@ -35,12 +35,13 @@
 	border-top: 1px solid black;
 }
 
+.show-newsletter {
+	padding: 20px 0px;
+}
+
 .show-newsletter--fixed {
-	position: fixed !important;
 	background-color: lighten($second-color, 28%);
-	box-sizing: border-box;
-	padding: 0px 20px 20px 20px;
-	margin-right: 10px;
+	padding: 20px;
 }
 
 .apply-now-hidden {
@@ -59,3 +60,6 @@
 		};
 }
 
+.newsletter-form {
+	width: 100%;
+}
