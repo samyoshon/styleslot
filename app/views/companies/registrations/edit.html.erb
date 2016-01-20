@@ -33,7 +33,10 @@
                         <%= f.text_field :twitter, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Twitter Account" %>
                     </div>
                     <div class="field">
-                        <%= f.label :logo, "Company Logo", id: "company-edit--company-logo-label" %>
+                        <%= f.label :logo, "Company Logo", id: "company-edit--company-logo-label" %><br>
+                        <% if @company.logo.exists? %>
+                            <%= image_tag @company.logo.url(:thumb) %><br>
+                        <% end %>
                         <%= f.file_field :logo, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", id: "company-edit--company-logo-upload", placeholder: "Company Logo" %>
                     </div>
                     <div class="actions">
