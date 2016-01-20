@@ -9,9 +9,12 @@
 	<div class="post-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<% if @posts.present? %>
 			<% @posts.each do |post| %>
-				<div class="post-container--each">
+				<div class="post-container--logo col-xs-12 col-sm-12 col-md-2 col-lg-2">
+					<%= image_tag post.company.logo(:thumb), class: :'circle-image' %>
+				</div>
+				<div class="post-container--each col-xs-12 col-sm-12 col-md-10 col-lg-10">
 					<h1><%= link_to post.title, post_path(post), target: "_blank" %></h1>
-					<h2><%= post.company.email %> - <i class="fa fa-map-marker"></i> <%= post.city %>, <%= post.state %> - <%= post.zip %></h2>
+					<h2><%= post.company.name %> - <i class="fa fa-map-marker"></i> <%= post.city %>, <%= post.state %> - <%= post.zip %></h2>
 					<p><%= post.description %></p>
 				</div>
 			<% end %>

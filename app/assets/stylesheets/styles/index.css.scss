@@ -37,9 +37,15 @@
 .post-container {
 	padding: 0px !important;
 }
+
+.post-container--logo {
+	padding: 5px 0px !important;
+}
 	
 .post-container--each {
-	padding: 10px 0px ;
+	height: 75px;
+	padding: 5px 0px !important;
+	box-sizing: content-box;
 
 		h1 {
 			margin: 0px;

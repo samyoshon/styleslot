@@ -1,13 +1,13 @@
 <div class="show-main col-xs-12 col-sm-12 col-md-8 col-lg-8">
 	<div class="show-main--company col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<div class="show-main--logo"><%= image_tag @post.company.logo(:thumb) %></div>
-		<h1><%= simple_format @post.company.email %></h1>
+		<div class="show-main--logo"><%= image_tag @post.company.logo(:small) %></div>
+		<h1><%= simple_format @post.company.name %></h1>
 		<p><%= simple_format @post.company.description %></p>
 		<p class="show-main--social col-xs-12 col-sm-12 col-md-3 col-lg-3">
-			<a href="#{@post.company.website}" target="blank"><i class="fa fa-globe"></i></a> 
-			<a href="#{@post.company.facebook}" target="blank"><i class="fa fa-facebook-square"></i></a>  
-			<a href="#{@post.company.instagram}" target="blank"><i class="fa fa-instagram"></i></a>  
-			<a href="#{@post.company.twitter}" target="blank"><i class="fa fa-twitter-square"></i></a>
+			<a href="<%= @post.company.website %>" target="blank"><i class="fa fa-globe"></i></a> 
+			<a href="<%= @post.company.facebook %>" target="blank"><i class="fa fa-facebook-square"></i></a>  
+			<a href="https://www.instagram.com/<%= @post.company.instagram %>" target="blank"><i class="fa fa-instagram"></i></a>  
+			<a href="https://www.twitter.com/<%= @post.company.twitter %>" target="blank"><i class="fa fa-twitter-square"></i></a>
 		</p>
 	</div>
 

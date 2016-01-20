@@ -11,13 +11,6 @@
 </head>
 
 <body>
-<!--     <nav class="nav-bar">
-        <div>
-   		   <li><%= link_to "Sign In", edit_company_registration_path %></li>
-           <li><%= link_to "Employers", new_company_session_path %></li>
-        </div>
-   </nav>
- -->
    <nav class="navbar navbar-inverse nav-bar" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle btn-navbar" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false" aria-controls="navbar" id="navbar-hamburger">
@@ -40,7 +33,7 @@
                         <% if current_company.email == nil || current_company.email == "" %>
                             <a id="btn-words"><%= "Edit Profile" %></a>
                         <% else %>
-                            <a id="btn-words"><%= "#{current_company.email}" %>  <i class="fa fa-caret-down"  id="navbar-edit"></i></a>
+                            <a id="btn-words"><%= "#{current_company.name}" %>  <i class="fa fa-caret-down"  id="navbar-edit"></i></a>
                         <% end %>
                     </li>
                     <ul class="dropdown-menu navbar-dropdown-menu">
@@ -74,7 +67,6 @@
                     </ul>
                 <% else %>
                     <li>
-                        <!-- posts_path -->
                         <%= link_to "Search Jobs", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
                     </li>
                     <li>
