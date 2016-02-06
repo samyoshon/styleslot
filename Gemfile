@@ -69,5 +69,7 @@ gem 'instagram'
 
 gem 'httparty'
 
+gem 'aws-sdk-v1'
+
 ruby "2.2.0"
 
