@@ -16,7 +16,7 @@
 
                 <div class="company-edit--section company-edit--profile" id="company-edit-1">
                     <div class="field">
-                        <%= f.text_field :name, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "Company Name" %>
+                        <%= f.text_field :name, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "Company Name", required: true %>
                     </div>
                     <div class="field">
                         <%= f.text_area :description, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Company Description" %>
@@ -25,7 +25,7 @@
                         <%= f.url_field :website, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Website" %>
                     </div>
                     <div class="field">
-                        <%= f.text_field :facebook, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Facebook Page" %>
+                        <%= f.url_field :facebook, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Facebook Page" %>
                     </div>
                     <div class="field">
                         <%= f.text_field :instagram, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Instagram Account" %>
@@ -34,7 +34,7 @@
                         <%= f.text_field :twitter, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Twitter Account" %>
                     </div>
                     <div class="field">
-                        <%= f.label :logo, "Company Logo (150x150)", id: "company-edit--company-logo-label" %><br>
+                        <%= f.label :logo, "Company Logo (150x150)", id: "company-edit--company-logo-label", required: true %><br>
                         <% if @company.logo.exists? %>
                             <%= image_tag @company.logo.url(:thumb) %><br>
                         <% end %>

@@ -5,24 +5,24 @@
 			<h1>New job post</h1>
 			<p>Find candidates who are passionate about fashion</p>
 
-			<%= f.text_field :title, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Job Title", autofocus: true%>
+			<%= f.text_field :title, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Job Title", autofocus: true, required: true %>
 
-			<%= f.text_field :city, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "City" %>
+			<%= f.text_field :city, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "City", required: true %>
 
-			<%= f.text_field :state, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "State" %>
+			<%= f.text_field :state, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "State", required: true %>
 
-			<%= f.text_field :zip, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "Zip Code" %>
+			<%= f.text_field :zip, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "Zip Code", required: true %>
 
-			<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Description" %>
+			<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Description", required: true %>
 
-			<%= f.select :job_type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Human Resources", "Fit Model", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down" %>
+			<%= f.select :job_type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Human Resources", "Fit Model", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down", required: true %>
 
-			<%= f.text_area :qualifications, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Qualifications" %>
+			<%= f.text_area :qualifications, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Qualifications", required: true %>
 
-			<%= f.text_area :benefits, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Benefits" %>
+			<%= f.text_area :benefits, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Benefits", required: true %>
 
 
-			<%= f.text_area :how_to, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "How To Apply" %>
+			<%= f.text_area :how_to, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "How To Apply", required: true %>
 
 			<%= f.url_field :how_to_link, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "If relevant, add application link here (http://www.example.com)" %>
 
