@@ -1,13 +1,13 @@
 $(document).ready(function(){
 	$('#show-apply-now-btn').click(function(){
+		var userId = $(this).
 		$('#show-apply-now-div').toggleClass("apply-now-active");
-		$('#show-apply-now-btn').hide();
+		$(this).hide();
 	});
 
 	$('#show-apply-now-btn-2').click(function(){
 		$('#show-apply-now-div-2').toggleClass("apply-now-active");
-		$('#show-apply-now-btn-2').hide();
-		console.log('hello');
+		$(this).hide();
 	});
 
 	$('.company-edit--options').click(function(){
@@ -20,14 +20,19 @@ $(document).ready(function(){
 
 	$('.post-view-count').click(function(){
 		console.log(this.id);
-	})
+	});
 });
 
 //Added 'Page:Load' because Turbolinks screws up JS when using link_to
 $(document).on('page:load',function(){
 	$('#show-apply-now-btn').click(function(){
 		$('#show-apply-now-div').toggleClass("apply-now-active");
-		$('#show-apply-now-btn').hide();
+		$(this).hide();
+	});
+
+	$('#show-apply-now-btn-2').click(function(){
+		$('#show-apply-now-div-2').toggleClass("apply-now-active");
+		$(this).hide();
 	});
 
 	$('.company-edit--options').click(function(){
