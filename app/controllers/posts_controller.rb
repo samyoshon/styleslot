@@ -20,6 +20,10 @@ class PostsController < ApplicationController
     def show
       	@post = Post.find(params[:id])
 
+        if params[:like]
+            @post.post_view_count=@post.post_view_count+1
+        end
+
         Post.increment_counter(:post_view_count, @post.id)
 
         @instagram_user = Post.find(params[:id]).company
@@ -81,6 +85,11 @@ class PostsController < ApplicationController
         #     flash[:alert] = 'One or more errors in your order'
         #     render :new
         # end
+
+    end
+
+    def update
+        @post=Post.find(params[:id])
 
     end
 

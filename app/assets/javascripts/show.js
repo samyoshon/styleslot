@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	$('#show-apply-now-btn').click(function(){
-		var userId = $(this).
 		$('#show-apply-now-div').toggleClass("apply-now-active");
 		$(this).hide();
 	});

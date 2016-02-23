@@ -47,13 +47,16 @@
 		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 			<p><%= simple_format @post.benefits %></p>
 		</div>
+
 		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12" id="show-apply-now-btn"><i class="fa fa-check-square-o"></i> Apply Now</div>
 
-		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12 apply-now-hidden" id="show-apply-now-div user-<%= @post.company.id %>-post-<%= @post.id %>">
+		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12 apply-now-hidden" id="show-apply-now-div">
 			<h4>How to Apply:</h4>
 			<%= simple_format @post.how_to %>
 			<%= link_to @post.how_to_link, @post.how_to_link, target: "blank" %>
 		</div>
+
+
 	</div>
 </div>
 

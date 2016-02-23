@@ -212,24 +212,24 @@ table {
 }
 
 .model-gif--riri {
-	background-image: image-url('riri.gif');
-/*	&:hover {
-		background-image: image-url('riri.gif');
-	};*/
-}
-
-.model-gif--cara {
-	background-image: image-url('cara.png');
+	background-image: image-url('riri.png');
 	&:hover {
-		background-image: image-url('cara.gif');
+		background-image: image-url('riri.gif');
 	};
 }
 
-.model-gif--women {
-	background-image: image-url('women.gif');
+.model-gif--cara {
+	background-image: image-url('cara.gif');
 /*	&:hover {
-		background-image: image-url('women.gif');
+		background-image: image-url('cara.gif');
 	};*/
+}
+
+.model-gif--women {
+	background-image: image-url('women.png');
+	&:hover {
+		background-image: image-url('women.gif');
+	};
 }
 
 .model-gif--kendall {
@@ -249,7 +249,6 @@ footer {
   	text-align: center !important;
   	padding: 15vh 0px;
   	height: 50vh;
-  	margin-top: 20px;
 }
 
 .footer-title {
