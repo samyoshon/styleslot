@@ -26,6 +26,47 @@
 
 			<%= f.url_field :how_to_link, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "(Optional) Add application link here - http://www.example.com" %>
 
+			<!-- Notifies users of remaining free posts -->
+			<% if @posts_count < 3 %>
+				<div>
+					<h3 class="new-post--free-post-counter">Free Posts Remaining: <%= @posts_count - 3 %></h3>
+				</div>
+			<% end %>
+
+			<!-- If free posts have run out, then Stripe Payment Forms -->
+			<% if @posts_count > 3 %>
+				<div class="new-post--stripe-container">
+					<%= form_tag create_post_path, :method => 'POST', id:"payment-form" do %>
+					 	<form action="" method="POST" id="payment-form">
+						<span class="payment-errors"></span>
+
+						<div class="form-row">
+					    	<label>
+					    		<span>Card Number</span>
+					    		<input type="text" size="20" data-stripe="number" class="new-post--input" placeholder="1234 1234 1234 1234" maxlength="20"/>
+					    	</label>
+						
+						    <label>
+						    	<span>CVC</span>
+						    	<input type="text" size="4" data-stripe="cvc" class="new-post--input" placeholder="123"  maxlength="3"/>
+						    </label>
+						</div>
+
+						<div class="form-row form-inline">
+						    <label>
+						    	<span>Expiration (MM/YYYY)</span>
+						    	<br>
+						      	<input type="text" size="2" data-stripe="exp-month" class="new-post--input" placeholder="01" maxlength="2"/>
+						    	<span> / </span>
+						    	<input type="text" size="4" data-stripe="exp-year" class="new-post--input" placeholder="2016" maxlength="4"/>
+						    </label>
+						</div>
+
+						</form>
+					<% end %>
+				</div>
+			<% end %>
+
 			<%= f.submit "Submit", class: :"col-xs-12 col-sm-12 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 home-search-form--search new-post--submit", placeholder: "State" %>
 		<% end %>
 		</div>

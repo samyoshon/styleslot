@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   
   root to: "posts#home"
 
+  post '/posts', to: 'posts#create', as: 'create_post'
 end
