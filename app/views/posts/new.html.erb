@@ -15,7 +15,7 @@
 
 			<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Description", required: true %>
 
-			<%= f.select :job_type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Human Resources", "Fit Model", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down", required: true %>
+			<%= f.select :job_type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down", required: true %>
 
 			<%= f.text_area :qualifications, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Qualifications", required: true %>
 
@@ -24,7 +24,7 @@
 
 			<%= f.text_area :how_to, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "How To Apply", required: true %>
 
-			<%= f.url_field :how_to_link, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "If relevant, add application link here (http://www.example.com)" %>
+			<%= f.url_field :how_to_link, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "(Optional) Add application link here - http://www.example.com" %>
 
 			<%= f.submit "Submit", class: :"col-xs-12 col-sm-12 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 home-search-form--search new-post--submit", placeholder: "State" %>
 		<% end %>

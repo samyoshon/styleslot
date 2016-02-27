@@ -1,4 +1,4 @@
-<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+<div class="main-container col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
 	<%= search_form_for @search do |f| %>
 		<%= f.text_field :title_or_description_cont, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input", placeholder: "What (job title, description)" %>
 		<%= f.text_field :city_or_state_or_zip_cont, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input", placeholder: "Where (city, state, or zip code)" %>
