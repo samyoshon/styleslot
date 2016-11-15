@@ -7,9 +7,11 @@
 
 			<%= f.text_field :title, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Job Title", autofocus: true, required: true %>
 
-			<%= f.text_field :city, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "City", required: true %>
+			<%= f.text_field :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "City", required: true %>
 
-			<%= f.text_field :state, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "State", required: true %>
+			<%= f.country_select(:state, {prompt: "Country"}, {class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select new-post--country"}, label: false) %>
+
+			<!--<%= f.text_field :state, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input index-search-form--select", placeholder: "State", required: true %>-->
 
 			<%= f.text_field :zip, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "Zip Code", required: true %>
 
@@ -21,17 +23,16 @@
 
 			<%= f.text_area :benefits, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Benefits", required: true %>
 
-
 			<%= f.text_area :how_to, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "How To Apply", required: true %>
 
-			<%= f.url_field :how_to_link, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "(Optional) Add application link here - http://www.example.com" %>
+			<%= f.url_field :how_to_link, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "(Optional) Application link - http://www.jetsetteach.com" %>
 
 			<!-- IF free posts have run out, then Stripe Payment Forms ELSE -->
-<!-- 			<% if @posts_count < 3 %>
+			<!--<% if @posts_count < 3 %>
 				<div>
 					<h3 class="new-post--free-post-counter">Free Posts Remaining: <%= @posts_count - 3 %></h3>
 				</div>
-			<% else %> -->
+			<% else %>
 				<div>HELLO</div>
 				<div class="new-post--stripe-container col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input">
 					<%= form_tag create_post_path, :method => 'POST', id:"payment-form" do %>
@@ -63,8 +64,8 @@
 						</form>
 					<% end %>
 				</div>
-			<!-- <% end %> -->
-			<%= f.submit "Submit", class: :"col-xs-12 col-sm-12 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 home-search-form--search new-post--submit", placeholder: "State" %>
+			<% end %> -->
+			<%= f.submit "Submit", class: :"col-xs-12 col-sm-12 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 home-search-form--search new-post--submit"%>
 		<% end %>
 
 		</div>
