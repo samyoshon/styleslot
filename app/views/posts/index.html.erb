@@ -2,7 +2,7 @@
 	<%= search_form_for @search do |f| %>
 		<%= f.text_field :title_or_description_cont, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input", placeholder: "Keywords (job title, description)" %>
 		<%= f.text_field :city_or_state_or_zip_cont, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input", placeholder: "Where (city, state, or zip code)" %>
-		<%= f.select(:job_type_cont, options_for_select(@posts_uniq), {include_blank: "All"}, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input index-search-form--select", id: :"select-drop-down")%>
+		<%= f.select(:state_cont, options_for_select(@countries_uniq), {include_blank: "All"}, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input index-search-form--select", id: :"select-drop-down")%>
 		<%= f.submit "Find Jobs", class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--search index-search-form--search", name: nil %>
 	<% end %>
 
