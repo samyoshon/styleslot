@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :newsletters
   
-  root to: "posts#home"
+  root to: "posts#index"
 
   post '/posts', to: 'posts#create', as: 'create_post'
 end

@@ -39,10 +39,10 @@ class PostsController < ApplicationController
         @post = current_company.posts.build(post_params)
 
         # comment this part out when adding stripe (start)
-        if current_company.posts.all.length < 3
-            @post.save
-            redirect_to posts_path
-        else
+        # if current_company.posts.all.length < 3
+        #     @post.save
+        #     redirect_to posts_path
+        # else
         # comment this part out when adding stripe (end)
 
                 charge_error = nil
@@ -95,7 +95,7 @@ class PostsController < ApplicationController
                 end
             end
 
-    end
+    # end
 
     def update
         @post=Post.find(params[:id])
