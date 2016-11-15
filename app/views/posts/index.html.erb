@@ -2,7 +2,7 @@
 	<%= search_form_for @search do |f| %>
 		<%= f.text_field :title_or_description_cont, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input", placeholder: "Keywords (job title, description)" %>
 		<%= f.text_field :city_or_state_or_zip_cont, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input", placeholder: "Where (city, state, or zip code)" %>
-		<%= f.select(:state_cont, options_for_select(@countries_uniq), {include_blank: "All"}, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input index-search-form--select", id: :"select-drop-down")%>
+		<%= f.select(:state_cont, options_for_select(@countries_uniq), {include_blank: "All", selected: :state}, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--input index-search-form--input index-search-form--select", id: :"select-drop-down")%>
 		<%= f.submit "Find Jobs", class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3 home-search-form--search index-search-form--search", name: nil %>
 	<% end %>
 
@@ -10,7 +10,9 @@
 		<% if @posts.present? %>
 			<% @posts.each do |post| %>
 				<div class="post-container--logo col-xs-12 col-sm-12 col-md-2 col-lg-2">
-					<%= image_tag post.company.logo(:thumb), class: :'circle-image' %>
+					<% if post.company.logo.present? %>
+						<%= image_tag post.company.logo(:thumb), class: :'circle-image' %>
+					<% end %>
 				</div>
 				<div class="post-container--each col-xs-12 col-sm-12 col-md-10 col-lg-10">
 					<h1><%= link_to post.title, post_path(post), target: "_blank", class: :"post-view-count", id: :"#{post.id}" %></h1>

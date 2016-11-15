@@ -71,7 +71,7 @@ gem 'httparty'
 
 gem 'aws-sdk-v1'
 
-gem 'country_select', github: 'stefanpenner/country_select'
+gem 'country_select', git: 'https://github.com/alibabajan/country_select.git'
 
 ruby "2.2.0"
 
