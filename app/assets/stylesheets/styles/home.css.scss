@@ -58,6 +58,12 @@ h2, p {
 
 /* NAV BAR */ 
 
+.navbar {
+	border-bottom: 1px solid $first-color !important;
+	box-shadow: 0px 1px 3px $first-color;
+	font-family: $first-font;
+}
+
 /*.nav-bar {
 	background-image: image-url('navbar.png') !important;
 	background-size: cover !important;
