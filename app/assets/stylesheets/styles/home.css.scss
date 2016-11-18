@@ -1,6 +1,8 @@
 $first-color: #F6F6F6;
 $second-color: #145ba8;
 $third-color: #FFF;
+$first-font: 'Montserrat', sans-serif;
+$second-font: 'Roboto', sans-serif;
 
 /* CSS RESET */
 
@@ -46,6 +48,12 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+h1, h4 {
+	font-family: $first-font !important;
+}
+h2, p {
+	font-family: $second-font;
 }
 
 /* NAV BAR */ 
