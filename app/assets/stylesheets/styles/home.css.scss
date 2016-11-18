@@ -1,6 +1,6 @@
-$first-color: #000000;
-$second-color: #D1A162;
-$third-color: #FFFFFF;
+$first-color: #F6F6F6;
+$second-color: #145ba8;
+$third-color: #FFF;
 
 /* CSS RESET */
 
@@ -50,7 +50,7 @@ table {
 
 /* NAV BAR */ 
 
-.nav-bar {
+/*.nav-bar {
 	background-image: image-url('navbar.png') !important;
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
@@ -124,7 +124,7 @@ table {
 
 #navbar-hamburger {
 	margin-right: 15px;
-}
+} */
 
 .home-flash {
 	text-align: center;
@@ -202,7 +202,7 @@ table {
 	}
 }
 
-.model-gif {
+/*.model-gif {
 	background-size: cover;
 	background-position: center bottom;
 	background-repeat: no-repeat;
@@ -220,9 +220,9 @@ table {
 
 .model-gif--cara {
 	background-image: image-url('cara.gif');
-/*	&:hover {
+	&:hover {
 		background-image: image-url('cara.gif');
-	};*/
+	
 }
 
 .model-gif--women {
@@ -237,7 +237,7 @@ table {
 	&:hover {
 		background-image: image-url('kendall.gif');
 	};
-}
+} */
 
 /* #### FOOTER #### */
 

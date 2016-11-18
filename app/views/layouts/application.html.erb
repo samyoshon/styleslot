@@ -47,11 +47,11 @@
                     <li>
                         <% if current_company.name == nil || current_company.name == "" %>
                             <%= link_to edit_company_registration_path, :method => :get, class: :"btn-navbar", id: :"btn-words" do %>
-                                Edit Profile <i class="fa fa-cog"></i>
+                                Edit Profile</i>
                             <% end %>
                         <% else %>
-                            <%= link_to edit_company_registration_path, :method => :get, class: :"btn-navbar", id: :"btn-words" do %>
-                                <%= current_company.name %> <i class="fa fa-cog"></i>
+                            <%= link_to edit_company_registration_path, :method => :get, class: :"btn-navbar", id: :"btn-words navbar-company-name" do %>
+                                <%= current_company.name %></i>
                             <% end %>
                         <% end %>
                     </li>
