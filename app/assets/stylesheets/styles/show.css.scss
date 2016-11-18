@@ -2,24 +2,25 @@
 	padding-bottom: 10px;
 }
 
+.show-main--company {
+	text-align: center;
+}
+
 .show-main--logo {
 	text-align: center;
 }
 
 .show-main--social {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-
 	a {
-		width: 25%;
+		padding-left: 5px;
+		padding-right: 5px;
 
 		i {
 		font-size: 25px;
-		color: $first-color;
+		color: $second-color;
 
 			&:hover {
-				color: $second-color;
+				color: $first-color;
 				cursor: pointer;
 			};
 		};
@@ -32,17 +33,17 @@
 }
 
 .show-main--post {
-	border-top: 1px solid black;
+
 }
 
-.show-newsletter {
+/*.show-newsletter {
 	padding: 20px 0px;
-}
+}*/
 
-.show-newsletter--fixed {
+/*.show-newsletter--fixed {
 	background-color: lighten($second-color, 28%);
 	padding: 20px;
-}
+}*/
 
 .apply-now-hidden {
 	display: none;
@@ -62,4 +63,16 @@
 
 .newsletter-form {
 	width: 100%;
+}
+
+.show-side--icon-wrapper {
+	padding-bottom: 10px;
+}
+
+.show-side--icon {
+	padding-right: 10px;
+}
+
+.show-side--icon i {
+	width: 10px;
 }
