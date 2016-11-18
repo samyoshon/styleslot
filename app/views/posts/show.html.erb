@@ -2,7 +2,7 @@
 	<div class="show-main--company col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="show-main--logo"><%= image_tag @post.company.logo(:small) %></div>
 		<h1><%= simple_format @post.company.name %></h1>
-		<p><%= simple_format @post.company.description %></p>
+		<div class="show-main--description"><%= simple_format @post.company.description %></div>
 		<div class="show-main--social col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<% if @post.company.website.present? %>
 				<a href="<%= @post.company.website %>" target="blank"><i class="fa fa-globe"></i></a>
@@ -24,12 +24,14 @@
     		<%= image_tag instagram.images.standard_resolution.url, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3" %>
     	<% end %>
 	</div> -->
+
 	<div class="show-main--post col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<h2><%= simple_format @post.title %></h2>
-		<p><i class="fa fa-map-marker"></i> <%= @post.city %>, <%= @post.state %> - <%= @post.zip %></p>
-		
+		<div class="show-main--title col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h2><%= simple_format @post.title %></h2>
+			<p><i class="fa fa-map-marker"></i> <%= @post.city %>, <%= @post.state %></p>
+		</div>
 		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-8 col-lg-8">
-			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			<div class="show-main--post-description-title col-xs-12 col-sm-12 col-md-3 col-lg-3">
 				<h4>Job Description</h4>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
@@ -62,7 +64,7 @@
 		</div>
 
 		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-8 col-lg-8">		
-			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			<div class="show-main--post-description-title col-xs-12 col-sm-12 col-md-3 col-lg-3">
 				<h4>Qualifications</h4>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
@@ -89,7 +91,7 @@
 		</div>
 
 		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-8 col-lg-8">
-			<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+			<div class="show-main--post-description-title col-xs-12 col-sm-12 col-md-3 col-lg-3">
 				<h4>Benefits</h4>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
@@ -115,9 +117,9 @@
 			</div>
 		</div>
 
-		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12" id="show-apply-now-btn"><i class="fa fa-check-square-o"></i> Apply Now</div>
+		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-8 col-lg-8" id="show-apply-now-btn"><i class="fa fa-check-square-o"></i> Apply Now</div>
 
-		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-12 col-lg-12 apply-now-hidden" id="show-apply-now-div">
+		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-8 col-lg-8 apply-now-hidden" id="show-apply-now-div">
 			<h4>How to Apply:</h4>
 			<%= simple_format @post.how_to %>
 			<%= link_to @post.how_to_link, @post.how_to_link, target: "blank" %>
