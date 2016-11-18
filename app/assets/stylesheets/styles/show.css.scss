@@ -39,6 +39,12 @@
 	margin-top: 10px;
 }
 
+.show-main--post {
+	float: none !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+}
+
 .show-main--post-description {
 	margin: 0;
 	text-align: justify;
@@ -48,6 +54,10 @@
 	padding-left: 0 !important;
 }
 
+.show-main--post-description-text {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
 /*.show-newsletter {
 	padding: 20px 0px;
 }
@@ -81,14 +91,21 @@
 .apply-now-active {
 	display: initial;
 	background-color: $third-color;
-	color: $first-color;
+	color: #000;
 	border: 5px solid $second-color;
 
 		&:hover {
 			background-color: $third-color;
+			color: #000;
 			cursor: default;
 		};
 }
 
+/*MOBILE VIEW*/
 
-
+@media screen and (max-width: 991px) {
+  	.show-main, .show-main--company, .show-main--post-title, .show-main--post-description {
+	    padding-left: 0 !important;
+	    padding-right: 0 !important;
+	}
+}
