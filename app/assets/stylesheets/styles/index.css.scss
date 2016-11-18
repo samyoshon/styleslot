@@ -1,7 +1,7 @@
-.main-body {
+/*.main-body {
 	position: relative !important;
 	padding-top: 120px;
-}
+}*/
 
 .main-container {
 	padding-bottom: 10px;
@@ -42,14 +42,20 @@
 	padding: 0px !important;
 }
 
+.post-container--wrapper:hover  {
+	background: $first-color;
+}
+
+.post-container--logo, .post-container--each {
+	padding: 15px 0px !important;
+}
+
 .post-container--logo {
-	padding: 5px 0px !important;
 	text-align: center;
 }
 	
 .post-container--each {
 	height: 75px;
-	padding: 5px 0px !important;
 	box-sizing: content-box;
 
 		h1 {

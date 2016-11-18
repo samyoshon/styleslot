@@ -9,15 +9,15 @@
 
 			<%= f.text_field :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "City", required: true %>
 
-			<%= f.country_select(:state, {prompt: "Country"}, {class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select new-post--country"}, label: false) %>
+			<%= f.country_select(:state, {prompt: "Country"}, {class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
 
-			<!--<%= f.text_field :state, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input index-search-form--select", placeholder: "State", required: true %>-->
+			<!--<%= f.text_field :state, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input index-search-form--select", placeholder: "State", required: true %> -->
 
-			<%= f.text_field :zip, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "Zip Code", required: true %>
+			<!--<%= f.text_field :zip, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "Zip Code", required: true %> -->
 
 			<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Description", required: true %>
 
-			<%= f.select :job_type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down", required: true %>
+			<!-- <%= f.select :job_type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down", required: true %> -->
 
 			<%= f.text_area :qualifications, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Qualifications", required: true %>
 
