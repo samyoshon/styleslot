@@ -64,6 +64,10 @@ h2, p {
 	font-family: $first-font;
 }
 
+.navbar .navbar-toggle .icon-bar {
+	background-color: #dadada !important;
+}
+
 
 @media (min-width: 991px) {
 	.navbar li {

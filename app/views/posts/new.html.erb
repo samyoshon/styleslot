@@ -1,5 +1,5 @@
 <div class="new-post-bg--container bg-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	<div class="new-post--container col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+	<div class="new-post--container col-xs-12 col-sm-12 col-md-12 col-md-offset-1 col-lg-10 col-lg-offset-1">
 		<%= form_for @post do |f| %>
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h1>New job post</h1>
@@ -30,7 +30,7 @@
 
 			<!-- IF free posts have run out, then Stripe Payment Forms ELSE -->
 			<div class="new-post--payment-container col-xs-12 col-sm-12 col-md-12">
-				<h1 class="new-post--payment-header">Payment Options</h1>
+				<h1>Payment Options</h1>
 				<p>Find candidates who are passionate about fashion</p>
 				<% if @posts_count < 3 %>
 					<div>
@@ -44,20 +44,20 @@
 
 							<div class="form-row">
 						    	<label>
-						    		<span>Card Number: </span>
+						    		<span>Card Number:  </span>
 						    		<input type="text" size="20" data-stripe="number" class="new-post--input" placeholder="1234 1234 1234 1234" maxlength="20"/>
 						    	</label>
 						    </div>
 							<div class="form-row">
 							    <label>
-							    	<span>CVC: </span>
+							    	<span>CVC:  </span>
 							    	<input type="text" size="4" data-stripe="cvc" class="new-post--input" placeholder="123"  maxlength="3"/>
 							    </label>
 							</div>
 
 							<div class="form-row form-inline">
 							    <label>
-							    	<span>Expiration: </span>
+							    	<span>Expiration:  </span>
 							      	<input type="text" size="2" data-stripe="exp-month" class="new-post--input" placeholder="01" maxlength="2"/>
 							    	<span> / </span>
 							    	<input type="text" size="4" data-stripe="exp-year" class="new-post--input" placeholder="2020" maxlength="4"/>
