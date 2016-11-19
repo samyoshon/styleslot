@@ -1,73 +1,76 @@
 <div class="new-post-bg--container bg-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<div class="new-post--container col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<%= form_for @post do |f| %>
-			<h1>New job post</h1>
-			<p>Find candidates who are passionate about fashion</p>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h1>New job post</h1>
+				<p>Find candidates who are passionate about fashion</p>
 
-			<%= f.text_field :title, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Job Title", autofocus: true, required: true %>
+				<%= f.text_field :title, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Job Title", autofocus: true, required: true %>
 
-			<%= f.text_field :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "City", required: true %>
+				<%= f.text_field :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "City", required: true %>
 
-			<%= f.country_select(:state, {prompt: "Country"}, {class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
+				<%= f.country_select(:state, {prompt: "Country"}, {class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
 
-			<!--<%= f.text_field :state, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input index-search-form--select", placeholder: "State", required: true %> -->
+				<!--<%= f.text_field :state, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input index-search-form--select", placeholder: "State", required: true %> -->
 
-			<!--<%= f.text_field :zip, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "Zip Code", required: true %> -->
+				<!--<%= f.text_field :zip, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "Zip Code", required: true %> -->
 
-			<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Description", required: true %>
+				<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Description", required: true %>
 
-			<!-- <%= f.select :job_type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down", required: true %> -->
+				<!-- <%= f.select :job_type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down", required: true %> -->
 
-			<%= f.text_area :qualifications, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Qualifications", required: true %>
+				<%= f.text_area :qualifications, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Qualifications", required: true %>
 
-			<%= f.text_area :benefits, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Benefits", required: true %>
+				<%= f.text_area :benefits, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Benefits", required: true %>
 
-			<%= f.text_area :how_to, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "How To Apply", required: true %>
+				<%= f.text_area :how_to, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "How To Apply", required: true %>
 
-			<%= f.url_field :how_to_link, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "(Optional) Application link - http://www.jetsetteach.com" %>
+				<%= f.url_field :how_to_link, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "(Optional) Application link - http://www.jetsetteach.com" %>
+			</div>
 
 			<!-- IF free posts have run out, then Stripe Payment Forms ELSE -->
-			<!--<% if @posts_count < 3 %>
-				<div>
-					<h3 class="new-post--free-post-counter">Free Posts Remaining: <%= @posts_count - 3 %></h3>
-				</div>
-			<% else %>
-				<div>HELLO</div>
-				<div class="new-post--stripe-container col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input">
-					<%= form_tag create_post_path, :method => 'POST', id:"payment-form" do %>
-					 	<form action="" method="POST" id="payment-form">
-						<span class="payment-errors"></span>
+			<div class="new-post--payment-container col-xs-12 col-sm-12 col-md-12">
+				<h1 class="new-post--payment-header">Payment Options</h1>
+				<p>Find candidates who are passionate about fashion</p>
+				<% if @posts_count < 3 %>
+					<div>
+						<h3 class="new-post--free-post-counter">Free Posts Remaining: <%= @posts_count - 3 %></h3>
+					</div>
+				<% else %>
+					<div class="new-post--stripe-container col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input">
+						<%= form_tag create_post_path, :method => 'POST', id:"payment-form" do %>
+						 	<form action="" method="POST" id="payment-form">
+							<span class="payment-errors"></span>
 
-						<div class="form-row">
-					    	<label>
-					    		<span>Card Number</span>
-					    		<input type="text" size="20" data-stripe="number" class="new-post--input" placeholder="1234 1234 1234 1234" maxlength="20"/>
-					    	</label>
-						
-						    <label>
-						    	<span>CVC</span>
-						    	<input type="text" size="4" data-stripe="cvc" class="new-post--input" placeholder="123"  maxlength="3"/>
-						    </label>
-						</div>
+							<div class="form-row">
+						    	<label>
+						    		<span>Card Number: </span>
+						    		<input type="text" size="20" data-stripe="number" class="new-post--input" placeholder="1234 1234 1234 1234" maxlength="20"/>
+						    	</label>
+						    </div>
+							<div class="form-row">
+							    <label>
+							    	<span>CVC: </span>
+							    	<input type="text" size="4" data-stripe="cvc" class="new-post--input" placeholder="123"  maxlength="3"/>
+							    </label>
+							</div>
 
-						<div class="form-row form-inline">
-						    <label>
-						    	<span>Expiration (MM/YYYY)</span>
-						    	<br>
-						      	<input type="text" size="2" data-stripe="exp-month" class="new-post--input" placeholder="01" maxlength="2"/>
-						    	<span> / </span>
-						    	<input type="text" size="4" data-stripe="exp-year" class="new-post--input" placeholder="2020" maxlength="4"/>
-						    </label>
-						</div>
+							<div class="form-row form-inline">
+							    <label>
+							    	<span>Expiration: </span>
+							      	<input type="text" size="2" data-stripe="exp-month" class="new-post--input" placeholder="01" maxlength="2"/>
+							    	<span> / </span>
+							    	<input type="text" size="4" data-stripe="exp-year" class="new-post--input" placeholder="2020" maxlength="4"/>
+							    </label>
+							</div>
 
-						</form>
-					<% end %>
-				</div>
-			<% end %> -->
+							</form>
+						<% end %>
+					</div>
+				
+			<% end %> 
 			<%= f.submit "Submit", class: :"col-xs-12 col-sm-12 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 home-search-form--search new-post--submit"%>
 		<% end %>
-
 		</div>
 	</div>
 </div>

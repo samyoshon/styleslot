@@ -54,7 +54,17 @@
 	margin-top: 10px;
 }
 
+.new-post--payment-container {
+	margin-top: 30px;
+}
+
 .new-post--stripe-container {
 	/*background-color: white;*/
+}
+
+@media (max-width: 991px) {
+	.new-post-bg--container, .new-post--container {
+		padding: 0 !important;
+	}
 }
 

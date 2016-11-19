@@ -66,8 +66,13 @@ h2, p {
 
 
 @media (min-width: 991px) {
-	.navbar li:hover {
-	border-top: 3px solid $second-color;
+	.navbar li {
+		&:hover {
+			border-top: 3px solid $second-color;
+		}
+		&:active {
+			border-top: 3px solid $second-color;
+		}
 	}
 
 	.navbar li a {
