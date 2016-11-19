@@ -64,6 +64,22 @@ h2, p {
 	font-family: $first-font;
 }
 
+
+@media (min-width: 991px) {
+	.navbar li:hover {
+	border-top: 3px solid $second-color;
+	}
+
+	.navbar li a {
+	line-height: 31px !important;
+    height: 62px;
+    	&:hover {
+    		background-color: white !important;
+    	}
+	}
+}
+
+
 /*.nav-bar {
 	background-image: image-url('navbar.png') !important;
 	background-size: cover !important;
