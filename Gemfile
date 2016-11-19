@@ -59,7 +59,7 @@ gem 'pry-rails'
 
 gem 'rails_12factor', group: :production
 
-gem 'stripe', '~> 1.31'
+gem 'stripe', '~> 1.33', '>= 1.33.1'
 
 gem 'puma'
 

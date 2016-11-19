@@ -49,7 +49,7 @@ class PostsController < ApplicationController
     end
 
     def create
-        @post = current_user.posts.build(post_params)
+        @post = current_company.posts.build(post_params)
         
         # ||||| (start) this part is in the stripe function below|||||
         # @post.save
@@ -68,17 +68,17 @@ class PostsController < ApplicationController
 
         if @post.valid? 
             begin
-                customer =  if current_user.stripe_id?
-                                Stripe::Customer.retrieve(current_user.stripe_id)
+                customer =  if current_company.stripe_id?
+                                Stripe::Customer.retrieve(current_company.stripe_id)
                             else
                                 Stripe::Customer.create(
-                                    email: current_user.email,
+                                    email: current_company.email,
                                     source: params[:stripeToken],
                                     description: "Standard Charge Customer"
                                 )                 
                             end
 
-                current_user.update(
+                current_company.update(
                     stripe_id: customer.id,
                     stripe_subscription_id: nil,
                     card_last4: params[:card_last4],

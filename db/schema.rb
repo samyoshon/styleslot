@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161119210005) do
+ActiveRecord::Schema.define(version: 20161119215140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,10 +40,11 @@ ActiveRecord::Schema.define(version: 20161119210005) do
     t.string   "instagram"
     t.string   "twitter"
     t.string   "stripe_id"
-    t.string   "last4"
-    t.integer  "exp_month"
-    t.integer  "exp_year"
-    t.integer  "brand"
+    t.string   "card_brand"
+    t.integer  "card_exp_month"
+    t.integer  "card_exp_year"
+    t.string   "card_last4"
+    t.string   "stripe_subscription_id"
   end
 
   add_index "companies", ["email"], name: "index_companies_on_email", unique: true, using: :btree

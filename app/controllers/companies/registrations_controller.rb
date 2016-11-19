@@ -8,6 +8,7 @@ class Companies::RegistrationsController < Devise::RegistrationsController
 
 		def update_resource(resource, params)
 			resource.update_without_password(params)
+			# redirect_to new_post_path - need to fix
 		end
 
 	  	def registration_params
