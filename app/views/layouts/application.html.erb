@@ -42,10 +42,10 @@
             <ul class="nav navbar-nav navbar-right">
                 <% if company_signed_in? %>
                     <li>
-                        <%= link_to "Search Jobs", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
+                        <%= link_to "Jobs", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
                     </li>
                     <li>
-                        <%= link_to "Post Job", new_post_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
+                        <%= link_to "Resumes", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
                     </li>
                     <li>
                         <% if current_company.name == nil || current_company.name == "" %>
@@ -60,7 +60,10 @@
                     </li>
                 <% elsif user_signed_in? %>
                     <li>
-                        <%= link_to "Search Jobs", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
+                        <%= link_to "Jobs", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
+                    </li>
+                    <li>
+                        <%= link_to "Resumes", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
                     </li>
                     <li>
                         <% if current_user.name == nil || current_user.name == "" %>
@@ -75,10 +78,13 @@
                     </li>
                 <% else %>
                     <li>
-                        <%= link_to "Search Jobs", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
+                        <%= link_to "Jobs", posts_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
                     </li>
                     <li>
-                        <%= link_to "Post Job", new_post_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
+                        <%= link_to "Resumes", new_post_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
+                    </li>
+                    <li>
+                        <%= link_to "Login", new_post_path, :method => :get, class: :"btn-navbar", id: :"btn-words" %>
                     </li>
                 <% end %> 
             </ul>
