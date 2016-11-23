@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def to_param
+	"#{id} #{name} #{lastname}".parameterize
+  end	
+
   has_many :resumes
 
   has_attached_file :logo, :styles => { :large => "600x600>", :medium => "300x300>", :small => "150x150#",
