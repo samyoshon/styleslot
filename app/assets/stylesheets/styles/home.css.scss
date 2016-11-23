@@ -68,7 +68,6 @@ h2, p {
 	background-color: #dadada !important;
 }
 
-
 @media (min-width: 991px) {
 	.navbar li {
 		&:hover {
@@ -87,6 +86,23 @@ h2, p {
     	}
 	}
 }
+
+.dropdown-menu {
+	padding: 0 !important;
+
+	li {
+		&:hover {
+			border-top: 0px;
+		}
+	}
+	li a {
+		height: 100% !important;
+		&:hover {
+			background-color: $first-color !important;
+		}
+	}
+}
+
 
 
 /*.nav-bar {
