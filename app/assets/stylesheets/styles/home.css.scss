@@ -90,6 +90,7 @@ h2, p {
 
 @media (min-width: 768px) {
 	.navbar li {
+			border-top: 3px solid white;
 		&:hover {
 			border-top: 3px solid $second-color;
 		}
