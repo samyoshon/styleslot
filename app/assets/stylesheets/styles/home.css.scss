@@ -67,18 +67,6 @@ h2, p {
 	font-weight: 700;
 }
 
-.navbar-sub-menu {
-	background-color: $first-color;
-
-}
-
-.navbar li a, .navbar #navbar-sub-menu {
-    color: #333;
-		&:hover {
-			background-color: white !important;
-			color: #0152a8;
-		}
-}
 
 .navbar .navbar-toggle .icon-bar {
 	background-color: #dadada !important;
@@ -105,6 +93,15 @@ h2, p {
 	}
 }
 
+
+.navbar li a, .navbar #navbar-sub-menu {
+    color: #333;
+		&:hover {
+			background-color: white !important;
+			color: #0152a8;
+		}
+}
+
 @media (max-width: 767px) {
 	.navbar-nav {
     	margin: 0px -15px !important;
@@ -122,21 +119,19 @@ h2, p {
 	}
 	.navbar #navbar-sub-menu {
 		line-height: 25px;
-		&:hover {
-			background-color: white;
-		}
 	}
 }
 
 .dropdown-menu {
 	padding: 0 !important;
 	background-color: $first-color !important;
-
+	li {
+		border-top: 3px solid $first-color;
+	}
 	li a {
 		height: 100% !important;
 		&:hover {
 			background-color: $first-color !important;
-
 		}
 	}
 }
