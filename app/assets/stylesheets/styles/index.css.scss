@@ -59,7 +59,7 @@
 }
 	
 .post-container--each {
-	height: 75px;
+	/*height: 75px;*/
 	box-sizing: content-box;
 
 		h1 {
@@ -87,4 +87,12 @@
 		    text-overflow: ellipsis;
 		    white-space: nowrap;
 		}
+}
+
+.resume-container--each {
+	height: 100%;
+}
+
+.resume-container--title {
+	margin-top: 15px !important;
 }
