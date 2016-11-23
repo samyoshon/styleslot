@@ -67,6 +67,11 @@ h2, p {
 	font-weight: 700;
 }
 
+.navbar-sub-menu {
+	background-color: $first-color;
+
+}
+
 .navbar li a, .navbar #navbar-sub-menu {
     color: #333;
 		&:hover {
@@ -124,16 +129,13 @@ h2, p {
 
 .dropdown-menu {
 	padding: 0 !important;
+	background-color: $first-color !important;
 
-	li {
-		&:hover {
-			border-top: 0px;
-		}
-	}
 	li a {
 		height: 100% !important;
 		&:hover {
 			background-color: $first-color !important;
+
 		}
 	}
 }

@@ -46,8 +46,13 @@
 	text-align: center;
 }
 
-.post-container--wrapper:hover  {
+.post-container--wrapper:hover, .resume-container--wrapper:hover {
 	background: $first-color;
+}
+
+
+.resume-container--wrapper {
+	padding: 10px;
 }
 
 .post-container--logo, .post-container--each {
@@ -59,7 +64,7 @@
 }
 	
 .post-container--each {
-	/*height: 75px;*/
+	height: 75px;
 	box-sizing: content-box;
 
 		h1 {
@@ -90,7 +95,9 @@
 }
 
 .resume-container--each {
-	height: 100%;
+	height: 250px;
+	margin-top: 10px;
+	border-bottom: 2px solid $second-color;
 }
 
 .resume-container--title {
