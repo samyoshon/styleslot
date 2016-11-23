@@ -51,6 +51,8 @@ table {
 }
 h1, h4 {
 	font-family: $first-font !important;
+	color: $first-color;
+	font-weight: 700 !important;
 }
 h2, p {
 	font-family: $second-font;
@@ -62,13 +64,26 @@ h2, p {
 	border-bottom: 1px solid $first-color !important;
 	box-shadow: 0px 1px 3px $first-color;
 	font-family: $first-font;
+	font-weight: 700;
+}
+
+.navbar li a, .navbar #navbar-sub-menu {
+    color: #333;
+		&:hover {
+			background-color: white !important;
+			color: #0152a8;
+		}
 }
 
 .navbar .navbar-toggle .icon-bar {
 	background-color: #dadada !important;
 }
 
-@media (min-width: 991px) {
+.navbar-nav li a#navbar-post-job {
+	color: red !important;
+}
+
+@media (min-width: 768px) {
 	.navbar li {
 		&:hover {
 			border-top: 3px solid $second-color;
@@ -81,9 +96,29 @@ h2, p {
 	.navbar li a {
 	line-height: 31px !important;
     height: 62px;
-    	&:hover {
-    		background-color: white !important;
-    	}
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-nav {
+    	margin: 0px -15px !important;
+	}	
+	.navbar ul {
+		background-color: $first-color;
+	}
+	.navbar li {
+		border-top: 1px solid #dadada;
+		border-bottom: 1px solid #dadada;
+		a {
+			font-size: 12px;
+			font-weight: 400;
+		}
+	}
+	.navbar #navbar-sub-menu {
+		line-height: 25px;
+		&:hover {
+			background-color: white;
+		}
 	}
 }
 
@@ -102,7 +137,6 @@ h2, p {
 		}
 	}
 }
-
 
 
 /*.nav-bar {
