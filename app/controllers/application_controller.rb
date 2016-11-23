@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  # add params for users
   def configure_devise_permitted_parameters
     registration_params = [:email, :password, :password_confirmation, :name, :description, :website, :facebook, :twitter, :instagram, :logo]
 

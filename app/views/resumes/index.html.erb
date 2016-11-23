@@ -1,0 +1,27 @@
+<div class="main-container col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+
+	<div class="post-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<% if @resumes.present? %>
+			<% @resumes.each do |resume| %>
+				<%= link_to resume_path(resume) do %>
+					<div class="post-container--wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+						<div class="post-container--logo col-xs-12 col-sm-12 col-md-2 col-lg-2">
+							<% if resume.email.present? %>
+								<h1>SHIT YEAH RESUME</h1>
+							<% end %>
+						</div>
+						<div class="post-container--each col-xs-12 col-sm-12 col-md-4 col-lg-4">
+							<h1><%= link_to resume.email, resume_path(resume), target: "_blank", class: :"post-view-count", id: :"#{resume.id}" %></h1>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+		<% else %>
+			<p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+		<% end %>
+	</div>
+
+	<div class="jobs-pagination col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<%= will_paginate @resumes %>
+	</div>
+</div>

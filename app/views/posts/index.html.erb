@@ -20,6 +20,7 @@
 							<h1><%= link_to post.title, post_path(post), target: "_blank", class: :"post-view-count", id: :"#{post.id}" %></h1>
 							<h2><%= post.company.name %> - <%= post.city %>, <%= post.state %></h2>
 							<br>
+							<!-- <%= post.created_at.strftime("%Y-%m-%d") %> -->
 							<p><%= post.description %></p>
 						</div>
 					</div>
