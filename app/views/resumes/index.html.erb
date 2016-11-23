@@ -10,8 +10,8 @@
 								<% if resume.logo.present? %>
 									<%= image_tag resume.logo(:small), class: :'circle-image' %>
 								<% end %>
-								<h1 class="resume-container--title"><%= link_to resume.name, resume_path(resume), target: "_blank", class: :"post-view-count", id: :"#{resume.id}" %> <%= link_to resume.lastname, resume_path(resume), target: "_blank", class: :"post-view-count", id: :"#{resume.id}" %></h1>
-								<p><%= resume.name %> <%= resume.lastname %></p>
+								<h1 class="resume-container--title"><%= resume.name %> <%= resume.lastname %></h1>
+								<p></p>
 							</div>
 						</div>
 					<% end %>
