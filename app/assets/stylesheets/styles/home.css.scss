@@ -1,6 +1,7 @@
 $first-color: #F6F6F6;
 $second-color: #145ba8;
 $third-color: #FFF;
+$error-color: red;
 $first-font: 'Montserrat', sans-serif;
 $second-font: 'Roboto', sans-serif;
 
@@ -58,6 +59,11 @@ h2, p {
 	font-family: $second-font;
 }
 
+.form-labels {
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
 /* NAV BAR */ 
 
 .navbar {
@@ -73,7 +79,7 @@ h2, p {
 }
 
 .navbar-nav li a#navbar-post-job {
-	color: red !important;
+	color: $error-color !important;
 }
 
 @media (min-width: 768px) {
@@ -134,6 +140,10 @@ h2, p {
 			background-color: $first-color !important;
 		}
 	}
+}
+
+textarea {
+	height: 150px;
 }
 
 

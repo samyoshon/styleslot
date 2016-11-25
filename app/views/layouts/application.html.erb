@@ -60,7 +60,7 @@
                     </li>
                 <% if company_signed_in? %>
                     <li>
-                        <%= link_to "Post Job", new_post_path, :method => :get, class: :"btn-navbar", id: :"navbar-post-job" %>
+                        <%= link_to "Post a Job!", new_post_path, :method => :get, class: :"btn-navbar", id: :"navbar-post-job" %>
                     </li>
                     <li>
                         <% if current_company.name == nil || current_company.name == "" %>

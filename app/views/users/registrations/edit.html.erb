@@ -24,7 +24,39 @@
                         <%= f.text_field :lastname, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "Last Name", required: true %>
                     </div>
                     <div class="field">
-                        <%= f.text_field :email, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Email" %>
+                        <%= f.text_field :email, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "Email", required: true %>
+                    </div>
+                    <div class="field">
+                        <%= f.country_select(:citizenship, {prompt: "Citizenship"}, {class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
+                    </div>
+                    <div class="field">
+                        <%= f.text_area :education, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Education (University, Certification, etc.)", required: true %>
+                    </div>
+
+                    <div class="field">
+                        <%= f.text_area :description, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "About", required: true %>
+                    </div>
+                    <div class="field">
+                        <%= f.text_area :expertise, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Expertise", required: true %>
+                    </div>
+                    <div class="field">
+                        <%= f.text_area :experience, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Previous Experience", required: true %>
+                    </div>
+
+                    <div class="field">
+                        <%= f.country_select(:residence, {prompt: "Current Residence"}, {class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
+                    </div>
+                    <div class="field">
+                        <%= f.text_area :skills, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Skills/Interests", required: true %>
+                    </div>
+                    <div class="field">
+                        <%= f.text_field :languages, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Additional Languages", required: true %>
+                    </div>
+                    <div class="field">
+                        <%= f.url_field :facebook, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "(Optional) Facebook Profile", required: false %>
+                    </div>
+                    <div class="field">
+                        <%= f.url_field :linkedin, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "(Optional) LinkedIn Profile", required: false %>
                     </div>
                     <div class="field">
                         <%= f.label :logo, "Profile Image (150x150)", id: "company-edit--company-logo-label", required: true %><br>

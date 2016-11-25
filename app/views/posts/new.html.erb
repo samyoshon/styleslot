@@ -5,67 +5,89 @@
 				<h1>New job post</h1>
 				<p>Find candidates who are passionate about fashion</p>
 
-				<%= f.text_field :title, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Job Title", autofocus: true, required: true %>
+				<h6 class="form-labels">Job Title</h6>
+				<%= f.text_field :title, class: :"new-post--input", placeholder: "Job Title", autofocus: true, required: true %>
 
-				<%= f.text_field :city, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "City", required: true %>
+				<h6 class="form-labels">City</h6>
+				<%= f.text_field :city, class: :"new-post--input", placeholder: "City", required: true %>
 
-				<%= f.country_select(:state, {prompt: "Country"}, {class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
+				<h6 class="form-labels">Country</h6>
+				<%= f.country_select(:country, {prompt: "Country"}, {class: "new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
 
 				<!--<%= f.text_field :state, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input index-search-form--select", placeholder: "State", required: true %> -->
 
 				<!--<%= f.text_field :zip, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "Zip Code", required: true %> -->
 
-				<%= f.text_area :description, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Description", required: true %>
+				<h6 class="form-labels">Job Description</h6>
+				<%= f.text_area :description, class: :"new-post--input new-post--textarea", placeholder: "Job Description", required: true %>
 
-				<!-- <%= f.select :job_type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]), {include_blank: "Job Type"}, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select", id: :"select-drop-down", required: true %> -->
+				<!-- <%= f.select :job_type, options_for_select(["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce", "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]), {include_blank: "Job Type"}, class: :"new-post--input index-search-form--select", id: :"select-drop-down", required: true %> -->
+				<h6 class="form-labels">Job Qualifications</h6>
+				<%= f.text_area :qualifications, class: :"new-post--input new-post--textarea", placeholder: "Job Qualifications", required: true %>
 
-				<%= f.text_area :qualifications, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Job Qualifications", required: true %>
+				<h6 class="form-labels">Benefits</h6>
+				<%= f.text_area :benefits, class: :"new-post--input new-post--textarea", placeholder: "Benefits", required: true %>
 
-				<%= f.text_area :benefits, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "Benefits", required: true %>
+				<h6 class="form-labels">How To Apply</h6>
+				<%= f.text_area :how_to, class: :"new-post--input new-post--textarea", placeholder: "How To Apply", required: true %>
 
-				<%= f.text_area :how_to, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input new-post--textarea", placeholder: "How To Apply", required: true %>
+				<h6 class="form-labels">(Optional) Application Link</h6>
+				<%= f.url_field :how_to_link, class: :"new-post--input", placeholder: "(Optional) Application Link - http://www.jetsetteach.com" %>
 
-				<%= f.url_field :how_to_link, class: :"col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "(Optional) Application link - http://www.jetsetteach.com" %>
-			<!-- </div> -->
+				<h6 class="form-labels">(Optional) Salary</h6>
+				<%= f.text_field :salary, class: :"new-post--input", placeholder: "(Optional) Salary", required: false %>
 
-			<!-- IF free posts have run out, then Stripe Payment Forms ELSE -->
-			<!-- <div class="new-post--payment-container col-xs-12 col-sm-12 col-md-12"> -->
+				<h6 class="form-labels">(Optional) Airfare Stipend</h6>
+				<%= f.text_field :airfare, class: :"new-post--input", placeholder: "(Optional) Airfare Stipend", required: false %>
+
+				<h6 class="form-labels">(Optional) Housing Stipend</h6>
+				<%= f.text_field :housing, class: :"new-post--input", placeholder: "(Optional) Housing Stipend", required: false %>
+
+				<h6 class="form-labels">(Optional) Bachelors Degree Required</h6>
+				<%= f.check_box :university, class: :"new-post--input", placeholder: "(Optional) Bachelors Required", required: false %>
+
+				<h6 class="form-labels">(Optional) TEFL Required</h6>
+				<%= f.check_box :tefl, class: :"new-post--input", placeholder: "(Optional) TEFL Required", required: false %>
+
+				<h6 class="form-labels">(Optional) Vacation Days</h6>
+				<%= f.text_field :vacation, class: :"new-post--input", placeholder: "(Optional) Vacation Days", required: false %>
+
+				<h6 class="form-labels">(Optional) Insurance</h6>
+				<%= f.text_field :insurance, class: :"new-post--input", placeholder: "(Optional) Insurance", required: false %>
+				
 				<h1>Payment Options</h1>
 				<p>Find candidates who are passionate about fashion</p>
-
-				<div class="new-post--stripe-container col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input">
-				<!-- <%= form_tag create_post_path, :method => 'POST', id:"payment-form" do %>
-					 	<form action="" method="POST" id="payment-form"> -->
+				<div class="new-post--stripe-container new-post--input">
 					<span class="payment-errors"></span>
 
 					<div class="form-row">
 				    	<label>
-				    		<span>Card Number:  </span>
+				    		<h6 class="form-labels">Card Number</h6>
 				    		<input type="text" size="20" data-stripe="number" class="new-post--input" placeholder="1234 1234 1234 1234" maxlength="20"/>
 				    	</label>
-				    </div>
-					<div class="form-row">
-					    <label>
-					    	<span>CVC:  </span>
+						<label>
+					    	<h6 class="form-labels">CVC</h6>
 					    	<input type="text" size="4" data-stripe="cvc" class="new-post--input" placeholder="123"  maxlength="3"/>
 					    </label>
+					    <label>
+					    	<h6 class="form-labels">Month</h6>
+					      	<input type="text" size="2" data-stripe="exp-month" class="new-post--input" placeholder="01" maxlength="2"/>
+					    </label>
+					    <label>
+					    	<h6 class="form-labels">Year</h6>
+					      	<input type="text" size="4" data-stripe="exp-year" class="new-post--input" placeholder="2020" maxlength="4"/>
+					    </label>
+
+				    </div>
+					<div class="form-row">
+					    
 					</div>
 
 					<div class="form-row form-inline">
-					    <label>
-					    	<span>Expiration:  </span>
-					      	<input type="text" size="2" data-stripe="exp-month" class="new-post--input" placeholder="01" maxlength="2"/>
-					    	<span> / </span>
-					    	<input type="text" size="4" data-stripe="exp-year" class="new-post--input" placeholder="2020" maxlength="4"/>
-					    </label>
+					    
 					</div>
 
-					<!-- </form> -->
-				<!-- <% end %> -->
-				</div>
-			<!-- <%= f.submit "Submit", class: :"col-xs-12 col-sm-12 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 home-search-form--search new-post--submit"%> -->
-
-			<button type="submit" class="col-xs-12 col-sm-12 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9 home-search-form--search new-post--submit" id="btn-job-post">Post Job</button>
+			<button type="submit" class="home-search-form--search new-post--submit" id="btn-job-post">Post Job</button>
 		<% end %>
 		</div>
 	</div>

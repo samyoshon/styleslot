@@ -1,17 +1,19 @@
 <div class="main-container col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
 
 	<div class="post-container resume-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<% if @resumes.present? %>
-			<% @resumes.each do |resume| %>
-				<% if resume.name.present? %>
-					<%= link_to resume_path(resume) do %>
+		<% if @users.present? %>
+			<% @users.each do |user| %>
+				<% if user.name.present? %>
+					<%= link_to resume_path(user) do %>
 						<div class="resume-container--wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
 							<div class="post-container--each resume-container--each col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<% if resume.logo.present? %>
-									<%= image_tag resume.logo(:small), class: :'circle-image' %>
+								<% if user.logo.present? %>
+									<%= image_tag user.logo(:small), class: :'circle-image' %>
 								<% end %>
-								<h1 class="resume-container--title"><%= resume.name %> <%= resume.lastname %></h1>
-								<p></p>
+								<h1 class="resume-container--title"><%= user.name %> <%= user.lastname %></h1>
+								<p><%= user.education %></p>
+								<p><%= user.citizenship %></p>
+								<p><%= user.description %></p>
 							</div>
 						</div>
 					<% end %>
@@ -23,7 +25,7 @@
 	</div>
 
 	<div class="jobs-pagination col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<%= will_paginate @resumes %>
+		<%= will_paginate @users %>
 	</div>
 </div>
 

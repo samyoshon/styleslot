@@ -38,6 +38,7 @@
 	border: 1px solid $first-color;
 	margin-top: 10px;
 	outline: none;
+	width: 100%;
 
 	&:focus {
 		border: 3px solid $second-color;
@@ -66,5 +67,9 @@
 	.new-post-bg--container, .new-post--container {
 		padding: 0 !important;
 	}
+}
+
+.payment-errors {
+	color: $error-color;
 }
 

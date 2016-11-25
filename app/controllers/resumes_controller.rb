@@ -4,9 +4,9 @@ class ResumesController < ApplicationController
 	# , except: [:index, :show, :home]
 
     def index
-        @resume = User.search(params[:q])
+        @user = User.search(params[:q])
 
-        @resumes = @resume.result.paginate(page: params[:page], per_page: 30).where(["created_at > ?", 30.days.ago]).order("created_at DESC")
+        @users = @user.result.paginate(page: params[:page], per_page: 30).where(["updated_at > ?", 30.days.ago]).order("updated_at DESC")
 
         ### Find Countries That Have Job Posts - Used for filter option
         # @posts_all = Post.where(["created_at > ?", 30.days.ago]).order("created_at DESC")
@@ -22,7 +22,7 @@ class ResumesController < ApplicationController
     end
 
     def show
-        @resume = User.find(params[:id])
+        @user = User.find(params[:id])
     end
 
     def create
@@ -31,7 +31,7 @@ class ResumesController < ApplicationController
 
 private 
     def resume_params
-        params.require(:resume).permit(:name, :first_name, :email, :lastname)
+        params.require(:resume).permit(:name, :first_name, :email, :lastname, :citizenship)
     end
 
 

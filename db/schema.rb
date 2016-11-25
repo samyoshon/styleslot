@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161123034420) do
+ActiveRecord::Schema.define(version: 20161125190329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,14 @@ ActiveRecord::Schema.define(version: 20161123034420) do
     t.text     "how_to_link"
     t.string   "job_type"
     t.integer  "post_view_count"
+    t.string   "salary"
+    t.string   "airfare"
+    t.string   "housing"
+    t.boolean  "university"
+    t.boolean  "tefl"
+    t.string   "vacation"
+    t.string   "insurance"
+    t.string   "country"
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree
@@ -106,6 +114,16 @@ ActiveRecord::Schema.define(version: 20161123034420) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.text     "description"
+    t.text     "expertise"
+    t.text     "experience"
+    t.text     "residence"
+    t.text     "education"
+    t.text     "skills"
+    t.text     "languages"
+    t.string   "countrya"
+    t.string   "countryb"
+    t.string   "countryc"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

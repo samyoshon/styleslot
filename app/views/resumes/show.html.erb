@@ -1,1 +1,82 @@
-<%= @resume.email %>
+<div class="show-main col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="show-main--company col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="post-container--logo col-xs-12 col-sm-12 col-md-2 col-lg-2">
+			<div class="show-main--logo"><%= image_tag @user.logo(:small) %></div>
+		</div>
+		<div class="resume-container--title col-xs-12 col-sm-12 col-md-10 col-lg-10">
+			<h1><%= @user.name %> <%= @user.lastname %></h1>
+			<ul>
+				<li class="show-side--icon-wrapper">
+					<span class="show-side--icon show-resume-side--icon">Citizenship: 
+						<!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+					</span>
+					<span><%= @user.citizenship %></span>
+				</li>
+				<li class="show-side--icon-wrapper">
+					<span class="show-side--icon show-resume-side--icon"> Education:
+						<!-- <i class="fa fa-plane" aria-hidden="true"></i> -->
+					</span>
+					<span><%= @user.education %></span>
+				</li>
+				<li class="show-main--social">
+					<% if @user.facebook.present? %>
+						<a href="<%= @user.facebook %>" target="blank"><i class="fa fa-facebook-square"></i></a>
+					<% end %>
+					<% if @user.linkedin.present? %>
+						<a href="<%= @user.linkedin %>" target="blank"><i class="fa fa-linkedin-square"></i></a>
+					<% end %>
+				</li>	
+			</ul>
+		</div>
+		<div class="resume-container--description col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<%= simple_format @user.description %>
+		</div>
+	</div>
+
+	<div class="show-main--post col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-9 col-lg-9">
+			<div class="show-main--post-description-title col-xs-12 col-sm-12 col-md-3 col-lg-3">
+				<h4>Experience</h4>
+			</div>
+			<div class="show-main--post-description-text col-xs-12 col-sm-12 col-md-9 col-lg-9">
+				<p><%= simple_format @user.experience %></p>
+			</div>
+		</div>
+		
+		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-9 col-lg-9">		
+			<div class="show-main--post-description-title col-xs-12 col-sm-12 col-md-3 col-lg-3">
+				<h4>Expertise</h4>
+			</div>
+			<div class="show-main--post-description-text col-xs-12 col-sm-12 col-md-9 col-lg-9">
+				<p><%= simple_format @user.expertise %></p>
+			</div>
+		</div>
+		
+		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-9 col-lg-9">
+			<div class="show-main--post-description-title col-xs-12 col-sm-12 col-md-3 col-lg-3">
+				<h4>Skills/Interests</h4>
+			</div>
+			<div class="show-main--post-description-text col-xs-12 col-sm-12 col-md-9 col-lg-9">
+				<p><%= simple_format @user.skills %></p>
+			</div>
+		</div>
+		
+		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-9 col-lg-9">
+			<div class="show-main--post-description-title col-xs-12 col-sm-12 col-md-3 col-lg-3">
+				<h4>Additional Languages</h4>
+			</div>
+			<div class="show-main--post-description-text col-xs-12 col-sm-12 col-md-9 col-lg-9">
+				<p><%= simple_format @user.languages %></p>
+			</div>
+		</div>
+		
+		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-9 col-lg-9" id="show-apply-now-btn"><i class="fa fa-check-square-o"></i> Contact Now</div>
+
+		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-9 col-lg-9 apply-now-hidden" id="show-resume-now-div">
+			<h4>Contact Teacher:</h4>
+			<%= link_to @user.email, @user.email, target: "blank" %>
+		</div>
+	</div>
+</div>
+
+<%= render "partials/footer" %>
