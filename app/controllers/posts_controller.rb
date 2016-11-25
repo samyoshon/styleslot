@@ -3,11 +3,11 @@ class PostsController < ApplicationController
 	before_action :authenticate_company!, except: [:index, :show, :home]
 
     def home
-        @search = Post.search(params[:q])
+        @search = Post.ransack(params[:q])
     end
 
     def index
-        @search = Post.search(params[:q])
+        @search = Post.ransack(params[:q])
 
         @posts = @search.result.paginate(page: params[:page], per_page: 30).where(["created_at > ?", 30.days.ago]).order("created_at DESC")
 

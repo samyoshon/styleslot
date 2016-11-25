@@ -4,9 +4,9 @@ class ResumesController < ApplicationController
 	# , except: [:index, :show, :home]
 
     def index
-        @user = User.search(params[:q])
+        @q = User.ransack(params[:q])
 
-        @users = @user.result.paginate(page: params[:page], per_page: 30).where(["updated_at > ?", 30.days.ago]).order("updated_at DESC")
+        @users = @q.result.paginate(page: params[:page], per_page: 30).where(["updated_at > ?", 30.days.ago]).order("updated_at DESC")
 
         ### Find Countries That Have Job Posts - Used for filter option
         # @posts_all = Post.where(["created_at > ?", 30.days.ago]).order("created_at DESC")
@@ -24,10 +24,6 @@ class ResumesController < ApplicationController
     def show
         @user = User.find(params[:id])
     end
-
-    def create
-    end
-
 
 private 
     def resume_params

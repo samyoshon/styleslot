@@ -4,6 +4,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
 		edit_user_registration_path
   	end
 
+  	
+
 	private 
 
 		def update_resource(resource, params)
