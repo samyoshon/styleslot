@@ -3,7 +3,7 @@
         <h1>Edit Profile</h1>
 
         <div class="company-edit--nav col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input company-edit--options company-edit--options-active" id="1">Profile</div>
+            <div class="new-post--input company-edit--options company-edit--options-active" id="1">Profile</div>
 
 <!--             Add Metrics After More Web Traction
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input company-edit--options" id="3">Metrics</div> -->
@@ -18,61 +18,92 @@
 
                 <div class="company-edit--section company-edit--profile" id="company-edit-1">
                     <div class="field">
-                        <%= f.text_field :name, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "First Name", required: true %>
-                    </div>
-                    <div class="field">
-                        <%= f.text_field :lastname, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "Last Name", required: true %>
-                    </div>
-                    <div class="field">
-                        <%= f.text_field :email, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "Email", required: true %>
-                    </div>
-                    <div class="field">
-                        <%= f.country_select(:citizenship, {prompt: "Citizenship"}, {class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
-                    </div>
-                    <div class="field">
-                        <%= f.text_area :education, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Education (University, Certification, etc.)", required: true %>
+                        <h6 class="form-labels">First Name</h6>
+                        <%= f.text_field :name, class: "new-post--input", autofocus: true, placeholder: "First Name", required: true %>
                     </div>
 
                     <div class="field">
-                        <%= f.text_area :description, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "About", required: true %>
-                    </div>
-                    <div class="field">
-                        <%= f.text_area :expertise, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Expertise", required: true %>
-                    </div>
-                    <div class="field">
-                        <%= f.text_area :experience, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Previous Experience", required: true %>
+                        <h6 class="form-labels">Last Name</h6>
+                        <%= f.text_field :lastname, class: "new-post--input", autofocus: true, placeholder: "Last Name", required: true %>
                     </div>
 
                     <div class="field">
-                        <%= f.country_select(:residence, {prompt: "Current Residence"}, {class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
+                        <h6 class="form-labels">Email</h6>
+                        <%= f.text_field :email, class: "new-post--input", autofocus: true, placeholder: "Email", required: true %>
                     </div>
+
                     <div class="field">
-                        <%= f.text_area :skills, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Skills/Interests", required: true %>
+                        <h6 class="form-labels">Citizenship</h6>
+                        <%= f.country_select(:citizenship, {prompt: "Citizenship"}, {class: "new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
                     </div>
+
                     <div class="field">
-                        <%= f.text_field :languages, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", placeholder: "Additional Languages", required: true %>
+                        <h6 class="form-labels">Education</h6>
+                        <%= f.text_area :education, class: "new-post--input", placeholder: "Education (University, Certification, etc.)", required: true %>
                     </div>
+
+
                     <div class="field">
-                        <%= f.url_field :facebook, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "(Optional) Facebook Profile", required: false %>
+                        <h6 class="form-labels">About</h6>
+                        <%= f.text_area :description, class: "new-post--input", placeholder: "About", required: true %>
                     </div>
+
                     <div class="field">
-                        <%= f.url_field :linkedin, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "(Optional) LinkedIn Profile", required: false %>
+                        <h6 class="form-labels">Expertise</h6>
+                        <%= f.text_area :expertise, class: "new-post--input", placeholder: "Expertise", required: true %>
                     </div>
+
+                    <div class="field">
+                        <h6 class="form-labels">Previous Experience</h6>
+                        <%= f.text_area :experience, class: "new-post--input", placeholder: "Previous Experience", required: true %>
+                    </div>
+
+
+                    <div class="field">
+                        <h6 class="form-labels">Current Residence</h6>
+                        <%= f.country_select(:residence, {prompt: "Current Residence"}, {class: "new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
+                    </div>
+
+                    <div class="field">
+                        <h6 class="form-labels">Skills/Interests</h6>
+                        <%= f.text_area :skills, class: "new-post--input", placeholder: "Skills/Interests", required: true %>
+                    </div>
+
+                    <div class="field">
+                        <h6 class="form-labels">Additional Languages</h6>
+                        <%= f.text_field :languages, class: "new-post--input", placeholder: "Additional Languages", required: true %>
+                    </div>
+
+                    <div class="field">
+                        <h6 class="form-labels">(Optional) Facebook Profile</h6>
+                        <%= f.url_field :facebook, class: "new-post--input", autofocus: true, placeholder: "(Optional) Facebook Profile", required: false %>
+                    </div>
+
+                    <div class="field">
+                        <h6 class="form-labels">(Optional) LinkedIn Profile</h6>
+                        <%= f.url_field :linkedin, class: "new-post--input", autofocus: true, placeholder: "(Optional) LinkedIn Profile", required: false %>
+                    </div>
+
                     <div class="field">
                         <%= f.label :logo, "Profile Image (150x150)", id: "company-edit--company-logo-label", required: true %><br>
                         <% if @user.logo.exists? %>
                             <%= image_tag @user.logo.url(:thumb) %><br>
                         <% end %>
-                        <%= f.file_field :logo, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", id: "company-edit--company-logo-upload", placeholder: "User Profile Image" %>
+                        <%= f.file_field :logo, class: "new-post--input", id: "company-edit--company-logo-upload", placeholder: "User Profile Image" %>
                     </div>
+
                     <div class="actions">
                         <%= f.submit "Post Resume", class: "home-search-form--search new-post--submit" %>
                     </div>
                 </div>
 
-                <div class="company-edit--section company-edit--password company-edit--hidden" id="company-edit-2">
+                <div class="company-edit--section comp
+                any-edit--password company-edit--hidden" id="company-edit-2">
+                    <h6 class="form-labels">Email</h6>
+
                     <div class="field">
-                        <%= f.email_field :email, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autofocus: true, placeholder: "Work Email" %>
+                        <h6 class="form-labels">Email</h6>
+                        <%= f.email_field :email, class: "new-post--input", autofocus: true, placeholder: "Work Email" %>
                     </div>
 
                     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -80,11 +111,13 @@
                     <% end %>
 
                     <div class="field">
-                        <%= f.password_field :password, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autocomplete: "off", placeholder: "New Password (leave blank if you don't want to change it)" %>
+                        <h6 class="form-labels">New Password</h6>
+                        <%= f.password_field :password, class: "new-post--input", autocomplete: "off", placeholder: "New Password" %>
                     </div>
 
                     <div class="field">
-                        <%= f.password_field :password_confirmation, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 new-post--input", autocomplete: "off", placeholder: "Password Confirmation" %>
+                        <h6 class="form-labels">Confirm Password</h6>
+                        <%= f.password_field :password_confirmation, class: "new-post--input", autocomplete: "off", placeholder: "Confirm Password" %>
                     </div>
 
                     <div class="actions">
