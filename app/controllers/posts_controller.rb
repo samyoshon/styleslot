@@ -18,7 +18,7 @@ class PostsController < ApplicationController
         @posts_all.each do |post|
             @countries << post.country
         end
-        @countries_uniq = @countries.uniq.to_s.sort_by!{|e| e.downcase}
+        @countries_uniq = @countries.uniq.sort_by!{|e| e.downcase}
         
         ### Related to Original Idea of Job Types
         # @posts_uniq = ["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce",  "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]   
