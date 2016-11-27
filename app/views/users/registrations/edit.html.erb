@@ -65,6 +65,21 @@
                     </div>
 
                     <div class="field">
+                        <h6 class="form-labels">First Choice Country</h6>
+                        <%= f.country_select(:countrya, {prompt: "First Choice Country"}, {class: "new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
+                    </div>
+
+                    <div class="field">
+                        <h6 class="form-labels">Second Choice Country</h6>
+                        <%= f.country_select(:countryb, {prompt: "Second Choice Country"}, {class: "new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
+                    </div>
+
+                    <div class="field">
+                        <h6 class="form-labels">Third Choice Country</h6>
+                        <%= f.country_select(:countryc, {prompt: "Third Choice Country"}, {class: "new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
+                    </div>
+
+                    <div class="field">
                         <h6 class="form-labels">Skills/Interests</h6>
                         <%= f.text_area :skills, class: "new-post--input", placeholder: "Skills/Interests", required: true %>
                     </div>

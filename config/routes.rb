@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :resumes
   resources :newsletters
+  resources :users
   
   root to: "posts#index"
 

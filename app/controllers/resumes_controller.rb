@@ -8,14 +8,16 @@ class ResumesController < ApplicationController
 
         @users = @q.result.paginate(page: params[:page], per_page: 30).where(["updated_at > ?", 30.days.ago]).order("updated_at DESC")
 
-        ### Find Countries That Have Job Posts - Used for filter option
-        # @posts_all = Post.where(["created_at > ?", 30.days.ago]).order("created_at DESC")
+        ## Find Countries That Have Job Posts - Used for filter option
+        @resumes = User.where(["updated_at > ?", 30.days.ago]).order("created_at DESC")
 
-        # @countries = []
-        # @posts_all.each do |post|
-        #     @countries << post.state
-        # end
-        # @countries_uniq = @countries.uniq.sort_by!{|e| e.downcase}
+        @top_countries = []
+        @resumes.each do |resume|
+            @top_countries << resume.countrya
+            @top_countries << resume.countryb
+            @top_countries << resume.countryc
+        end
+        @top_countries_uniq = @top_countries.uniq.sort_by!{|e| e.downcase}
         
         ### Related to Original Idea of Job Types
         # @posts_uniq = ["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce",  "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]   
