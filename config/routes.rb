@@ -2,11 +2,11 @@ Rails.application.routes.draw do
 
   devise_for :companies, :controllers => {:registrations => "companies/registrations", :sessions => "companies/sessions", :passwords => "companies/passwords"}
   devise_for :users, :controllers => {:registrations => "users/registrations", :sessions => "users/sessions", :passwords => "users/passwords"}
+  resources :users
 
   resources :posts
   resources :resumes
   resources :newsletters
-  resources :users
   
   root to: "posts#index"
 
