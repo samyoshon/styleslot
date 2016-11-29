@@ -18,29 +18,29 @@
 
                 <div class="company-edit--section company-edit--profile" id="company-edit-1">
                     <div class="field">
-                        <h6 class="form-labels">Company Name</h6>
-                        <%= f.text_field :name, class: "new-post--input", autofocus: true, placeholder: "Company Name", required: true %>
+                        <h6 class="form-labels">Company Name*</h6>
+                        <%= f.text_field :name, class: "new-post--input", required: true %>
                     </div>
                     <div class="field">
-                        <h6 class="form-labels">Company Description</h6>
-                        <%= f.text_area :description, class: "new-post--input", placeholder: "Company Description" %>
+                        <h6 class="form-labels">Company Description*</h6>
+                        <%= f.text_area :description, class: "new-post--input", required: true %>
                     </div>
                     <div class="field">
-                        <h6 class="form-labels">(Optional) Website</h6>
-                        <%= f.url_field :website, class: "new-post--input", placeholder: "(Optional) Website" %>
+                        <h6 class="form-labels">Company Website</h6>
+                        <%= f.url_field :website, class: "new-post--input", placeholder: "http://www.example.com - (if n/a leave blank)" %>
                     </div>
                     <div class="field">
-                        <h6 class="form-labels">(Optional) Facebook</h6>
-                        <%= f.url_field :facebook, class: "new-post--input", placeholder: "(Optional) Facebook Page" %>
+                        <h6 class="form-labels">Facebook</h6>
+                        <%= f.url_field :facebook, class: "new-post--input", placeholder: "http://www.facebook.com/example - (if n/a leave blank)" %>
                     </div>
                     <div class="field">
-                        <h6 class="form-labels">(Optional) Instagram</h6>
-                        <%= f.text_field :instagram, class: "new-post--input", placeholder: "(Optional) Instagram Username" %>
+                        <h6 class="form-labels">Instagram</h6>
+                        <%= f.text_field :instagram, class: "new-post--input", placeholder: "example - (if n/a leave blank)" %>
                     </div>
-                    <div class="field">
+<!--                     <div class="field">
                         <h6 class="form-labels">(Optional) Twitter</h6>
                         <%= f.text_field :twitter, class: "new-post--input", placeholder: "(Optional) Twitter Username" %>
-                    </div>
+                    </div> -->
                     <div class="field">
                         <%= f.label :logo, "Company Logo (150x150)", id: "company-edit--company-logo-label", required: true %><br>
                         <% if @company.logo.exists? %>
