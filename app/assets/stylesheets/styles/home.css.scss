@@ -146,83 +146,6 @@ textarea {
 	height: 150px;
 }
 
-
-/*.nav-bar {
-	background-image: image-url('navbar.png') !important;
-	background-size: cover !important;
-	background-repeat: no-repeat !important;
-	z-index: 100 !important;
-	width: 100% !important;
-	height: 100px !important;
-	position: absolute !important;
-	background-color: transparent !important;
-	border: none !important;
-	border-radius: 0px !important;
-
-	div {
-		float: right;
-		padding: 30px 0px;
-
-		li {
-			display: inline;
-
-			a {
-				text-decoration: none;
-				color: $third-color;
-				margin-right: 20px;
-
-				&:hover {
-					color: $second-color;
-				}
-
-			}
-
-		}
-	}
-}
-
-.navbar-header {
-	padding: 15px 0px 0px 0px !important;
-}
-
-.navbar-right {
-	margin: 0px !important;
-}
-
-.btn-navbar {
-	font-weight: bold;
-	position: relative;
-	margin-right: 10px !important;
-}
-
-#btn-words {
-	margin-right: 0px !important;
-	padding-top: 45px;
-}
-
-.nav-bar div {
-	float: inherit;
-	background-color: black;
-	padding: 0px;
-}
-
-.navbar-dropdown-menu {
-	background-color: $second-color !important;
-	border-radius: 0px !important;
-}
-
-#navbar-collapse-1 {
-	margin-top: -60px;
-
-	li {
-		margin-left: 20px;
-	}
-}
-
-#navbar-hamburger {
-	margin-right: 15px;
-} */
-
 .home-flash {
 	text-align: center;
 	z-index: 100;
@@ -298,43 +221,6 @@ textarea {
 		transition: background-color 0.2s ease;
 	}
 }
-
-/*.model-gif {
-	background-size: cover;
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	float: left;
-	height: 100vh;
-	width: 100%;
-}
-
-.model-gif--riri {
-	background-image: image-url('riri.png');
-	&:hover {
-		background-image: image-url('riri.gif');
-	};
-}
-
-.model-gif--cara {
-	background-image: image-url('cara.gif');
-	&:hover {
-		background-image: image-url('cara.gif');
-	
-}
-
-.model-gif--women {
-	background-image: image-url('women.png');
-	&:hover {
-		background-image: image-url('women.gif');
-	};
-}
-
-.model-gif--kendall {
-	background-image: image-url('kendall.png');
-	&:hover {
-		background-image: image-url('kendall.gif');
-	};
-} */
 
 /* #### FOOTER #### */
 
