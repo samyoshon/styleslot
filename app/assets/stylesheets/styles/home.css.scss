@@ -2,6 +2,9 @@ $first-color: #F6F6F6;
 $second-color: #145ba8;
 $third-color: #FFF;
 $error-color: #e60505;
+$footerbg-color: #000;
+$footertype-color: #8c8989;
+$footerborder-color: #E9EAEE;
 $first-font: 'Montserrat', sans-serif;
 $second-font: 'Roboto', sans-serif;
 
@@ -225,13 +228,14 @@ textarea {
 /* #### FOOTER #### */
 
 footer {
-	background-color: $first-color;
+	background-color: $footerbg-color;
+	border-top: 12px solid $footerborder-color;
 }
 
 .footer-container {
   	text-align: center !important;
-  	padding: 15vh 0px;
-  	height: 50vh;
+  	padding: 5vh 0px;
+  	/*height: 50vh;*/
 }
 
 .footer-title {
