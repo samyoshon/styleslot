@@ -77,7 +77,7 @@
                     <li>
                         <% if current_user.name == nil || current_user.name == "" %>
                             <%= link_to edit_user_registration_path, :method => :get, class: :"btn-navbar", id: :"btn-words" do %>
-                                Post Resume <i class="fa fa-cog"></i>
+                                Edit Resume <i class="fa fa-cog"></i>
                             <% end %>
                         <% else %>
                             <%= link_to edit_user_registration_path, :method => :get, class: :"btn-navbar", id: :"btn-words" do %>

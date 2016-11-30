@@ -236,6 +236,24 @@ footer {
   	text-align: center !important;
   	padding: 5vh 0px;
   	/*height: 50vh;*/
+  	font-family: $first-font;
+
+  	h1 {
+  		color: #ddd;
+  		font-size: 13px;
+  		padding-bottom: 23px;
+  	}
+  	li {
+  		padding: 5px 0px;
+  	}
+  	li a {
+  		color: #bfbfbf;
+  		font-size: 12px;
+  		&:hover {
+  			color: $second-color;
+  			text-decoration: none;
+  		}
+  	}
 }
 
 .footer-title {
@@ -248,10 +266,10 @@ footer {
   	align-items: center !important;
   	align-content: center !important;
   	text-align: center !important;
-
+  	
   	i {
   		color: $third-color;
-  		font-size: 25px;
+  		font-size: 16px;
   		padding: 0px 10px;
   		margin-top: 20px;
 
