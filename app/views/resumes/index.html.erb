@@ -3,7 +3,7 @@
 	<p>Find the perfect teacher for your program.</p>
 	<%= search_form_for @q do |f| %>
 		<%= f.text_field :expertise_or_description_or_experience_cont, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 home-search-form--input index-search-form--input", placeholder: "Keywords (description, expertise, experience)" %>
-		<%= f.select(:countrya_or_countryb_or_countryc_cont, options_for_select(@top_countries_uniq), {include_blank: "No Preference", selected: :country}, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 home-search-form--input index-search-form--input index-search-form--select", id: :"select-drop-down")%>
+		<%= f.select(:countrya_or_countryb_or_countryc_cont, options_for_select(@top_countries_uniq), {include_blank: "All", selected: :country}, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 home-search-form--input index-search-form--input index-search-form--select", id: :"select-drop-down")%>
 		<%= f.submit "Find Candidates", class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 home-search-form--search index-search-form--search", name: nil %>
 	<% end %>
 
