@@ -49,18 +49,22 @@
 						<span><%= @post.salary %></span>
 					</li>
 					<% end %>
+					<% if @post.airfare.present? %>
 					<li class="show-side--icon-wrapper">
 						<span class="show-side--icon">
 							<i class="fa fa-plane" aria-hidden="true"></i>
 						</span>
 						<span>Airfare Stipend</span>
 					</li>
+					<% end %>
+					<% if @post.housing.present? %>
 					<li class="show-side--icon-wrapper">
 						<span class="show-side--icon">
 							<i class="fa fa-home" aria-hidden="true"></i>
 						</span>
 						<span>Housing Stipend</span>
 					</li>
+					<% end %>
 				</ul>
 			</div>
 		</div>
@@ -76,18 +80,22 @@
 		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-3 col-lg-3">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<ul>
+					<% if @post.university.present? %>
 					<li class="show-side--icon-wrapper">
 						<span class="show-side--icon">
 							<i class="fa fa-graduation-cap" aria-hidden="true"></i>
 						</span>
 						<span>BA/BS Requirement</span>
 					</li>
+					<% end %>
+					<% if @post.tefl.present? %>
 					<li class="show-side--icon-wrapper">
 						<span class="show-side--icon">
 							<i class="fa fa-book" aria-hidden="true"></i>
 						</span>
 						<span>TEFL Requirement</span>
 					</li>
+					<% end %>
 				</ul>
 			</div>
 		</div>
@@ -103,18 +111,22 @@
 		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-3 col-lg-3">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<ul>
+					<% if @post.vacation.present? %>
 					<li class="show-side--icon-wrapper">
 						<span class="show-side--icon">
 							<i class="fa fa-sun-o" aria-hidden="true"></i>
 						</span>
 						<span>Vacation Days</span>
 					</li>
+					<% end %>
+					<% if @post.insurance.present? %>
 					<li class="show-side--icon-wrapper">
 						<span class="show-side--icon">
 							<i class="fa fa-ambulance" aria-hidden="true"></i>
 						</span>
 						<span>Medical Insurance</span>
 					</li>
+					<% end %>
 				</ul>
 			</div>
 		</div>
