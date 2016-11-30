@@ -1,6 +1,7 @@
 $first-color: #F6F6F6;
 $second-color: #145ba8;
 $third-color: #FFF;
+$form-color: #eaeaea;
 $error-color: #e60505;
 $footerbg-color: #000;
 $footertype-color: #8c8989;
@@ -83,6 +84,10 @@ h2, p {
 
 .navbar-nav li a#navbar-post-job {
 	color: $error-color !important;
+}
+
+.navbar-nav li a#navbar-profile {
+	color: $second-color !important;
 }
 
 @media (min-width: 768px) {

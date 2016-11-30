@@ -41,16 +41,16 @@
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="http://www.google.com" class="btn-navbar" id="btn-words">Home</a>
+                        <a href="http://www.google.com" class="btn-navbar">Home</a>
                     </li>
                     <li>
-                        <a href="http://www.google.com" class="btn-navbar" id="btn-words">Countries</a>
+                        <a href="http://www.google.com" class="btn-navbar">Countries</a>
                     </li>
                     <li>
-                        <a href="http://www.google.com" class="btn-navbar" id="btn-words">Stories</a>
+                        <a href="http://www.google.com" class="btn-navbar">Stories</a>
                     </li>
                     <li>
-                        <a href="http://www.google.com" class="btn-navbar" id="btn-words">Community</a>
+                        <a href="http://www.google.com" class="btn-navbar">Community</a>
                     </li>
                     <li>
                         <%= link_to "Jobs", posts_path, :method => :get, class: :"btn-navbar"%>
@@ -64,11 +64,11 @@
                     </li>
                     <li>
                         <% if current_company.name == nil || current_company.name == "" %>
-                            <%= link_to edit_company_registration_path, :method => :get, class: :"btn-navbar" do %>
+                            <%= link_to edit_company_registration_path, :method => :get, class: :"btn-navbar", id: :"navbar-profile" do %>
                                 Edit Profile  <i class="fa fa-cog"></i>
                             <% end %>
                         <% else %>
-                            <%= link_to edit_company_registration_path, :method => :get, class: :"btn-navbar", id: :"btn-words navbar-company-name" do %>
+                            <%= link_to edit_company_registration_path, :method => :get, class: :"btn-navbar", id: :"navbar-profile" do %>
                                 <%= current_company.name %>  <i class="fa fa-cog"></i>
                             <% end %>
                         <% end %>
@@ -76,11 +76,11 @@
                 <% elsif user_signed_in? %>
                     <li>
                         <% if current_user.name == nil || current_user.name == "" %>
-                            <%= link_to edit_user_registration_path, :method => :get, class: :"btn-navbar", id: :"btn-words" do %>
+                            <%= link_to edit_user_registration_path, :method => :get, class: :"btn-navbar", id: :"navbar-profile" do %>
                                 Edit Resume <i class="fa fa-cog"></i>
                             <% end %>
                         <% else %>
-                            <%= link_to edit_user_registration_path, :method => :get, class: :"btn-navbar", id: :"btn-words" do %>
+                            <%= link_to edit_user_registration_path, :method => :get, class: :"btn-navbar", id: :"navbar-profile" do %>
                                 <%= current_user.name %> <i class="fa fa-cog"></i>
                             <% end %>
                         <% end %>

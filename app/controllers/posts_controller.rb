@@ -50,9 +50,9 @@ class PostsController < ApplicationController
         @post = current_company.posts.build(post_params)
         
         # ||||| (start) this part is in the stripe function below|||||
-        # @post.save
-        # redirect_to posts_path
-        # end
+    # @post.save
+    # redirect_to posts_path
+    # end
         # ||||| (end) this part is in the stripe function below|||||
     
         # ||||| (start) comment this part out when adding stripe |||||
@@ -86,7 +86,7 @@ class PostsController < ApplicationController
                 )
 
                 Stripe::Charge.create(
-                    amount: 1600, # amount in cents, again
+                    amount: 10000, # amount in cents, again
                     currency: "usd",
                     customer: customer.id,
                     description: "Standard job posting"
