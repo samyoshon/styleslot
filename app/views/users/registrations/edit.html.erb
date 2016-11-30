@@ -24,7 +24,7 @@
 
                     <div class="field">
                         <h6 class="form-labels">Last Name*</h6>
-                        <%= f.text_field :lastname, class: "new-post--input", autofocus: true, required: true %>
+                        <%= f.text_field :lastname, class: "new-post--input", required: true %>
                     </div>
 
                     <div class="field">
@@ -34,7 +34,7 @@
 
                     <div class="field">
                         <h6 class="form-labels">Education*</h6>
-                        <%= f.text_area :education, class: "new-post--input", placeholder: "Education (University, Certification, etc.)", required: true %>
+                        <%= f.text_field :education, class: "new-post--input", placeholder: "Education (University, Certification, etc.)", required: true %>
                     </div>
 
 
@@ -75,23 +75,23 @@
                     </div>
 
                     <div class="field">
-                        <h6 class="form-labels">Skills/Interests</h6>
+                        <h6 class="form-labels">Skills/Interests*</h6>
                         <%= f.text_area :skills, class: "new-post--input", required: true %>
                     </div>
 
                     <div class="field">
-                        <h6 class="form-labels">Additional Languages</h6>
+                        <h6 class="form-labels">Additional Languages*</h6>
                         <%= f.text_field :languages, class: "new-post--input", required: true %>
                     </div>
 
                     <div class="field">
                         <h6 class="form-labels">Facebook Profile</h6>
-                        <%= f.url_field :facebook, class: "new-post--input", autofocus: true,placeholder: "http://www.facebook.com/example - (if n/a leave blank)" %>
+                        <%= f.url_field :facebook, class: "new-post--input", placeholder: "http://www.facebook.com/example - (if n/a leave blank)" %>
                     </div>
 
                     <div class="field">
                         <h6 class="form-labels">LinkedIn Profile</h6>
-                        <%= f.url_field :linkedin, class: "new-post--input", autofocus: true,placeholder: "https://www.linkedin.com/in/example - (if n/a leave blank)" %>
+                        <%= f.url_field :linkedin, class: "new-post--input", placeholder: "https://www.linkedin.com/in/example - (if n/a leave blank)" %>
                     </div>
 
                     <div class="field">
@@ -111,7 +111,7 @@
                 any-edit--password company-edit--hidden" id="company-edit-2">
                     <div class="field">
                         <h6 class="form-labels">Email</h6>
-                        <%= f.email_field :email, class: "new-post--input", autofocus: true, placeholder: "Work Email" %>
+                        <%= f.email_field :email, class: "new-post--input", placeholder: "Work Email" %>
                     </div>
 
                     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
