@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :resumes
 
-  has_attached_file :logo, :styles => { :large => "600x600>", :medium => "300x300>", :small => "150x150#",
+  has_attached_file :logo, :styles => { :large => "600x600>", :medium => "200x200>", :small => "150x150#",
   :thumb => "75x75#" }
 
   validates_attachment_content_type :logo, content_type: /\Aimage\/.*\Z/      

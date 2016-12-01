@@ -33,28 +33,6 @@
                     </div>
 
                     <div class="field">
-                        <h6 class="form-labels">Education*</h6>
-                        <%= f.text_field :education, class: "new-post--input", placeholder: "Education (University, Certification, etc.)", required: true %>
-                    </div>
-
-
-                    <div class="field">
-                        <h6 class="form-labels">About Me*</h6>
-                        <%= f.text_area :description, class: "new-post--input", required: true %>
-                    </div>
-
-                    <div class="field">
-                        <h6 class="form-labels">Expertise*</h6>
-                        <%= f.text_area :expertise, class: "new-post--input", required: true %>
-                    </div>
-
-                    <div class="field">
-                        <h6 class="form-labels">Previous Experience*</h6>
-                        <%= f.text_area :experience, class: "new-post--input", required: true %>
-                    </div>
-
-
-                    <div class="field">
                         <h6 class="form-labels">Current Residence*</h6>
                         <%= f.country_select(:residence, {}, {class: "new-post--input index-search-form--select new-post--country"}, label: false, required: true) %>
                     </div>
@@ -73,6 +51,28 @@
                         <h6 class="form-labels">Third Choice Country</h6>
                         <%= f.country_select(:countryc, {include_blank: "All"}, {class: "new-post--input index-search-form--select new-post--country"}, label: false) %>
                     </div>
+
+                    <div class="field">
+                        <h6 class="form-labels">About Me*</h6>
+                        <%= f.text_area :description, class: "new-post--input", required: true %>
+                    </div>
+
+                    <div class="field">
+                        <h6 class="form-labels">Education*</h6>
+                        <%= f.text_field :education, class: "new-post--input", placeholder: "Education (University, Certification, etc.)", required: true %>
+                    </div>
+
+                    <div class="field">
+                        <h6 class="form-labels">Expertise*</h6>
+                        <%= f.text_area :expertise, class: "new-post--input", required: true %>
+                    </div>
+
+                    <div class="field">
+                        <h6 class="form-labels">Previous Experience*</h6>
+                        <%= f.text_area :experience, class: "new-post--input", required: true %>
+                    </div>
+
+
 
                     <div class="field">
                         <h6 class="form-labels">Skills/Interests*</h6>
@@ -95,7 +95,7 @@
                     </div>
 
                     <div class="field">
-                        <%= f.label :logo, "Profile Image (150x150)", id: "company-edit--company-logo-label", required: true %><br>
+                        <%= f.label :logo, "Profile Image (250x250)", id: "company-edit--company-logo-label", required: true %><br>
                         <% if @user.logo.exists? %>
                             <%= image_tag @user.logo.url(:thumb) %><br>
                         <% end %>
