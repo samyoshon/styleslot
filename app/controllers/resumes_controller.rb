@@ -66,7 +66,7 @@ class ResumesController < ApplicationController
                     description: "Standard job posting"
                 )
 
-                flash[:notice] = 'Post has been successfully posted!'
+                flash[:notice] = 'You now have access to contact teachers!'
 
             rescue Stripe::StripeError => e
                     charge_error = e.message
@@ -79,6 +79,7 @@ class ResumesController < ApplicationController
                 # render :new
             else
                 current_company.monthly = Date.today + 730
+                # add date as variable
                 current_company.save
                 redirect_to posts_path
             end
