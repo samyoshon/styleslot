@@ -27,11 +27,15 @@ class ResumesController < ApplicationController
     def show
         @user = User.find(params[:id])
 
-        @date = Date.today - 30
+        @date = Date.today
     end
 
+    def subscription
+        @current = current_company
+    end 
+
     def subscribe
-        # @post = current_company.posts.build(post_params)
+        @current = current_company.id
 
         charge_error = nil
 
@@ -56,7 +60,7 @@ class ResumesController < ApplicationController
                 )
 
                 Stripe::Charge.create(
-                    amount: 10000, # amount in cents, again
+                    amount: params[:company][:amount], # amount in cents, again
                     currency: "usd",
                     customer: customer.id,
                     description: "Standard job posting"
@@ -70,11 +74,18 @@ class ResumesController < ApplicationController
 
             if charge_error
                 flash[:alert] = charge_error
-                render :new
+                debug(params)
+                # redirect_to posts_path
+                # render :new
             else
-                @post.save
+                current_company.monthly = Date.today + 730
+                current_company.save
                 redirect_to posts_path
             end
+    end
+
+    def update
+        @current = current_company.id
     end
 
 private 

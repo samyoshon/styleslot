@@ -38,6 +38,8 @@
 		</div>
 	</div>
 
+
+	<%= form_for @current, url: resume_subscribe_path, html: {method: :post} do |f| %>
 	<div class="new-post--container new-post--stripe-container subscription-container">
 		<h1>Payment Options</h1>
 		<p>100% Secure Payments via <a href="https://stripe.com/" target="_blank">Stripe</a></p>
@@ -58,7 +60,10 @@
 	    	<h6 class="form-labels">CVC</h6>
 	    	<input type="text" size="4" data-stripe="cvc" class="new-post--input" placeholder="123"  maxlength="3"/>
     	</div>
+    	<!-- VALUE IS ENTERED AS VARIABLE TO STRIPE -->
+    	<%= f.hidden_field :amount, :value => '4545' %>
 
     	<button type="submit" class="home-search-form--search new-post--submit col-sm-12" id="btn-job-post">Post Job</button>
+    <% end %>
     </div>
 </div>
