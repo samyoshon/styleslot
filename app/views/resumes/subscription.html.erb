@@ -1,1 +1,64 @@
-<h1> HELLO </h1>
+<div class="main-container col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+	<h1>Recruit Teachers.</h1>
+	<p>Find the perfect teacher for your program.</p>
+
+	<div class="post-container resume-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="resume-container--wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="post-container--each resume-container--each col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h1 class="resume-index-container--title">1 Month</h1>
+				<h1 class="subscription-index--dollar">$100</h1>
+				<ul>
+					<li>Unlimited Access</li>
+					<br>
+				</ul>
+				<button type="button" class="btn btn-primary subscription-button" id="sub-btn-1">Subscribe Now</button>
+			</div>
+		</div>
+		<div class="resume-container--wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="post-container--each resume-container--each col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h1 class="resume-index-container--title">3 Months</h1>
+				<h1 class="subscription-index--dollar">$80*</h1>
+				<ul>
+					<li>Unlimited Access</li>
+					<li>Save 20%</li>
+				</ul>
+				<button type="button" class="btn btn-primary subscription-button" id="sub-btn-2">Subscribe Now</button>
+			</div>
+		</div>
+		<div class="resume-container--wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="post-container--each resume-container--each col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h1 class="resume-index-container--title">6 Months</h1>
+				<h1 class="subscription-index--dollar">$75*</h1>
+				<ul>
+					<li>Unlimited Access</li>
+					<li>Save 25%</li>
+				</ul>
+				<button type="button" class="btn btn-primary subscription-button" id="sub-btn-3">Subscribe Now</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="new-post--container new-post--stripe-container subscription-container">
+		<h1>Payment Options</h1>
+		<p>100% Secure Payments via <a href="https://stripe.com/" target="_blank">Stripe</a></p>
+		<span class="payment-errors"></span>
+		<div class="col-sm-12">
+    		<h6 class="form-labels">Credit Card Number</h6>
+    		<input type="text" size="20" data-stripe="number" class="new-post--input " placeholder="1234 1234 1234 1234" maxlength="20"/>
+    	</div>
+    	<div class="col-sm-4">
+	    	<h6 class="form-labels">Month</h6>
+	      	<input type="text" size="2" data-stripe="exp-month" class="new-post--input" placeholder="MM" maxlength="2"/>
+	    </div>
+	    <div class="col-sm-4">
+	    	<h6 class="form-labels">Year</h6>
+	    	<input type="text" size="4" data-stripe="exp-year" class="new-post--input" placeholder="YYYY" maxlength="4"/>
+		</div>
+		<div class="col-sm-4">
+	    	<h6 class="form-labels">CVC</h6>
+	    	<input type="text" size="4" data-stripe="cvc" class="new-post--input" placeholder="123"  maxlength="3"/>
+    	</div>
+
+    	<button type="submit" class="home-search-form--search new-post--submit col-sm-12" id="btn-job-post">Post Job</button>
+    </div>
+</div>
