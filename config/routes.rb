@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :users
 
   resources :posts
+  
+  get '/resumes/subscription', to: 'resumes#subscription', as: 'resume_subs'
+  
   resources :resumes
   resources :newsletters
   

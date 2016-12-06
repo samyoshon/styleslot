@@ -95,6 +95,11 @@
                     </div>
 
                     <div class="field">
+                        <h6 class="form-labels">Monthly</h6>
+                        <%= f.date_field :monthly, class: "new-post--input", :value => Time.now.strftime('%Y-%m-%d') %>
+                    </div>
+
+                    <div class="field">
                         <%= f.label :logo, "Profile Image (250x250)", id: "company-edit--company-logo-label", required: true %><br>
                         <% if @user.logo.exists? %>
                             <%= image_tag @user.logo.url(:thumb) %><br>
@@ -143,5 +148,3 @@
             </div>
         </div>
 </div>
-
-<%= render "partials/footer" %>

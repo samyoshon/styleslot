@@ -26,6 +26,10 @@ class ResumesController < ApplicationController
 
     def show
         @user = User.find(params[:id])
+
+        @usera = @current_user
+
+        @date = Date.today - 30
     end
 
 private 

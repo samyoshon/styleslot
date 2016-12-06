@@ -1,9 +1,9 @@
 <div class="show-main col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<div class="show-main--company col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<div class="post-container--logo col-xs-12 col-sm-12 col-md-2 col-lg-2">
+		<div class="post-container--logo col-xs-12 col-sm-12 col-md-3 col-lg-3">
 			<div class="show-main--logo"><%= image_tag @user.logo(:medium) %></div>
 		</div>
-		<div class="resume-container--title col-xs-12 col-sm-12 col-md-10 col-lg-10">
+		<div class="resume-container--title col-xs-12 col-sm-12 col-md-9 col-lg-9">
 			<h1><%= @user.name %> <%= @user.lastname %></h1>
 			<ul>
 				<li class="show-side--icon-wrapper">
@@ -79,9 +79,13 @@
 
 		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-9 col-lg-9 apply-now-hidden" id="show-apply-now-div">
 			<h4>Contact Teacher:</h4>
-			<%= link_to @user.email, @user.email, target: "blank" %>
+			<% if current_user.present? && current_user.monthly >= @date && current_user.monthly == nil && current_user.monthly == "" %>
+				<%= link_to @user.email, @user.email, target: "blank" %>
+			<% else %>
+				<%= link_to resume_subs_path do %>
+					Are you a recruiter? Click here to gain access to contact potential teachers.
+				<% end %>
+			<% end %>
 		</div>
 	</div>
 </div>
-
-<%= render "partials/footer" %>
