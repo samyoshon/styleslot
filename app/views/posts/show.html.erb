@@ -1,9 +1,9 @@
-<div class="show-main col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	<div class="show-main--company col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="show-main col-sm-12">
+	<div class="show-main--company col-sm-12">
 		<div class="show-main--logo"><%= image_tag @post.company.logo(:small) %></div>
 		<h1><%= @post.company.name %></h1>
 		<div class="show-main--description"><%= simple_format @post.company.description %></div>
-		<div class="show-main--social col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="show-main--social col-sm-12">
 			<% if @post.company.website.present? %>
 				<a href="<%= @post.company.website %>" target="blank"><i class="fa fa-globe"></i></a>
 			<% end %>
@@ -21,25 +21,25 @@
 
 <!-- 	<div class="show-main--instagram">
 		<% @photos.each do |instagram| %>
-    		<%= image_tag instagram.images.standard_resolution.url, class: :"col-xs-12 col-sm-12 col-md-3 col-lg-3" %>
+    		<%= image_tag instagram.images.standard_resolution.url, class: :"col-sm-12 col-md-3" %>
     	<% end %>
 	</div> -->
 
-	<div class="show-main--post col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<div class="show-main--post-title col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="show-main--post col-sm-12">
+		<div class="show-main--post-title col-sm-12">
 			<h2><%= simple_format @post.title %></h2>
 			<p><i class="fa fa-map-marker"></i> <%= @post.city %>, <%= @post.country %></p>
 		</div>
-		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-9 col-lg-9">
-			<div class="show-main--post-description-title col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		<div class="show-main--post-description col-sm-12 col-md-9">
+			<div class="show-main--post-description-title col-sm-12 col-md-3">
 				<h4>Job Description</h4>
 			</div>
-			<div class="show-main--post-description-text col-xs-12 col-sm-12 col-md-9 col-lg-9">
+			<div class="show-main--post-description-text col-sm-12 col-md-9">
 				<p><%= simple_format @post.description %></p>
 			</div>
 		</div>
-		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-3 col-lg-3">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="show-main--post-description col-sm-12 col-md-3">
+			<div class="col-sm-12">
 				<ul>
 					<% if @post.salary.present? %>
 					<li class="show-side--icon-wrapper">
@@ -69,16 +69,16 @@
 			</div>
 		</div>
 
-		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-9 col-lg-9">		
-			<div class="show-main--post-description-title col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		<div class="show-main--post-description col-sm-12 col-md-9">		
+			<div class="show-main--post-description-title col-sm-12 col-md-3">
 				<h4>Qualifications</h4>
 			</div>
-			<div class="show-main--post-description-text col-xs-12 col-sm-12 col-md-9 col-lg-9">
+			<div class="show-main--post-description-text col-sm-12 col-md-9">
 				<p><%= simple_format @post.qualifications %></p>
 			</div>
 		</div>
-		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-3 col-lg-3">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="show-main--post-description col-sm-12 col-md-3">
+			<div class="col-sm-12">
 				<ul>
 					<% if @post.university.present? %>
 					<li class="show-side--icon-wrapper">
@@ -100,16 +100,16 @@
 			</div>
 		</div>
 
-		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-9 col-lg-9">
-			<div class="show-main--post-description-title col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		<div class="show-main--post-description col-sm-12 col-md-9">
+			<div class="show-main--post-description-title col-sm-12 col-md-3">
 				<h4>Benefits</h4>
 			</div>
-			<div class="show-main--post-description-text col-xs-12 col-sm-12 col-md-9 col-lg-9">
+			<div class="show-main--post-description-text col-sm-12 col-md-9">
 				<p><%= simple_format @post.benefits %></p>
 			</div>
 		</div>
-		<div class="show-main--post-description col-xs-12 col-sm-12 col-md-3 col-lg-3">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="show-main--post-description col-sm-12 col-md-3">
+			<div class="col-sm-12">
 				<ul>
 					<% if @post.vacation.present? %>
 					<li class="show-side--icon-wrapper">
@@ -131,9 +131,9 @@
 			</div>
 		</div>
 
-		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-9 col-lg-9" id="show-apply-now-btn"><i class="fa fa-check-square-o"></i> Apply Now</div>
+		<div class="home-search-form--search show-main--apply col-sm-12 col-md-9" id="show-apply-now-btn"><i class="fa fa-check-square-o"></i> Apply Now</div>
 
-		<div class="home-search-form--search show-main--apply col-xs-12 col-sm-12 col-md-9 col-lg-9 apply-now-hidden" id="show-apply-now-div">
+		<div class="home-search-form--search show-main--apply col-sm-12 col-md-9 apply-now-hidden" id="show-apply-now-div">
 			<h4>How to Apply:</h4>
 			<%= simple_format @post.how_to %>
 			<%= link_to @post.how_to_link, @post.how_to_link, target: "blank" %>
@@ -141,8 +141,8 @@
 	</div>
 </div>
 
-<!-- <aside class="show-newsletter col-xs-12 col-sm-12 col-md-3 col-md-3">
-	<div class="show-newsletter--fixed col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<!-- <aside class="show-newsletter col-sm-12 col-md-3 col-md-3">
+	<div class="show-newsletter--fixed col-sm-12">
 		<h1>Stay updated.</h1>
 		<p>Stay updated with the best jobs in fashion.</p>
 		<%= form_for Newsletter.new do |f| %>
@@ -150,9 +150,9 @@
 			<%= f.email_field :email, class: "new-post--input newsletter-form", placeholder: "Email" %>
 			<%= f.submit "Submit", class: "home-search-form--search new-post--submit" %>
 		<% end %>
-		<div class="home-search-form--search show-main--apply hidden-xs hidden-sm col-md-12 col-lg-12" id="show-apply-now-btn-2"><i class="fa fa-check-square-o"></i> Apply Now</div>
+		<div class="home-search-form--search show-main--apply hidden-xs hidden-sm" id="show-apply-now-btn-2"><i class="fa fa-check-square-o"></i> Apply Now</div>
 
-		<div class="home-search-form--search show-main--apply hidden-xs hidden-sm col-md-12 col-lg-12 apply-now-hidden" id="show-apply-now-div-2">
+		<div class="home-search-form--search show-main--apply hidden-xs hidden-sm apply-now-hidden" id="show-apply-now-div-2">
 			<h4>How to Apply:</h4>
 			<%= simple_format @post.how_to %>
 			<%= link_to @post.how_to_link, @post.how_to_link, target: "blank" %>

@@ -1,6 +1,6 @@
-<div class="new-post--container col-xs-12 col-sm-12 col-md-12 col-md-offset-1 col-lg-10 col-lg-offset-1">
+<div class="new-post--container col-sm-12 col-md-10 col-md-offset-1">
 	<%= form_for @post, html: {id:"payment-form"} do |f| %>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="col-sm-12">
 			<h1>New Job Post</h1>
 			<p>Recruit the best teachers from around the world.</p>
 			<p>Job will be posted for 30 days. Please double check your post as it is final. Single job post is $100 USD.</p>
@@ -14,9 +14,9 @@
 			<h6 class="form-labels">Country*</h6>
 			<%= f.country_select(:country, {}, {class: "new-post--input index-search-form--select new-post--country"}, required: true) %>
 
-			<!--<%= f.text_field :state, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input index-search-form--select", placeholder: "State", required: true %> -->
+			<!--<%= f.text_field :state, class: :"col-sm-12 col-md-4 new-post--input index-search-form--select", placeholder: "State", required: true %> -->
 
-			<!--<%= f.text_field :zip, class: :"col-xs-12 col-sm-12 col-md-4 col-lg-4 new-post--input", placeholder: "Zip Code", required: true %> -->
+			<!--<%= f.text_field :zip, class: :"col-sm-12 col-md-4 new-post--input", placeholder: "Zip Code", required: true %> -->
 
 			<h6 class="form-labels">Job Description*</h6>
 			<%= f.text_area :description, class: :"new-post--input new-post--textarea", required: true %>
