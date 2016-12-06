@@ -79,11 +79,23 @@
 
 		<div class="home-search-form--search show-main--apply col-sm-12 col-md-9 apply-now-hidden" id="show-apply-now-div">
 			<h4>Contact Teacher:</h4>
-			<% if current_user.present? && current_user.monthly >= @date && current_user.monthly == nil && current_user.monthly == "" %>
-				<%= link_to @user.email, @user.email, target: "blank" %>
+			<% if current_company.present? %>
+				<% if current_company.monthly >= @date %>
+					<%= link_to @user.email, @user.email, target: "blank" %>
+				<% else %>
+					<%= link_to resume_subs_path do %>
+						Are you a recruiter? Click here to gain access to contact potential teachers.
+					<% end %>
+				<% end %>
+			<% elsif current_user.present? %>
+				<% if current_user.id == @user.id %>
+					<%= link_to @user.email, @user.email, target: "blank" %>
+				<% else %>
+					<p>We discourage spam. You must be a recruiter to access contact information.</p>
+				<% end %>
 			<% else %>
-				<%= link_to resume_subs_path do %>
-					Are you a recruiter? Click here to gain access to contact potential teachers.
+				<%= link_to new_company_registration_path do %>
+					Are you a recruiter? Sign up now to gain access to contact potential teachers.
 				<% end %>
 			<% end %>
 		</div>

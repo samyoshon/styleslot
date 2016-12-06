@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :posts
   
   get '/resumes/subscription', to: 'resumes#subscription', as: 'resume_subs'
+  post '/resumes/subscription', to: 'resumes#subscribe', as: 'resume_subscribe'
   
   resources :resumes
   resources :newsletters

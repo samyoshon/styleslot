@@ -27,9 +27,54 @@ class ResumesController < ApplicationController
     def show
         @user = User.find(params[:id])
 
-        @usera = @current_user
-
         @date = Date.today - 30
+    end
+
+    def subscribe
+        # @post = current_company.posts.build(post_params)
+
+        charge_error = nil
+
+            begin
+                customer =  if current_company.stripe_id?
+                                Stripe::Customer.retrieve(current_company.stripe_id)
+                            else
+                                Stripe::Customer.create(
+                                    email: current_company.email,
+                                    source: params[:stripeToken],
+                                    description: "Standard Charge Customer"
+                                )                 
+                            end
+
+                current_company.update(
+                    stripe_id: customer.id,
+                    stripe_subscription_id: nil,
+                    card_last4: params[:card_last4],
+                    card_exp_month: params[:card_exp_month],
+                    card_exp_year: params[:card_exp_year],
+                    card_brand: params[:card_brand]
+                )
+
+                Stripe::Charge.create(
+                    amount: 10000, # amount in cents, again
+                    currency: "usd",
+                    customer: customer.id,
+                    description: "Standard job posting"
+                )
+
+                flash[:notice] = 'Post has been successfully posted!'
+
+            rescue Stripe::StripeError => e
+                    charge_error = e.message
+            end
+
+            if charge_error
+                flash[:alert] = charge_error
+                render :new
+            else
+                @post.save
+                redirect_to posts_path
+            end
     end
 
 private 
