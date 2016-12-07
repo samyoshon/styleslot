@@ -59,11 +59,8 @@
 }
 
 .new-post--payment-container {
-	margin-top: 30px;
-}
-
-.new-post--stripe-container {
-	margin-top: 100px;
+	margin-top: 50px;
+	border: 2px solid $second-color;
 }
 
 @media (max-width: 991px) {

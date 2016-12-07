@@ -60,7 +60,7 @@ class ResumesController < ApplicationController
                 )
 
                 Stripe::Charge.create(
-                    amount: params[:company][:amount], # amount in cents, again
+                    amount: params[:company][:amount], #amount in cents, again
                     currency: "usd",
                     customer: customer.id,
                     description: "Standard job posting"
@@ -78,7 +78,7 @@ class ResumesController < ApplicationController
                 # redirect_to posts_path
                 # render :new
             else
-                current_company.monthly = Date.today + 730
+                current_company.monthly = Date.today() + (params[:company][:monthly]).to_i
                 # add date as variable
                 current_company.save
                 redirect_to posts_path

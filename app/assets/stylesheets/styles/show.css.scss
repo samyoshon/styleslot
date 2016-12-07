@@ -92,8 +92,12 @@
 	width: 10px;
 }
 
-.apply-now-hidden {
+.apply-now-hidden, .payment-hidden, .payment-options-hidden {
 	display: none;
+}
+
+.payment-active {
+	display: initial;
 }
 
 .apply-now-active {

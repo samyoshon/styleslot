@@ -20,6 +20,19 @@ $(document).ready(function(){
 	$('.post-view-count').click(function(){
 		console.log(this.id);
 	});
+
+	$('.subscription-button').click(function(){
+		$('.subscription-container').addClass('payment-active');
+		$('.payment-options').addClass('payment-options-hidden');
+		$('.payment-amount-disabled').attr('disabled', true);
+		var paymentOption = this.id;
+		$('#sub-btn-' + paymentOption).removeClass('payment-options-hidden');
+		$('#mon-' + paymentOption).attr('disabled', false);
+		$('#amt-' + paymentOption).attr('disabled', false);
+	});
+
+	// $('form > input:hidden').attr("disabled",true);
+    
 });
 
 //Added 'Page:Load' because Turbolinks screws up JS when using link_to
