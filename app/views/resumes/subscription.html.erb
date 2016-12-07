@@ -2,7 +2,6 @@
 	<div class="main-container col-md-10 col-md-offset-1">
 		<h1>Recruit Teachers.</h1>
 		<p>Find the perfect teacher for your program.</p>
-		<%= current_company.monthly %>
  		<div class="post-container resume-container">
 			<div class="resume-container--wrapper col-md-4">
 				<div class="post-container--each resume-container--each col-sm-12">
@@ -59,6 +58,7 @@
 			<%= f.hidden_field :amount, class: :"payment-amount-disabled", :id => 'amt-3', value: :'45000' %>
 		</div>
 		<p>100% Secure Payments via <a href="https://stripe.com/" target="_blank">Stripe</a></p>
+		<p><i class="fa fa-cc-visa" aria-hidden="true"></i> <i class="fa fa-cc-mastercard" aria-hidden="true"></i> <i class="fa fa-cc-amex" aria-hidden="true"></i> <i class="fa fa-cc-discover" aria-hidden="true"></i> <i class="fa fa-cc-jcb" aria-hidden="true"></i> <i class="fa fa-cc-diners-club" aria-hidden="true"></i></p>
 		<span class="payment-errors"></span>
 		<div class="col-sm-12">
     		<h6 class="form-labels">Credit Card Number</h6>

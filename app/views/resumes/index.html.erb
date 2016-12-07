@@ -1,7 +1,9 @@
 <div class="main-container col-sm-12 col-md-10 col-md-offset-1">
 	<h1>Teachers Abroad.</h1>
 	<p>Find the perfect teacher for your program.</p>
-	<p><a href="http://www.google.com">Are you an employer and want to attract the best teachers? Sign up here.</a></p>
+	<%= link_to new_user_registration_path do %>
+		<p>Are you a teacher? Sign up now to get recruited from employers all over the world.</p>
+	<% end %>
 	
 	<%= search_form_for @q do |f| %>
 		<%= f.text_field :expertise_or_description_or_experience_cont, class: :"col-sm-12 col-md-4 home-search-form--input index-search-form--input", placeholder: "Keywords (description, expertise, experience)" %>

@@ -102,11 +102,6 @@
                         <%= f.file_field :logo, class: "new-post--input", id: "company-edit--company-logo-upload", placeholder: "User Profile Image" %>
                     </div>
 
-                    <div class="field">
-                        <h6 class="form-labels">Monthly</h6>
-                        <%= f.date_field :monthly, class: "new-post--input", :value => Time.now.strftime('%Y-%m-%d') %>
-                    </div>
-
                     <div class="actions">
                         <%= f.submit "Post Resume", class: "home-search-form--search new-post--submit" %>
                     </div>

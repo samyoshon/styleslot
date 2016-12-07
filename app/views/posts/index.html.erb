@@ -1,7 +1,9 @@
 <div class="main-container col-sm-12 col-md-10 col-md-offset-1">
 	<h1>Jobs Abroad.</h1>
 	<p>Find the perfect job to get started on your adventure.</p>
-	<p><a href="http://www.google.com">Are you an employer and want to attract the best teachers? Sign up here.</a></p>
+	<%= link_to new_company_registration_path do %>
+		<p>Are you an employer? Sign up now to attract the best teachers from around the world.</p>
+	<% end %>
 
 	<%= search_form_for @search do |f| %>
 		<%= f.text_field :title_or_description_cont, class: :"col-sm-12 col-md-4 home-search-form--input index-search-form--input", placeholder: "Keywords (job title, description)" %>
