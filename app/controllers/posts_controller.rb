@@ -9,8 +9,7 @@ class PostsController < ApplicationController
     def index
         @search = Post.ransack(params[:q])
 
-        @posts = @search.result.paginate(page: params[:page], per_page: 30)
-        # @posts = @search.result.paginate(page: params[:page], per_page: 30).where(["created_at > ?", 30.days.ago]).order("created_at DESC")
+        @posts = @search.result.paginate(page: params[:page], per_page: 30).where(["created_at > ?", 30.days.ago]).order("created_at DESC")
 
         ### Find Countries That Have Job Posts - Used for filter option
         @posts_all = Post.where(["created_at > ?", 30.days.ago]).order("created_at DESC")
