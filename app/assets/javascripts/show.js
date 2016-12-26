@@ -22,7 +22,6 @@ $(document).ready(function(){
 	});
 
 	$('.subscription-button').click(function(){
-		console.log('hello');
 		$('.subscription-container').addClass('payment-active');
 		$('.payment-options').addClass('payment-options-hidden');
 		$('.payment-amount-disabled').attr('disabled', true);
@@ -61,7 +60,6 @@ $(document).on('page:load',function(){
 	});
 
 	$('.subscription-button').click(function(){
-		console.log('hello');
 		$('.subscription-container').addClass('payment-active');
 		$('.payment-options').addClass('payment-options-hidden');
 		$('.payment-amount-disabled').attr('disabled', true);

@@ -1,5 +1,5 @@
 <% if current_company.present? %>
-	<div class="main-container col-md-10 col-md-offset-1">
+	<div class="new-post--container col-md-10 col-md-offset-1">
 		<h1>Recruit Teachers.</h1>
 		<p class="post-tagline">Find the perfect teacher for your program.</p>
  		<div class="post-container resume-container">
@@ -40,7 +40,7 @@
 	</div>
 
 	<%= form_for @current, url: resume_subscribe_path, html: {method: :post} do |f| %>
-	<div class="new-post--container subscription-container payment-options-hidden col-md-8 col-md-offset-2">
+	<div class="new-post--container new-post--payment-container new-post--stripe-container subscription-container payment-options-hidden col-md-8 col-md-offset-2">
 		<h1>Payment Options</h1>
 		<div id='sub-btn-1' class='payment-options payment-options-hidden'>
 			<%= f.hidden_field :monthly, class: :"payment-amount-disabled", :id => 'mon-1', value: :'30' %>

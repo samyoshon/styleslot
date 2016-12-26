@@ -63,12 +63,6 @@
 	border: 2px solid $second-color;
 }
 
-@media (max-width: 991px) {
-	.new-post-bg--container, .new-post--container {
-		padding: 0 !important;
-	}
-}
-
 .payment-errors {
 	color: $error-color;
 }
