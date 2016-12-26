@@ -2,8 +2,8 @@
 	<%= form_for @post, html: {id:"payment-form"} do |f| %>
 		<div>
 			<h1>New Job Post</h1>
-			<p>Recruit the best teachers from around the world.</p>
-			<p>Job will be posted for 30 days. Please double check your post as it is final. Single job post is $100 USD.</p>
+			<p class="post-tagline">Recruit the best teachers from around the world.</p>
+			<p class="post-tagline--payment">Job will be posted for 30 days. Please double check your post as it is final. Single job post is $100 USD.</p>
 
 			<h6 class="form-labels">Job Title*</h6>
 			<%= f.text_field :title, class: :"new-post--input", autofocus: true, required: true %>
@@ -58,9 +58,9 @@
 			
 		<div class="new-post--container new-post--payment-container new-post--stripe-container col-md-10 col-md-offset-1">
 			<h1>Payment Options</h1>
-			<p>You will be charged $100. Your job post will available 30 days.</p>
-			<p>100% Secure Payments via <a href="https://stripe.com/" target="_blank">Stripe</a></p>
-			<p><i class="fa fa-cc-visa" aria-hidden="true"></i> <i class="fa fa-cc-mastercard" aria-hidden="true"></i> <i class="fa fa-cc-amex" aria-hidden="true"></i> <i class="fa fa-cc-discover" aria-hidden="true"></i> <i class="fa fa-cc-jcb" aria-hidden="true"></i> <i class="fa fa-cc-diners-club" aria-hidden="true"></i></p>
+			<p class="post-tagline">100% Secure Payments via <a href="https://stripe.com/" target="_blank">Stripe</a></p>
+			<p class="post-tagline"><i class="fa fa-cc-visa" aria-hidden="true"></i> <i class="fa fa-cc-mastercard" aria-hidden="true"></i> <i class="fa fa-cc-amex" aria-hidden="true"></i> <i class="fa fa-cc-discover" aria-hidden="true"></i> <i class="fa fa-cc-jcb" aria-hidden="true"></i> <i class="fa fa-cc-diners-club" aria-hidden="true"></i></p>
+			<p class="post-tagline--payment">You will be charged $100. Your job post will available 30 days.</p>
 			<span class="payment-errors"></span>
 
 				<div class="col-sm-12">

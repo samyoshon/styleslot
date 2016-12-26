@@ -238,6 +238,7 @@ textarea {
 footer {
 	background-color: $footerbg-color;
 	border-top: 12px solid $footerborder-color;
+	margin-top: 50px;
 }
 
 .footer-container {
@@ -262,10 +263,6 @@ footer {
   			text-decoration: none;
   		}
   	}
-}
-
-.footer-title {
-
 }
 
 .footer-social {

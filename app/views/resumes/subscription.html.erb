@@ -1,7 +1,7 @@
 <% if current_company.present? %>
 	<div class="main-container col-md-10 col-md-offset-1">
 		<h1>Recruit Teachers.</h1>
-		<p>Find the perfect teacher for your program.</p>
+		<p class="post-tagline">Find the perfect teacher for your program.</p>
  		<div class="post-container resume-container">
 			<div class="resume-container--wrapper col-md-4">
 				<div class="post-container--each resume-container--each col-sm-12">
@@ -44,21 +44,21 @@
 		<h1>Payment Options</h1>
 		<div id='sub-btn-1' class='payment-options payment-options-hidden'>
 			<%= f.hidden_field :monthly, class: :"payment-amount-disabled", :id => 'mon-1', value: :'30' %>
-			<p>You will be charged $100 for 1 month of access.</p>
+			<p class="post-tagline--payment">You will be charged $100 for 1 month of access.</p>
 			<%= f.hidden_field :amount, class: :"payment-amount-disabled", :id => 'amt-1', value: :'10000' %>
 		</div>
 		<div id='sub-btn-2' class='payment-options payment-options-hidden'>
 			<%= f.hidden_field :monthly, class: :"payment-amount-disabled", :id => 'mon-2', value: :'90' %>
-			<p>You will be charged $240 for 3 months of access.</p>
+			<p class="post-tagline--payment">You will be charged $240 for 3 months of access.</p>
 			<%= f.hidden_field :amount, class: :"payment-amount-disabled", :id => 'amt-2', value: :'24000' %>
 		</div>
 		<div id='sub-btn-3' class='payment-options payment-options-hidden'>
 			<%= f.hidden_field :monthly, class: :"payment-amount-disabled", :id => 'mon-3', value: :'180' %>
-			<p>You will be charged $450 for 6 months of access.</p>
+			<p class="post-tagline--payment">You will be charged $450 for 6 months of access.</p>
 			<%= f.hidden_field :amount, class: :"payment-amount-disabled", :id => 'amt-3', value: :'45000' %>
 		</div>
-		<p>100% Secure Payments via <a href="https://stripe.com/" target="_blank">Stripe</a></p>
-		<p><i class="fa fa-cc-visa" aria-hidden="true"></i> <i class="fa fa-cc-mastercard" aria-hidden="true"></i> <i class="fa fa-cc-amex" aria-hidden="true"></i> <i class="fa fa-cc-discover" aria-hidden="true"></i> <i class="fa fa-cc-jcb" aria-hidden="true"></i> <i class="fa fa-cc-diners-club" aria-hidden="true"></i></p>
+		<p class="post-tagline">100% Secure Payments via <a href="https://stripe.com/" target="_blank">Stripe</a></p>
+		<p class="post-tagline"><i class="fa fa-cc-visa" aria-hidden="true"></i> <i class="fa fa-cc-mastercard" aria-hidden="true"></i> <i class="fa fa-cc-amex" aria-hidden="true"></i> <i class="fa fa-cc-discover" aria-hidden="true"></i> <i class="fa fa-cc-jcb" aria-hidden="true"></i> <i class="fa fa-cc-diners-club" aria-hidden="true"></i></p>
 		<span class="payment-errors"></span>
 		<div class="col-sm-12">
     		<h6 class="form-labels">Credit Card Number</h6>
