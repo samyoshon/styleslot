@@ -44,17 +44,17 @@
 		<h1>Payment Options</h1>
 		<div id='sub-btn-1' class='payment-options payment-options-hidden'>
 			<%= f.hidden_field :monthly, class: :"payment-amount-disabled", :id => 'mon-1', value: :'30' %>
-			<p class="post-tagline--payment">You will be charged $100 for 1 month of access.</p>
+			<p class="post-tagline">You will be charged <strong class="post-tagline--payment">$100</strong> for <strong class="post-tagline--payment">1 month</strong> of access.</p>
 			<%= f.hidden_field :amount, class: :"payment-amount-disabled", :id => 'amt-1', value: :'10000' %>
 		</div>
 		<div id='sub-btn-2' class='payment-options payment-options-hidden'>
 			<%= f.hidden_field :monthly, class: :"payment-amount-disabled", :id => 'mon-2', value: :'90' %>
-			<p class="post-tagline--payment">You will be charged $240 for 3 months of access.</p>
+			<p class="post-tagline">You will be charged <strong class="post-tagline--payment">$240</strong> for <strong class="post-tagline--payment">3 months</strong> of access.</p>
 			<%= f.hidden_field :amount, class: :"payment-amount-disabled", :id => 'amt-2', value: :'24000' %>
 		</div>
 		<div id='sub-btn-3' class='payment-options payment-options-hidden'>
 			<%= f.hidden_field :monthly, class: :"payment-amount-disabled", :id => 'mon-3', value: :'180' %>
-			<p class="post-tagline--payment">You will be charged $450 for 6 months of access.</p>
+			<p class="post-tagline">You will be charged <strong class="post-tagline--payment">$450</strong> for <strong class="post-tagline--payment">6 months</strong> of access.</p>
 			<%= f.hidden_field :amount, class: :"payment-amount-disabled", :id => 'amt-3', value: :'45000' %>
 		</div>
 		<p class="post-tagline">100% Secure Payments via <a href="https://stripe.com/" target="_blank">Stripe</a></p>

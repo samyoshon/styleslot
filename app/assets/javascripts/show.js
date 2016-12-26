@@ -22,6 +22,7 @@ $(document).ready(function(){
 	});
 
 	$('.subscription-button').click(function(){
+		console.log('hello');
 		$('.subscription-container').addClass('payment-active');
 		$('.payment-options').addClass('payment-options-hidden');
 		$('.payment-amount-disabled').attr('disabled', true);
@@ -53,5 +54,20 @@ $(document).on('page:load',function(){
 		var editID = this.id;
 		$('.company-edit--section').hide();
 		$('#company-edit-' + editID).show();
+	});
+
+	$('.post-view-count').click(function(){
+		console.log(this.id);
+	});
+
+	$('.subscription-button').click(function(){
+		console.log('hello');
+		$('.subscription-container').addClass('payment-active');
+		$('.payment-options').addClass('payment-options-hidden');
+		$('.payment-amount-disabled').attr('disabled', true);
+		var paymentOption = this.id;
+		$('#sub-btn-' + paymentOption).removeClass('payment-options-hidden');
+		$('#mon-' + paymentOption).attr('disabled', false);
+		$('#amt-' + paymentOption).attr('disabled', false);
 	});
 });
