@@ -283,3 +283,37 @@ footer {
   		};
   	}
 }
+
+#navbar-logo img {
+	margin-top: 12px;
+	margin-bottom: 12px;
+	height: 56px;
+	width: 140px;
+}
+
+#navbar-hamburger {
+	font-size: 30px;
+	margin-top: 28px;
+}
+
+@media screen and (min-width: 991px) {
+	#navbar-logo {	
+		margin-left: 80px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	#navbar-logo {	
+		margin-left: 20px;
+	}
+
+	#navbar-logo img {
+		margin-top: 18px !important;
+		margin-bottom: 18px !important;
+	}
+}
+
+.icon-bar {
+	width: 28px !important;
+	height: 4px !important;
+}
