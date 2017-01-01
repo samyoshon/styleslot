@@ -20,6 +20,8 @@
 							<div class="post-container--each resume-container--each col-sm-12">
 								<% if user.logo.present? %>
 									<%= image_tag user.logo(:small), class: :'circle-image' %>
+								<% else %>
+									<%= image_tag("default_logo.jpg", size: "150x150", alt: "Default Profile Pic") %>
 								<% end %>
 								<h1 class="resume-index-container--title"><%= user.name %> <%= user.lastname %></h1>
 								<p><%= user.education %></p>

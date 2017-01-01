@@ -1,6 +1,12 @@
 <div class="show-main col-sm-12">
 	<div class="show-main--company col-sm-12">
-		<div class="show-main--logo"><%= image_tag @post.company.logo(:small) %></div>
+		<div class="show-main--logo">
+			<% if @post.company.logo.present? %>
+				<%= image_tag @post.company.logo(:small) %>
+			<% else %>
+				<%= image_tag("default_logo.jpg", size: "150x150", alt: "Default Profile Pic") %>
+			<% end %>
+		</div>
 		<h1><%= @post.company.name %></h1>
 		<div class="show-main--description"><%= simple_format @post.company.description %></div>
 		<div class="show-main--social col-sm-12">

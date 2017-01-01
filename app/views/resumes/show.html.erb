@@ -1,7 +1,13 @@
 <div class="show-main col-sm-12">
 	<div class="show-main--company col-sm-12">
 		<div class="post-container--logo col-sm-12 col-md-3">
-			<div class="show-main--logo"><%= image_tag @user.logo(:medium) %></div>
+			<div class="show-main--logo">
+				<% if @user.logo.present? %>
+					<%= image_tag @user.logo(:medium) %>
+				<% else %>
+					<%= image_tag("default_logo.jpg", size: "150x150", alt: "Default Profile Pic") %>
+				<% end %>
+			</div>
 		</div>
 		<div class="resume-container--title col-sm-12 col-md-9">
 			<h1><%= @user.name %> <%= @user.lastname %></h1>
