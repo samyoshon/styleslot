@@ -1,9 +1,11 @@
 <div class="new-post--container col-sm-12 col-md-10 col-md-offset-1">
-	<%= form_for @post, html: {id:"payment-form"} do |f| %>
+	<!-- XXXX COMMENT FOR STIPE XXXX
+	form_for @post, html: {id:"payment-form"} do |f| -->
+	<%= form_for @post do |f| %>
 		<div>
 			<h1>New Job Post</h1>
 			<p class="post-tagline">Recruit the best teachers from around the world.</p>
-			<p class="post-tagline--payment">Job will be posted for 30 days. Please double check your post as it is final. Single job post is $100 USD.</p>
+			<p class="post-tagline--payment">Job will be posted for 30 days. Please double check your post as it is final. Single job post is FREE for a limited time!</p>
 
 			<h6 class="form-labels">Job Title*</h6>
 			<%= f.text_field :title, class: :"new-post--input", autofocus: true, required: true %>
@@ -54,8 +56,15 @@
 
 			<h6 class="form-labels">Health Insurance</h6>
 			<%= f.text_field :insurance, class: :"new-post--input", placeholder: "Medical - (if n/a leave blank)"%>
+
+			</br>
+			</br>
+			</br>
+			<p class="post-tagline--payment">Job will be posted for 30 days. Please double check your post as it is final. Single job post is FREE for a limited time!</p>
+			<button type="submit" class="home-search-form--search new-post--submit col-sm-12" id="btn-job-post">Post Job</button>
 		</div>
 			
+		<!-- XXXX COMMENT FOR STRIPE XXXX
 		<div class="new-post--container new-post--payment-container new-post--stripe-container col-md-10 col-md-offset-1">
 			<h1>Payment Options</h1>
 			<p class="post-tagline">100% Secure Payments via <a href="https://stripe.com/" target="_blank">Stripe</a></p>
@@ -80,8 +89,6 @@
 			    	<input type="text" size="4" data-stripe="cvc" class="new-post--input" placeholder="123"  maxlength="3"/>
 		    	</div>
 		    	<button type="submit" class="home-search-form--search new-post--submit col-sm-12" id="btn-job-post">Post Job</button>
-		    </div>
-		</div>
+		</div> -->
 	<% end %>
-	</div>
 </div>

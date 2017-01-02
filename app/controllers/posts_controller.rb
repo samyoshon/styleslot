@@ -50,9 +50,8 @@ class PostsController < ApplicationController
         @post = current_company.posts.build(post_params)
         
         # ||||| (start) this part is in the stripe function below|||||
-    # @post.save
-    # redirect_to posts_path
-    # end
+        @post.save
+        redirect_to posts_path
         # ||||| (end) this part is in the stripe function below|||||
     
         # ||||| (start) comment this part out when adding stripe |||||
@@ -62,54 +61,55 @@ class PostsController < ApplicationController
         # else
         # ||||| (end) comment this part out when adding stripe |||||
 
-        charge_error = nil
+        # ||||| (start) XXXX COMMENT FOR STRIPE XXXX |||||
+        # charge_error = nil
 
-        if @post.valid? 
-            begin
-                customer =  if current_company.stripe_id?
-                                Stripe::Customer.retrieve(current_company.stripe_id)
-                            else
-                                Stripe::Customer.create(
-                                    email: current_company.email,
-                                    source: params[:stripeToken],
-                                    description: "Standard Charge Customer"
-                                )                 
-                            end
+        # if @post.valid? 
+        #     begin
+        #         customer =  if current_company.stripe_id?
+        #                         Stripe::Customer.retrieve(current_company.stripe_id)
+        #                     else
+        #                         Stripe::Customer.create(
+        #                             email: current_company.email,
+        #                             source: params[:stripeToken],
+        #                             description: "Standard Charge Customer"
+        #                         )                 
+        #                     end
 
-                current_company.update(
-                    stripe_id: customer.id,
-                    stripe_subscription_id: nil,
-                    card_last4: params[:card_last4],
-                    card_exp_month: params[:card_exp_month],
-                    card_exp_year: params[:card_exp_year],
-                    card_brand: params[:card_brand]
-                )
+        #         current_company.update(
+        #             stripe_id: customer.id,
+        #             stripe_subscription_id: nil,
+        #             card_last4: params[:card_last4],
+        #             card_exp_month: params[:card_exp_month],
+        #             card_exp_year: params[:card_exp_year],
+        #             card_brand: params[:card_brand]
+        #         )
 
-                Stripe::Charge.create(
-                    amount: 10000, # amount in cents, again
-                    currency: "usd",
-                    customer: customer.id,
-                    description: "Standard job posting"
-                )
+        #         Stripe::Charge.create(
+        #             amount: 10000, # amount in cents, again
+        #             currency: "usd",
+        #             customer: customer.id,
+        #             description: "Standard job posting"
+        #         )
 
-                flash[:notice] = 'Post has been successfully posted!'
+        #         flash[:notice] = 'Post has been successfully posted!'
 
-            rescue Stripe::StripeError => e
-                    charge_error = e.message
-            end
+        #     rescue Stripe::StripeError => e
+        #             charge_error = e.message
+        #     end
 
-            if charge_error
-                flash[:alert] = charge_error
-                render :new
-            else
-                @post.save
-                redirect_to posts_path
-            end
+        #     if charge_error
+        #         flash[:alert] = charge_error
+        #         render :new
+        #     else
+        #         @post.save
+        #         redirect_to posts_path
+        #     end
         
-        else
-            flash[:alert] = 'One or more errors in your order'
-            render :new
-        end
+        # else
+        #     flash[:alert] = 'One or more errors in your order'
+        #     render :new
+        # end
     end
 
     def update
