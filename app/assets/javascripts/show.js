@@ -31,6 +31,11 @@ $(document).ready(function(){
 		$('#amt-' + paymentOption).attr('disabled', false);
 	});
 
+	$('#btn-job-post').click(function(){
+		$(this).empty();
+		$(this).append('<img src="/assets/ajax-loader.gif" style="width: 30px; length: 30px;">');
+	});
+
 	// $('form > input:hidden').attr("disabled",true);
     
 });
@@ -67,5 +72,10 @@ $(document).on('page:load',function(){
 		$('#sub-btn-' + paymentOption).removeClass('payment-options-hidden');
 		$('#mon-' + paymentOption).attr('disabled', false);
 		$('#amt-' + paymentOption).attr('disabled', false);
+	});
+
+	$('#btn-job-post').click(function(){
+		$(this).empty();
+		$(this).append('<img src="/assets/ajax-loader.gif" style="width: 30px; length: 30px;">');
 	});
 });
