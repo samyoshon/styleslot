@@ -17,11 +17,7 @@ class ResumesController < ApplicationController
             @top_countries << resume.countryb
             @top_countries << resume.countryc
         end
-        @top_countries_uniq = @top_countries.uniq.sort!
-        # _by!{|e| e.downcase}
-        
-        ### Related to Original Idea of Job Types
-        # @posts_uniq = ["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce",  "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]   
+        @top_countries_uniq = @top_countries.uniq.sort_by!{|e| e.downcase}
     end
 
     def show
