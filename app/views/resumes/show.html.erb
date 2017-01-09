@@ -24,6 +24,21 @@
 					</span>
 					<span><%= @user.education %></span>
 				</li>
+				<li class="show-side--icon-wrapper">
+					<span class="show-side--icon show-resume-side--icon"><b>Current Residence:</b>
+						<!-- <i class="fa fa-plane" aria-hidden="true"></i> -->
+					</span>
+					<span><%= @user.residence %></span>
+				</li>
+				<li class="show-side--icon-wrapper">
+					<span class="show-side--icon show-resume-side--icon"><b>Interested in:</b>
+						<!-- <i class="fa fa-plane" aria-hidden="true"></i> -->
+					</span>
+					<span><%= @user.countrya %>
+						<% if @user.countryb.present? %>, <%= @user.countryb %><% end %>
+						<% if @user.countryc.present? %>, <%= @user.countryc %><% end %>
+					</span>
+				</li>
 				<li class="show-main--social">
 					<% if @user.facebook.present? %>
 						<a href="<%= @user.facebook %>" target="blank"><i class="fa fa-facebook-square"></i></a>
@@ -34,17 +49,18 @@
 				</li>	
 			</ul>
 		</div>
-		<div class="resume-container--description col-sm-12">
-			<%= simple_format @user.description %>
-			<p><b>Current Residence:</b> <%= @user.residence %></p>
-			<p><b>Looking for opportunities in:</b> <%= @user.countrya %>
-				<% if @user.countryb.present? %>, <%= @user.countryb %><% end %>
-				<% if @user.countryc.present? %>, <%= @user.countryc %><% end %>
-			</p>
-		</div>
 	</div>
 
 	<div class="show-main--post col-sm-12">
+		<div class="show-main--post-description col-sm-12 col-md-9">
+			<div class="show-main--post-description-title col-sm-12 col-md-3">
+				<h4>Bio</h4>
+			</div>
+			<div class="show-main--post-description-text col-sm-12 col-md-9">
+				<p><%= simple_format @user.description %></p>
+			</div>
+		</div>
+
 		<div class="show-main--post-description col-sm-12 col-md-9">
 			<div class="show-main--post-description-title col-sm-12 col-md-3">
 				<h4>Experience</h4>
