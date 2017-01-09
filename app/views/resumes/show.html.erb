@@ -13,13 +13,13 @@
 			<h1><%= @user.name %> <%= @user.lastname %></h1>
 			<ul>
 				<li class="show-side--icon-wrapper">
-					<span class="show-side--icon show-resume-side--icon">Citizenship: 
+					<span class="show-side--icon show-resume-side--icon"><b>Citizenship: </b>
 						<!-- <i class="fa fa-money" aria-hidden="true"></i> -->
 					</span>
 					<span><%= @user.citizenship %></span>
 				</li>
 				<li class="show-side--icon-wrapper">
-					<span class="show-side--icon show-resume-side--icon"> Education:
+					<span class="show-side--icon show-resume-side--icon"><b>Education:</b>
 						<!-- <i class="fa fa-plane" aria-hidden="true"></i> -->
 					</span>
 					<span><%= @user.education %></span>
@@ -36,8 +36,8 @@
 		</div>
 		<div class="resume-container--description col-sm-12">
 			<%= simple_format @user.description %>
-			<p>Current Residence: <%= @user.residence %></p>
-			<p>Looking for opportunities in: <%= @user.countrya %>
+			<p><b>Current Residence:</b> <%= @user.residence %></p>
+			<p><b>Looking for opportunities in:</b> <%= @user.countrya %>
 				<% if @user.countryb.present? %>, <%= @user.countryb %><% end %>
 				<% if @user.countryc.present? %>, <%= @user.countryc %><% end %>
 			</p>
