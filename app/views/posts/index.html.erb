@@ -19,7 +19,7 @@
 					<div class="post-container--wrapper col-sm-12">
 						<div class="post-container--logo col-sm-12 col-md-2">
 							<% if post.company.logo.present? %>
-								<%= image_tag post.company.logo(:thumb), class: :'circle-image' %>
+								<%= image_tag post.company.logo(:small), class: :'circle-image' %>
 							<% else %>
 								<%= image_tag("default_logo.jpg", size: "150x150", alt: "Default Profile Pic") %>
 							<% end %>
