@@ -17,7 +17,7 @@ class ResumesController < ApplicationController
             @top_countries << resume.countryb
             @top_countries << resume.countryc
         end
-        @top_countries_uniq = @top_countries.uniq
+        @top_countries_uniq = @top_countries.sort! {|x,y| x <=> y }.uniq
         # .sort_by!{|e| e.downcase}
     end
 
