@@ -13,11 +13,17 @@ class ResumesController < ApplicationController
 
         @top_countries = []
         @resumes.each do |resume|
-            @top_countries << resume.countrya
-            @top_countries << resume.countryb
-            @top_countries << resume.countryc
+            if resume.countrya?
+                @top_countries << resume.countrya
+            end
+            if resume.countryb?
+                @top_countries << resume.countryb
+            end
+            if resume.countryc?
+                @top_countries << resume.countryc
+            end
         end
-        @top_countries_uniq = @top_countries.reject { |c| c.empty? }.uniq.sort!{|x,y| x <=> y }
+        @top_countries_uniq = @top_countries.uniq.sort!{|x,y| x <=> y }
         # .sort_by!{|e| e.downcase}
     end
 
