@@ -11,13 +11,17 @@ class UsersController < ApplicationController
         @top_countries = []
 
         @resumes.each do |resume|
-            @top_countries << resume.countrya
-            @top_countries << resume.countryb
-            @top_countries << resume.countryc
+            if resume.countrya?
+                @top_countries << resume.countrya
+            end
+            if resume.countryb?
+                @top_countries << resume.countryb
+            end
+            if resume.countryc?
+                @top_countries << resume.countryc
+            end
         end
-        @top_countries_uniq = @top_countries.reject { |c| c.empty? }.uniq.sort!{|x,y| x <=> y }
-
-        # .sort! {|x,y| x <=> y }.uniq
+        @top_countries_uniq = @top_countries.uniq.sort!{|x,y| x <=> y }
         
         ### Related to Original Idea of Job Types
         # @posts_uniq = ["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce",  "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]   
