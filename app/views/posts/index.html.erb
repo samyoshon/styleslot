@@ -20,7 +20,7 @@
 							<% if post_promote.company.logo.present? %>
 								<%= image_tag post_promote.company.logo(:thumb), class: :'circle-image' %>
 							<% else %>
-								<%= image_tag("default_logo.jpg", size: "75x75", alt: "Default Profile Pic") %>
+								<%= image_tag("default_logo.png", size: "75x75", alt: "Default Profile Pic") %>
 
 							<% end %>
 						</div>
@@ -48,7 +48,7 @@
 							<% if post.company.logo.present? %>
 								<%= image_tag post.company.logo(:thumb), class: :'circle-image' %>
 							<% else %>
-								<%= image_tag("default_logo.jpg", size: "75x75", alt: "Default Profile Pic") %>
+								<%= image_tag("default_logo.png", size: "75x75", alt: "Default Profile Pic") %>
 							<% end %>
 						</div>
 						<div class="post-container--each col-sm-12 col-md-10">

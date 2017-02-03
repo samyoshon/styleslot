@@ -4,7 +4,7 @@
 			<% if @post.company.logo.present? %>
 				<%= image_tag @post.company.logo(:small) %>
 			<% else %>
-				<%= image_tag("default_logo.jpg", size: "150x150", alt: "Default Profile Pic") %>
+				<%= image_tag("default_logo.png", size: "150x150", alt: "Default Profile Pic") %>
 			<% end %>
 		</div>
 		<h1><%= @post.company.name %></h1>
