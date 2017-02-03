@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
         @posts_promotes = Post.where(["created_at > ?", 30.days.ago] && ["job_type = ?", '1']).order("created_at DESC")
 
-        @posts = @search.result.paginate(page: params[:page], per_page: 30).where(["created_at > ?", 30.days.ago]).where.not(["job_type = ?", '1']).order("created_at DESC")
+        @posts = @search.result.paginate(page: params[:page], per_page: 30).where(["created_at > ?", 30.days.ago]).order("created_at DESC")
 
         ### Find Countries That Have Job Posts - Used for filter option
         @posts_all = Post.where(["created_at > ?", 30.days.ago]).order("created_at DESC")
