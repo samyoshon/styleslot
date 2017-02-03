@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 	$('#btn-job-post').click(function(){
 		$(this).empty();
-		$(this).append('<img src="/assets/ajax-loader.gif" style="width: 30px; length: 30px;">');
+		$(this).append('<img src="/assets/images/ajax-loader.gif" style="width: 30px; length: 30px;">');
 	});
 
 	// $('form > input:hidden').attr("disabled",true);
@@ -76,6 +76,6 @@ $(document).on('page:load',function(){
 
 	$('#btn-job-post').click(function(){
 		$(this).empty();
-		$(this).append('<img src="/assets/ajax-loader.gif" style="width: 30px; length: 30px;">');
+		$(this).append('<img src="/assets/images/ajax-loader.gif" style="width: 30px; length: 30px;">');
 	});
 });
