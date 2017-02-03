@@ -42,13 +42,18 @@
 	};
 }
 
-.post-container {
+.post-container, .post-container-sponsored {
 	padding: 0px !important;
 }
 
 .resume-container {
 	text-align: center;
 }
+
+.post-container-sponsored p {
+	display: none;
+}
+
 
 .post-container--wrapper:hover, .resume-container--wrapper:hover {
 	background: $first-color;
@@ -65,6 +70,10 @@
 
 .post-container--logo {
 	text-align: center;
+}
+
+.post-container--each img {
+	vertical-align: bottom;
 }
 	
 .post-container--each {

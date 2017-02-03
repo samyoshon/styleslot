@@ -11,6 +11,33 @@
 		<%= f.select(:country_cont, options_for_select(@countries_uniq), {include_blank: "All", selected: :country}, class: :"col-sm-12 col-md-4 home-search-form--input index-search-form--input index-search-form--select", id: :"select-drop-down")%>
 		<%= f.submit "Find Jobs", class: :"col-sm-12 col-md-4 home-search-form--search index-search-form--search", name: nil %>
 	<% end %>
+	<div class="post-container-sponsored col-sm-12">
+		<% if @posts_promotes.present? %>
+			<% @posts_promotes.each do |post_promote| %>
+				<%= link_to post_path(post_promote) do %>
+					<div class="post-container--wrapper col-sm-12">
+						<div class="post-container--logo col-sm-12 col-md-2">
+							<% if post_promote.company.logo.present? %>
+								<%= image_tag post_promote.company.logo(:thumb), class: :'circle-image' %>
+							<% else %>
+								<%= image_tag("default_logo.jpg", size: "75x75", alt: "Default Profile Pic") %>
+
+							<% end %>
+						</div>
+						<div class="post-container--each col-sm-12 col-md-10">
+							<h1><%= image_tag("fire.png", size: "30x30", alt: "Default Profile Pic") %> <%= post_promote.title %></h1>
+							<h2><%= post_promote.company.name %> - <%= post_promote.city %>, <%= post_promote.country %></h2>
+							<br>
+							<!-- <%= post_promote.created_at.strftime("%Y-%m-%d") %> -->
+							<p><%= post_promote.description %></p>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+		<% else %>
+			<p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+		<% end %>
+	</div>
 
 	<div class="post-container col-sm-12">
 		<% if @posts.present? %>
