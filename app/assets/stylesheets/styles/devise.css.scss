@@ -9,3 +9,28 @@
 #new_company input, #new_user input {
 	margin-bottom: 10px;
 }
+
+@media screen and (min-width: 991px) {
+  	.sign-up--background  {
+		height: 70vh;
+	}
+	.sign-up--page {
+		margin-top: 10vh;
+	}
+}
+
+.sign-up--background {
+	background-image: image-url('vietnam-bg.jpg') !important;
+	background-size: cover;
+	background-position-y: 70%;
+	margin-top: -20px;
+	margin-bottom: -50px;
+}
+
+#sign-up-tagline {
+	color: #F6F6F6 !important;
+}
+
+#sign-up-header {
+	color: black !important;
+}

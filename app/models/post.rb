@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 
+	include ImageUploader[:image]
+	
 	belongs_to :company
 
 	attr_accessor :country_code
@@ -11,5 +13,9 @@ class Post < ActiveRecord::Base
 
 	def to_param
 		"#{id} #{company.name} #{title}".parameterize
+	end
+
+	def post_params
+		params.requires(:post).permit(:image)
 	end
 end

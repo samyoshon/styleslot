@@ -73,5 +73,7 @@ gem 'aws-sdk-v1'
 
 gem 'country_select', git: 'https://github.com/alibabajan/country_select.git'
 
+gem 'shrine', '~> 2.5'
+
 ruby "2.2.0"
 
