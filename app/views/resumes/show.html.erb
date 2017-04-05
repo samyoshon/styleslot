@@ -101,18 +101,15 @@
 
 		<div class="home-search-form--search show-main--apply col-sm-12 col-md-9 apply-now-hidden" id="show-apply-now-div">
 			<h4>Contact Teacher:</h4>
-			<!-- 	<p class="post-tagline--payment"><b>Congrats, you have FREE unlimited access to teachers' profiles for a limited time!</b> Regular price is $100/month.</p>
-				</br> -->
-				<%= link_to @user.email, @user.email, target: "blank" %>
-
-			<!-- <% if current_company.present? %>
-				<% if current_company.monthly != nil && current_company.monthly >= @date %>
-					<%= link_to @user.email, @user.email, target: "blank" %>
-				<% else %>
+		
+			<% if current_company.present? %>
+			    <%= link_to @user.email, @user.email, target: "blank" %>
+				<!-- <% if current_company.monthly != nil && current_company.monthly >= @date %> -->
+				<!-- <% else %>
 					<%= link_to resume_subs_path do %>
 						Are you a recruiter? Click here to gain access to contact potential teachers.
 					<% end %>
-				<% end %>
+				<% end %> -->
 			<% elsif current_user.present? %>
 				<% if current_user.id == @user.id %>
 					<%= link_to @user.email, @user.email, target: "blank" %>
@@ -123,7 +120,7 @@
 				<%= link_to new_company_registration_path do %>
 					Are you a recruiter? Sign up now to gain access to contact potential teachers.
 				<% end %>
-			<% end %> -->
+			<% end %>
 		</div>
 	</div>
 </div>
