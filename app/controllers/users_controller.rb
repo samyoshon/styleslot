@@ -1,15 +1,17 @@
 class UsersController < ApplicationController
 
-	def index
+
+
+
+    def index
         @q = User.ransack(params[:q])
 
-        @users = @q.result.paginate(page: params[:page], per_page: 30).where(["updated_at > ?", 30.days.ago]).order("updated_at DESC")
+        @users = @q.result.paginate(page: params[:page], per_page: 30).where(["updated_at > ?", 360.days.ago]).order("updated_at DESC")
 
         ## Find Countries That Have Job Posts - Used for filter option
         @resumes = User.where(["updated_at > ?", 360.days.ago]).order("created_at DESC")
 
         @top_countries = []
-
         @resumes.each do |resume|
             if resume.countrya?
                 @top_countries << resume.countrya
@@ -22,13 +24,13 @@ class UsersController < ApplicationController
             end
         end
         @top_countries_uniq = @top_countries.uniq.sort!{|x,y| x <=> y }
-        
-        ### Related to Original Idea of Job Types
-        # @posts_uniq = ["Accounting/Finance", "Administrative", "Buyer", "Design", "Digital/eCommerce",  "Fit Model", "Human Resources", "IT", "Logistics/Supply Chain", "Marketing", "Merchandising", "Operations", "Pattern Making", "Photography", "Production", "Retail Store", "Sales", "Social Media", "Sourcing", "Stylist", "Other"]   
-	end
+        # .sort_by!{|e| e.downcase}
+    end
 
     def show
         @user = User.find(params[:id])
+
+        @date = Date.today
     end
 
 private 
