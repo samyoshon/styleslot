@@ -6,7 +6,7 @@ class UsersController < ApplicationController
         @users = @q.result.paginate(page: params[:page], per_page: 30).where(["updated_at > ?", 30.days.ago]).order("updated_at DESC")
 
         ## Find Countries That Have Job Posts - Used for filter option
-        @resumes = User.where(["updated_at > ?", 30.days.ago]).order("created_at DESC")
+        @resumes = User.where(["updated_at > ?", 360.days.ago]).order("created_at DESC")
 
         @top_countries = []
 
