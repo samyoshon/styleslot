@@ -129,6 +129,10 @@
 	text-align: justify;
 }
 
+.show-main--post-summary-mobile {
+	display: none;
+}
+
 /*MOBILE VIEW*/
 
 @media screen and (max-width: 991px) {
@@ -138,5 +142,13 @@
 	}
 	.resume-container--title {
 		text-align: center;
+	}
+
+	.show-main--post-summary-mobile {
+		display: initial;
+	}
+
+	.show-main--post-summary-desktop {
+		display: none;
 	}
 }
