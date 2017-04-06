@@ -112,6 +112,10 @@
 			color: #000;
 			cursor: default;
 		};
+
+		a {
+			word-wrap: break-word;
+		}
 }
 
 .resume-container--title {
