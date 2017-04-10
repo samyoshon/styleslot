@@ -1,4 +1,8 @@
 $(document).ready(function(){
+	// $(window).load(function(){
+	// 	$('#myModal').modal('show');
+	// });
+
 	$('#show-apply-now-btn').click(function(){
 		$('#show-apply-now-div').toggleClass("apply-now-active");
 		$(this).hide();
